@@ -101,13 +101,33 @@ wrangler pages deploy . --project-name=fubon-bank-redesign
 4. 將 `fubon-bank-site/` 目錄內容拖放上傳
 5. 等待部署完成
 
-### 方法 C：Git 集成（持續部署）
+### 方法 C：Git 集成（持續部署）⭐ 推薦
 
-1. 將程式碼推送到 GitHub/GitLab
-2. 在 Cloudflare Dashboard 連接 Git 倉庫
-3. 配置自動部署：
-   - Build command: （留空）
-   - Build output directory: `/`
+#### 步驟 1：推送程式碼到 GitHub
+
+```bash
+cd /root/.openclaw/workspace/fubon-bank-site
+git remote add origin https://github.com/YOUR_USERNAME/fubon-bank-apple-redesign.git
+git branch -M main
+git push -u origin main
+```
+
+#### 步驟 2：連接 Cloudflare Pages
+
+1. 登入 [Cloudflare Dashboard](https://dash.cloudflare.com/)
+2. 進入 **Workers & Pages** → **Create application** → **Pages**
+3. 選擇 **Connect to Git**
+4. 授權 GitHub 並選擇 `fubon-bank-apple-redesign` 倉庫
+5. 配置構建設定：
+   - **Production branch**: `main`
+   - **Build command**: （留空）
+   - **Build output directory**: `/`
+   - **Root directory**: `/`
+6. 點擊 **Save and Deploy**
+
+#### 步驟 3：自動部署
+
+完成後，每次推送到 `main` 分支都會自動觸發部署。
 
 ## 自定義域名
 
