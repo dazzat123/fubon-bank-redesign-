@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>結構性存款 | 富邦銀行</title>
+  <link rel="stylesheet" href="../../../css/main.css">
+  <style>
+    .page-header {
+      padding: var(--spacing-15) 0 var(--spacing-10);
+      background: linear-gradient(135deg, #FF9500 0%, #FFB340 100%);
+      color: var(--white);
+      text-align: center;
+    }
+    .page-header .page-subtitle { color: rgba(255, 255, 255, 0.9); }
+    .product-detail { max-width: 900px; margin: 0 auto; padding: var(--spacing-12) 0; }
+    .hero-card {
+      background: linear-gradient(135deg, #FF9500 0%, #FFB340 100%);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-12);
+      color: var(--white);
+      text-align: center;
+      margin-bottom: var(--spacing-12);
+    }
+    .hero-icon {
+      width: 100px; height: 100px;
+      background: rgba(255,255,255,0.2);
+      border-radius: var(--radius-xl);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 60px; margin: 0 auto var(--spacing-6);
+    }
+    .feature-section { background: var(--gray-quaternary); padding: var(--spacing-12) 0; margin-bottom: var(--spacing-12); }
+    .feature-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-8); max-width: 1000px; margin: 0 auto; }
+    .feature-item {
+      background: var(--white); padding: var(--spacing-8);
+      border-radius: var(--radius-2xl); box-shadow: var(--shadow-md);
+    }
+    .feature-icon {
+      width: 56px; height: 56px; border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, #FF9500 0%, #FFB340 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 28px; margin-bottom: var(--spacing-5);
+    }
+    .rate-highlight {
+      font-size: 48px; font-weight: var(--font-weight-bold);
+      color: var(--warning); line-height: 1; margin: var(--spacing-4) 0;
+    }
+    .rate-highlight span { font-size: var(--font-body); color: var(--gray-primary); }
+    .info-table {
+      width: 100%; border-collapse: collapse; background: var(--white);
+      border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-md); margin-top: var(--spacing-8);
+    }
+    .info-table th, .info-table td {
+      padding: var(--spacing-5); text-align: left; border-bottom: 1px solid var(--gray-tertiary);
+    }
+    .info-table th { background: var(--black); color: var(--white); font-weight: var(--font-weight-semibold); }
+    .risk-warning {
+      background: #FFF3CD;
+      border-left: 4px solid var(--warning);
+      padding: var(--spacing-6);
+      border-radius: var(--radius-lg);
+      margin-top: var(--spacing-8);
+    }
+    .cta-section {
+      background: linear-gradient(135deg, #FF9500 0%, #FFB340 100%);
+      padding: var(--spacing-14) 0; text-align: center; color: var(--white);
+    }
+    @media (max-width: 734px) {
+      .feature-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-content">
+      <a href="../../../" class="navbar-logo">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="#F47920"/>
+          <text x="50" y="65" text-anchor="middle" fill="white" font-size="40" font-weight="bold">F</text>
+        </svg>
+        <span>富邦銀行</span>
+      </a>
+      <div class="navbar-menu">
+        <a href="../../personal/" class="navbar-link" style="opacity: 1; color: var(--fubon-orange);">個人銀行</a>
+        <a href="../../commercial/" class="navbar-link">商業銀行</a>
+        <a href="../../wealth/" class="navbar-link">財富管理</a>
+        <a href="../../ebanking/" class="navbar-link">電子銀行</a>
+        <a href="../../about/" class="navbar-link">關於我們</a>
+      </div>
+      <div class="navbar-actions">
+        <a href="#" class="btn btn-primary btn-small">網上銀行</a>
+        <button class="navbar-toggle" aria-label="選單"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">結構性存款</h1>
+      <p class="page-subtitle">掛鉤潛在高回報，保本結構設計</p>
+    </div>
+  </header>
+
+  <section class="product-detail">
+    <div class="hero-card">
+      <div class="hero-icon">📊</div>
+      <h2 style="font-size: var(--font-title-2); margin-bottom: var(--spacing-4);">富邦結構性存款</h2>
+      <p style="font-size: var(--font-headline); opacity: 0.9;">結合固定收益及衍生工具，追求潛在更高回報</p>
+    </div>
+    
+    <div class="feature-grid">
+      <div class="feature-item">
+        <div class="feature-icon">💰</div>
+        <h3 style="font-size: var(--font-title-3); margin-bottom: var(--spacing-3);">潛在回報</h3>
+        <div class="rate-highlight">高達<span>6.5%</span></div>
+        <p style="color: var(--gray-primary);">視乎掛鉤資產表現，潛在回報可達 6.5% 年利率</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🛡️</div>
+        <h3 style="font-size: var(--font-title-3); margin-bottom: var(--spacing-3);">保本設計</h3>
+        <div class="rate-highlight">100%<span>保本</span></div>
+        <p style="color: var(--gray-primary);">到期保本設計，保障本金安全</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">📈</div>
+        <h3 style="font-size: var(--font-title-3); margin-bottom: var(--spacing-3);">掛鉤資產</h3>
+        <div class="rate-highlight">多元<span>選擇</span></div>
+        <p style="color: var(--gray-primary);">可選擇掛鉤股票、指數、貨幣或商品</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">⏱️</div>
+        <h3 style="font-size: var(--font-title-3); margin-bottom: var(--spacing-3);">投資年期</h3>
+        <div class="rate-highlight">3-24<span>個月</span></div>
+        <p style="color: var(--gray-primary);">靈活選擇 3 至 24 個月投資年期</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature-section">
+    <div class="container">
+      <div class="section-header" style="text-align: center; margin-bottom: var(--spacing-10);">
+        <h2 class="section-title">產品特色</h2>
+        <p class="section-subtitle">結構性存款全方位服務</p>
+      </div>
+      <div style="max-width: 800px; margin: 0 auto;">
+        <table class="info-table">
+          <thead><tr><th>特色</th><th>詳情</th></tr></thead>
+          <tbody>
+            <tr><td><strong>保本程度</strong></td><td>100% 保本（持有至到期）</td></tr>
+            <tr><td><strong>潛在回報</strong></td><td>最高可达 6.5% 年利率</td></tr>
+            <tr><td><strong>掛鉤資產</strong></td><td>股票、指數、貨幣、商品</td></tr>
+            <tr><td><strong>投資年期</strong></td><td>3、6、12、18、24 個月</td></tr>
+            <tr><td><strong>最低投資額</strong></td><td>HK$100,000 起</td></tr>
+            <tr><td><strong>派息方式</strong></td><td>到期一次過派付</td></tr>
+            <tr><td><strong>提前贖回</strong></td><td>不允許提前贖回</td></tr>
+            <tr><td><strong>產品說明書</strong></td><td>每款產品均有詳細說明書</td></tr>
+          </tbody>
+        </table>
+        
+        <div class="risk-warning">
+          <h4 style="font-size: var(--font-title-3); margin-bottom: var(--spacing-3); color: var(--warning);">⚠️ 風險提示</h4>
+          <ul style="color: var(--gray-primary); font-size: var(--font-callout); line-height: 1.8;">
+            <li>結構性存款並非傳統存款，涉及投資風險</li>
+            <li>實際回報視乎掛鉤資產表現，可能低於預期</li>
+            <li>如提前贖回，可能招致本金損失</li>
+            <li>過往表現不代表將來回報</li>
+            <li>投資前請仔細閱讀產品說明書及風險披露聲明</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header" style="text-align: center;">
+        <h2 class="section-title">熱門產品</h2>
+        <p class="section-subtitle">本期熱門結構性存款產品</p>
+      </div>
+      <div style="max-width: 900px; margin: var(--spacing-10) auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-6);">
+        <div style="background: var(--white); padding: var(--spacing-8); border-radius: var(--radius-2xl); box-shadow: var(--shadow-md); text-align: center;">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-4);">🇭🇰</div>
+          <h4 style="font-size: var(--font-title-3); margin-bottom: var(--spacing-3);">恒指掛鉤</h4>
+          <div style="font-size: 36px; font-weight: var(--font-weight-bold); color: var(--fubon-orange); margin-bottom: var(--spacing-2);">5.8%</div>
+          <p style="color: var(--gray-primary); font-size: var(--font-callout);">12 個月｜恒指掛鉤</p>
+        </div>
+        <div style="background: var(--white); padding: var(--spacing-8); border-radius: var(--radius-2xl); box-shadow: var(--shadow-md); text-align: center;">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-4);">💱</div>
+          <h4 style="font-size: var(--font-title-3); margin-bottom: var(--spacing-3);">貨幣掛鉤</h4>
+          <div style="font-size: 36px; font-weight: var(--font-weight-bold); color: var(--fubon-orange); margin-bottom: var(--spacing-2);">4.5%</div>
+          <p style="color: var(--gray-primary); font-size: var(--font-callout);">6 個月｜美元／港元</p>
+        </div>
+        <div style="background: var(--white); padding: var(--spacing-8); border-radius: var(--radius-2xl); box-shadow: var(--shadow-md); text-align: center;">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-4);">🏆</div>
+          <h4 style="font-size: var(--font-title-3); margin-bottom: var(--spacing-3);">股票掛鉤</h4>
+          <div style="font-size: 36px; font-weight: var(--font-weight-bold); color: var(--fubon-orange); margin-bottom: var(--spacing-2);">6.2%</div>
+          <p style="color: var(--gray-primary); font-size: var(--font-callout);">12 個月｜藍籌股籃子</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--gray-quaternary);">
+    <div class="container">
+      <div class="section-header" style="text-align: center;">
+        <h2 class="section-title">申請資格及所需文件</h2>
+      </div>
+      <div style="max-width: 800px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-8);">
+        <div style="background: var(--white); padding: var(--spacing-8); border-radius: var(--radius-2xl); box-shadow: var(--shadow-md);">
+          <h3 style="font-size: var(--font-title-3); margin-bottom: var(--spacing-4);">📋 申請資格</h3>
+          <ul style="list-style: none; color: var(--gray-primary); font-size: var(--font-callout);">
+            <li style="padding: var(--spacing-2) 0;">✓ 年滿 18 歲</li>
+            <li style="padding: var(--spacing-2) 0;">✓ 持有有效香港身份證</li>
+            <li style="padding: var(--spacing-2) 0;">✓ 富邦銀行投資賬戶持有人</li>
+            <li style="padding: var(--spacing-2) 0;">✓ 最低投資額 HK$100,000</li>
+          </ul>
+        </div>
+        <div style="background: var(--white); padding: var(--spacing-8); border-radius: var(--radius-2xl); box-shadow: var(--shadow-md);">
+          <h3 style="font-size: var(--font-title-3); margin-bottom: var(--spacing-4);">📄 所需文件</h3>
+          <ul style="list-style: none; color: var(--gray-primary); font-size: var(--font-callout);">
+            <li style="padding: var(--spacing-2) 0;">✓ 香港身份證副本</li>
+            <li style="padding: var(--spacing-2) 0;">✓ 投資風險評估問卷</li>
+            <li style="padding: var(--spacing-2) 0;">✓ 簽署產品說明書</li>
+            <li style="padding: var(--spacing-2) 0;">✓ 投資申請表格</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: var(--spacing-6);">立即查詢結構性存款</h2>
+      <p class="section-subtitle" style="margin-bottom: var(--spacing-8); color: rgba(255,255,255,0.9);">
+        我們的理財顧問將為您提供專業建議
+      </p>
+      <div style="display: flex; gap: var(--spacing-4); justify-content: center; flex-wrap: wrap;">
+        <a href="#" class="btn btn-primary btn-large">預約顧問</a>
+        <a href="tel:+85221001000" class="btn btn-secondary btn-large" style="background: rgba(255,255,255,0.2);">致電 2100 1000</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 富邦銀行 (香港) 有限公司 版權所有</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../../js/main.js"></script>
+</body>
+</html>

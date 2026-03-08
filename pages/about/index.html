@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>關於我們 | 富邦銀行</title>
+  <link rel="stylesheet" href="../../css/main.css">
+  <style>
+    .page-header {
+      padding: var(--spacing-15) 0 var(--spacing-10);
+      background: linear-gradient(135deg, #1D1D1F 0%, #4A4A4C 100%);
+      color: var(--white);
+      text-align: center;
+    }
+    
+    .page-header .page-subtitle {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .nav-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-8);
+      padding: var(--spacing-12) 0;
+    }
+    
+    .nav-card {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-10);
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-normal);
+      text-decoration: none;
+      color: var(--black);
+      display: block;
+      text-align: center;
+    }
+    
+    .nav-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    .nav-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto var(--spacing-6);
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, #1D1D1F 0%, #4A4A4C 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+    }
+    
+    .nav-title {
+      font-size: var(--font-title-3);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: var(--spacing-3);
+    }
+    
+    .nav-desc {
+      font-size: var(--font-callout);
+      color: var(--gray-primary);
+    }
+    
+    .story-section {
+      background: var(--gray-quaternary);
+      padding: var(--spacing-15) 0;
+    }
+    
+    .timeline {
+      max-width: 900px;
+      margin: var(--spacing-12) auto;
+      position: relative;
+    }
+    
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 100%;
+      background: var(--fubon-orange);
+    }
+    
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: var(--spacing-8);
+      margin-bottom: var(--spacing-12);
+      align-items: center;
+    }
+    
+    .timeline-content {
+      text-align: right;
+      padding: var(--spacing-6);
+    }
+    
+    .timeline-content.right {
+      text-align: left;
+    }
+    
+    .timeline-year {
+      font-size: var(--font-title-2);
+      font-weight: var(--font-weight-bold);
+      color: var(--fubon-orange);
+      margin-bottom: var(--spacing-2);
+    }
+    
+    .timeline-dot {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--fubon-orange);
+      border: 4px solid var(--white);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--spacing-8);
+      margin-top: var(--spacing-12);
+    }
+    
+    .value-card {
+      text-align: center;
+      padding: var(--spacing-8);
+    }
+    
+    .value-icon {
+      font-size: 48px;
+      margin-bottom: var(--spacing-5);
+    }
+    
+    @media (max-width: 1023px) {
+      .nav-grid,
+      .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .timeline::before {
+        left: 20px;
+      }
+      
+      .timeline-item {
+        grid-template-columns: auto 1fr;
+        gap: var(--spacing-4);
+      }
+      
+      .timeline-content {
+        text-align: left !important;
+      }
+      
+      .timeline-content.left {
+        grid-column: 2;
+      }
+      
+      .timeline-dot {
+        grid-column: 1;
+      }
+      
+      .timeline-content.right {
+        grid-column: 2;
+      }
+    }
+    
+    @media (max-width: 734px) {
+      .nav-grid,
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 導航欄 -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <a href="../../" class="navbar-logo">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="#F47920"/>
+          <text x="50" y="65" text-anchor="middle" fill="white" font-size="40" font-weight="bold">F</text>
+        </svg>
+        <span>富邦銀行</span>
+      </a>
+      
+      <div class="navbar-menu">
+        <a href="../personal/" class="navbar-link">個人銀行</a>
+        <a href="../commercial/" class="navbar-link">商業銀行</a>
+        <a href="../wealth/" class="navbar-link">財富管理</a>
+        <a href="../ebanking/" class="navbar-link">電子銀行</a>
+        <a href="../about/" class="navbar-link" style="opacity: 1; color: var(--fubon-orange);">關於我們</a>
+      </div>
+      
+      <div class="navbar-actions">
+        <a href="#" class="btn btn-primary btn-small">網上銀行</a>
+        <button class="navbar-toggle" aria-label="選單">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 頁面標題 -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">關於我們</h1>
+      <p class="page-subtitle">認識富邦銀行，了解我們的使命、願景及核心價值</p>
+    </div>
+  </header>
+
+  <!-- 導航卡片 -->
+  <section class="section">
+    <div class="container">
+      <div class="nav-grid">
+        <a href="profile/" class="nav-card">
+          <div class="nav-icon">🏦</div>
+          <h2 class="nav-title">銀行簡介</h2>
+          <p class="nav-desc">了解富邦銀行的歷史、發展及企業管治</p>
+        </a>
+        
+        <a href="branches/" class="nav-card">
+          <div class="nav-icon">📍</div>
+          <h2 class="nav-title">分支行網絡</h2>
+          <p class="nav-desc">查找附近的分行及自動櫃員機</p>
+        </a>
+        
+        <a href="contact/" class="nav-card">
+          <div class="nav-icon">📞</div>
+          <h2 class="nav-title">聯絡我們</h2>
+          <p class="nav-desc">聯絡我們查詢或預約服務</p>
+        </a>
+        
+        <a href="press/" class="nav-card">
+          <div class="nav-icon">📰</div>
+          <h2 class="nav-title">新聞稿</h2>
+          <p class="nav-desc">最新銀行動態及媒體資訊</p>
+        </a>
+        
+        <a href="careers/" class="nav-card">
+          <div class="nav-icon">💼</div>
+          <h2 class="nav-title">事業機會</h2>
+          <p class="nav-desc">加入富邦，與我們一起成長</p>
+        </a>
+        
+        <a href="#" class="nav-card">
+          <div class="nav-icon">🌱</div>
+          <h2 class="nav-title">社會責任</h2>
+          <p class="nav-desc">我們的可持續發展及社區參與</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 我們的歷史 -->
+  <section class="story-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">我們的歷史</h2>
+        <p class="section-subtitle">超過 25 年服務香港社會</p>
+      </div>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-content left">
+            <div class="timeline-year">1999</div>
+            <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-2);">成立</h4>
+            <p style="font-size: var(--font-callout); color: var(--gray-primary);">富邦銀行（香港）有限公司正式成立</p>
+          </div>
+          <div class="timeline-dot"></div>
+          <div></div>
+        </div>
+        
+        <div class="timeline-item">
+          <div></div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content right">
+            <div class="timeline-year">2005</div>
+            <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-2);">業務擴展</h4>
+            <p style="font-size: var(--font-callout); color: var(--gray-primary);">推出財富管理及商業銀行服務</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-content left">
+            <div class="timeline-year">2012</div>
+            <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-2);">數位轉型</h4>
+            <p style="font-size: var(--font-callout); color: var(--gray-primary);">推出手機銀行應用程式</p>
+          </div>
+          <div class="timeline-dot"></div>
+          <div></div>
+        </div>
+        
+        <div class="timeline-item">
+          <div></div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content right">
+            <div class="timeline-year">2018</div>
+            <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-2);">跨境服務</h4>
+            <p style="font-size: var(--font-callout); color: var(--gray-primary);">加強大灣區跨境金融服務</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-content left">
+            <div class="timeline-year">2024</div>
+            <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-2);">全新體驗</h4>
+            <p style="font-size: var(--font-callout); color: var(--gray-primary);">推出 Apple 風格全新數位體驗</p>
+          </div>
+          <div class="timeline-dot"></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 核心價值 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">核心價值</h2>
+        <p class="section-subtitle">指引我們前行的信念</p>
+      </div>
+      
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">🎯</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">客戶為先</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">以客戶需要為核心，提供卓越服務體驗</p>
+        </div>
+        
+        <div class="value-card">
+          <div class="value-icon">🤝</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">誠信可靠</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">坚守誠信原則，贏得客戶長期信任</p>
+        </div>
+        
+        <div class="value-card">
+          <div class="value-icon">💡</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">創新進取</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">擁抱創新，不斷提升服務質量</p>
+        </div>
+        
+        <div class="value-card">
+          <div class="value-icon">🌍</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">社會責任</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">積極回饋社會，促進可持續發展</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section-gray" style="text-align: center;">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: var(--spacing-6);">成為我們的客戶</h2>
+      <p class="section-subtitle" style="margin-bottom: var(--spacing-8);">
+        立即開立戶口，體驗富邦銀行的優質服務
+      </p>
+      <a href="#" class="btn btn-primary btn-large">立即開戶</a>
+    </div>
+  </section>
+
+  <!-- 頁尾 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 富邦銀行 (香港) 有限公司 版權所有</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>

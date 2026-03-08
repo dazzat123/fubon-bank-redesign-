@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>保安提示 | 富邦銀行</title>
+  <link rel="stylesheet" href="../../css/main.css">
+  <style>
+    .page-header {
+      padding: var(--spacing-12) 0 var(--spacing-8);
+      background: linear-gradient(135deg, #FF3B30 0%, #FF6B35 100%);
+      color: var(--white);
+      text-align: center;
+    }
+    
+    .page-header .page-subtitle {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .content-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: var(--spacing-12) 0;
+    }
+    
+    .content-section {
+      margin-bottom: var(--spacing-10);
+    }
+    
+    .content-section h2 {
+      font-size: var(--font-title-3);
+      margin-bottom: var(--spacing-5);
+      padding-bottom: var(--spacing-3);
+      border-bottom: 2px solid var(--fubon-orange);
+    }
+    
+    .content-section p {
+      font-size: var(--font-callout);
+      line-height: 1.8;
+      color: var(--gray-primary);
+      margin-bottom: var(--spacing-4);
+    }
+    
+    .content-section ul {
+      margin-bottom: var(--spacing-6);
+      padding-left: var(--spacing-6);
+    }
+    
+    .content-section li {
+      font-size: var(--font-callout);
+      line-height: 1.8;
+      color: var(--gray-primary);
+      margin-bottom: var(--spacing-2);
+    }
+    
+    .tip-box {
+      background: rgba(52, 199, 89, 0.1);
+      border-left: 4px solid var(--success);
+      padding: var(--spacing-6);
+      border-radius: var(--radius-md);
+      margin: var(--spacing-8) 0;
+    }
+    
+    .tip-box p {
+      margin: 0;
+      color: var(--black);
+    }
+    
+    .warning-box {
+      background: rgba(255, 59, 48, 0.1);
+      border-left: 4px solid var(--error);
+      padding: var(--spacing-6);
+      border-radius: var(--radius-md);
+      margin: var(--spacing-8) 0;
+    }
+    
+    .warning-box p {
+      margin: 0;
+      color: var(--black);
+    }
+    
+    .security-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-8);
+      margin: var(--spacing-12) 0;
+    }
+    
+    .security-card {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-8);
+      box-shadow: var(--shadow-md);
+      text-align: center;
+    }
+    
+    .security-icon {
+      font-size: 48px;
+      margin-bottom: var(--spacing-5);
+    }
+    
+    @media (max-width: 1023px) {
+      .security-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 734px) {
+      .security-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 導航欄 -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <a href="../../" class="navbar-logo">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="#F47920"/>
+          <text x="50" y="65" text-anchor="middle" fill="white" font-size="40" font-weight="bold">F</text>
+        </svg>
+        <span>富邦銀行</span>
+      </a>
+      
+      <div class="navbar-menu">
+        <a href="../personal/" class="navbar-link">個人銀行</a>
+        <a href="../commercial/" class="navbar-link">商業銀行</a>
+        <a href="../wealth/" class="navbar-link">財富管理</a>
+        <a href="../ebanking/" class="navbar-link">電子銀行</a>
+        <a href="../about/" class="navbar-link">關於我們</a>
+      </div>
+      
+      <div class="navbar-actions">
+        <a href="#" class="btn btn-primary btn-small">網上銀行</a>
+        <button class="navbar-toggle" aria-label="選單">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 頁面標題 -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">保安提示</h1>
+      <p class="page-subtitle">保障您的資金及個人資料安全</p>
+    </div>
+  </header>
+
+  <!-- 內容 -->
+  <div class="content-container">
+    <div class="tip-box">
+      <p>
+        <strong>🛡️ 保安提示：</strong>本行永遠不會透過電郵、短訊或電話要求您提供密碼、一次性驗證碼或完整信用卡號碼。如收到可疑訊息，請立即聯絡我們。
+      </p>
+    </div>
+
+    <div class="content-section">
+      <h2>1. 保護您的登入資料</h2>
+      <ul>
+        <li>切勿向任何人透露您的用戶名稱、密碼或一次性驗證碼</li>
+        <li>使用強密碼（至少 8 位字符，包含字母、數字及符號）</li>
+        <li>定期更改密碼</li>
+        <li>避免使用易於猜測的密碼（如生日、電話號碼）</li>
+        <li>不要在公共電腦上登入網上銀行</li>
+      </ul>
+    </div>
+
+    <div class="content-section">
+      <h2>2. 識別釣魚郵件</h2>
+      <p>釣魚郵件的特徵：</p>
+      <ul>
+        <li>發件人地址可疑或不正確</li>
+        <li>要求您提供個人資料或密碼</li>
+        <li>包含可疑連結或附件</li>
+        <li>製造緊急感或威脅</li>
+        <li>文法錯誤或拼寫錯誤</li>
+      </ul>
+      <div class="warning-box">
+        <p>
+          <strong>⚠️ 注意：</strong>如收到可疑電郵，請勿點擊任何連結或下載附件。請直接致電本行客戶服務熱線查詢。
+        </p>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <h2>3. 安全使用網上銀行</h2>
+      <ul>
+        <li>確保網址為 https:// 並顯示安全鎖圖示</li>
+        <li>使用最新版本的瀏覽器</li>
+        <li>安裝及更新防病毒軟體</li>
+        <li>避免使用公共 Wi-Fi 進行銀行交易</li>
+        <li>完成交易後務必登出</li>
+        <li>定期檢查戶口結單</li>
+      </ul>
+    </div>
+
+    <div class="content-section">
+      <h2>4. 保護您的設備</h2>
+      <ul>
+        <li>為手機及電腦設置鎖定密碼</li>
+        <li>安裝官方應用程式（從 App Store 或 Google Play 下載）</li>
+        <li>定期更新作業系統及應用程式</li>
+        <li>不要越獄或 root 您的設備</li>
+        <li>安裝信譽良好的安全軟體</li>
+      </ul>
+    </div>
+
+    <div class="content-section">
+      <h2>5. 常見詐騙手法</h2>
+      <div class="security-grid">
+        <div class="security-card">
+          <div class="security-icon">📞</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">假冒銀行職員</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">
+            聲稱戶口有問題，要求提供個人資料
+          </p>
+        </div>
+        
+        <div class="security-card">
+          <div class="security-icon">💳</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">信用卡詐騙</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">
+            通知中獎或退款，要求提供信用卡資料
+          </p>
+        </div>
+        
+        <div class="security-card">
+          <div class="security-icon">💰</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">投資詐騙</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">
+            承諾高回報，誘導投資騙局
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <h2>6. 如懷疑被騙</h2>
+      <p>如您懷疑已被騙或戶口被未經授權存取，請立即：</p>
+      <ul>
+        <li>致電本行 24 小時客戶服務熱線 (852) 2100 1000</li>
+        <li>更改您的網上銀行密碼</li>
+        <li>檢查戶口交易記錄</li>
+        <li>向警方報案</li>
+        <li>如涉及信用卡，請立即報失</li>
+      </ul>
+    </div>
+
+    <div class="content-section">
+      <h2>7. 聯絡我們</h2>
+      <p>
+        如有任何保安疑問或需要協助，請聯絡我們：
+      </p>
+      <ul>
+        <li><strong>24 小時客戶服務熱線：</strong>(852) 2100 1000</li>
+        <li><strong>電郵：</strong>security@fubonbank.com.hk</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 頁尾 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 富邦銀行 (香港) 有限公司 版權所有</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>

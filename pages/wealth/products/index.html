@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>投資產品 | 富邦銀行</title>
+  <link rel="stylesheet" href="../../../css/main.css">
+  <style>
+    .page-header {
+      padding: var(--spacing-15) 0 var(--spacing-10);
+      background: linear-gradient(135deg, #007AFF 0%, #5AC8FA 100%);
+      color: var(--white);
+      text-align: center;
+    }
+    
+    .page-header .page-subtitle {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-8);
+      padding: var(--spacing-12) 0;
+    }
+    
+    .product-card {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-10);
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-normal);
+    }
+    
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    .product-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, #007AFF 0%, #5AC8FA 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      margin-bottom: var(--spacing-6);
+    }
+    
+    .product-title {
+      font-size: var(--font-title-3);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: var(--spacing-3);
+    }
+    
+    .product-desc {
+      font-size: var(--font-callout);
+      color: var(--gray-primary);
+      margin-bottom: var(--spacing-6);
+    }
+    
+    .product-features {
+      list-style: none;
+      margin-bottom: var(--spacing-8);
+    }
+    
+    .product-features li {
+      padding: var(--spacing-2) 0;
+      font-size: var(--font-callout);
+      color: var(--gray-primary);
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-3);
+    }
+    
+    .product-features li::before {
+      content: "✓";
+      color: var(--success);
+      font-weight: bold;
+    }
+    
+    .featured-section {
+      background: var(--gray-quaternary);
+      padding: var(--spacing-14) 0;
+    }
+    
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-8);
+      margin-top: var(--spacing-12);
+    }
+    
+    .featured-card {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-10);
+      box-shadow: var(--shadow-md);
+      border-left: 4px solid var(--fubon-orange);
+    }
+    
+    .featured-badge {
+      display: inline-block;
+      background: var(--fubon-orange);
+      color: var(--white);
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: var(--spacing-4);
+    }
+    
+    .risk-section {
+      padding: var(--spacing-14) 0;
+    }
+    
+    .risk-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: var(--spacing-4);
+      margin-top: var(--spacing-12);
+    }
+    
+    .risk-item {
+      text-align: center;
+      padding: var(--spacing-6);
+      background: var(--gray-light);
+      border-radius: var(--radius-xl);
+    }
+    
+    @media (max-width: 1023px) {
+      .product-grid,
+      .featured-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .risk-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    @media (max-width: 734px) {
+      .product-grid,
+      .featured-grid,
+      .risk-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 導航欄 -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <a href="../../../" class="navbar-logo">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="#F47920"/>
+          <text x="50" y="65" text-anchor="middle" fill="white" font-size="40" font-weight="bold">F</text>
+        </svg>
+        <span>富邦銀行</span>
+      </a>
+      
+      <div class="navbar-menu">
+        <a href="../../personal/" class="navbar-link">個人銀行</a>
+        <a href="../../commercial/" class="navbar-link">商業銀行</a>
+        <a href="../../wealth/" class="navbar-link" style="opacity: 1; color: var(--fubon-orange);">財富管理</a>
+        <a href="../../ebanking/" class="navbar-link">電子銀行</a>
+        <a href="../../about/" class="navbar-link">關於我們</a>
+      </div>
+      
+      <div class="navbar-actions">
+        <a href="#" class="btn btn-primary btn-small">登入</a>
+        <button class="navbar-toggle" aria-label="選單">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 頁面標題 -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">投資產品</h1>
+      <p class="page-subtitle">多元化投資選擇，配合不同風險偏好及投資目標</p>
+    </div>
+  </header>
+
+  <!-- 投資產品 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">產品類別</h2>
+        <p class="section-subtitle">豐富多樣的投資產品，滿足不同投資需要</p>
+      </div>
+      
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-icon">📈</div>
+          <h3 class="product-title">股票</h3>
+          <p class="product-desc">買賣港股、美股、A 股通，捕捉全球股市機遇。</p>
+          <ul class="product-features">
+            <li>港股交易佣金低至 0.08%</li>
+            <li>免費即時報價</li>
+            <li>網上及手機交易平台</li>
+            <li>IPO 認購服務</li>
+          </ul>
+          <a href="#" class="btn btn-primary">開始買賣</a>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-icon">💰</div>
+          <h3 class="product-title">基金</h3>
+          <p class="product-desc">超過 500 隻基金選擇，包括股票基金、債券基金、混合基金。</p>
+          <ul class="product-features">
+            <li>全球頂級基金管理人</li>
+            <li>基金轉換優惠</li>
+            <li>每月投資計劃</li>
+            <li>基金篩選工具</li>
+          </ul>
+          <a href="#" class="btn btn-primary">瀏覽基金</a>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-icon">📜</div>
+          <h3 class="product-title">債券</h3>
+          <p class="product-desc">政府債券、企業債券、點心債，穩定收益選擇。</p>
+          <ul class="product-features">
+            <li>港元及人民幣債券</li>
+            <li>投資級別企業債</li>
+            <li>政府零售債券</li>
+            <li>債券二手市場</li>
+          </ul>
+          <a href="#" class="btn btn-primary">查詢詳情</a>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-icon">🎯</div>
+          <h3 class="product-title">結構性產品</h3>
+          <p class="product-desc">股票掛鈎投資、貨幣掛鈎投資，進階投資選擇。</p>
+          <ul class="product-features">
+            <li>保本及非保本選擇</li>
+            <li>多元貨幣選擇</li>
+            <li>彈性投資期限</li>
+            <li>潛在高回報</li>
+          </ul>
+          <a href="#" class="btn btn-primary">了解詳情</a>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-icon">¥</div>
+          <h3 class="product-title">人民幣產品</h3>
+          <p class="product-desc">人民幣存款、債券、基金，把握人民幣業務機遇。</p>
+          <ul class="product-features">
+            <li>人民幣定期存款</li>
+            <li>人民幣債券</li>
+            <li>人民幣基金</li>
+            <li>貨幣兌換服務</li>
+          </ul>
+          <a href="#" class="btn btn-primary">了解詳情</a>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-icon">🏦</div>
+          <h3 class="product-title">存款產品</h3>
+          <p class="product-desc">結構性存款、掛鈎存款，賺取更高利息回報。</p>
+          <ul class="product-features">
+            <li>保本結構性存款</li>
+            <li>貨幣掛鈎存款</li>
+            <li>利率掛鈎存款</li>
+            <li>靈活投資期限</li>
+          </ul>
+          <a href="#" class="btn btn-primary">查詢詳情</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 精選產品 -->
+  <section class="featured-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">精選產品</h2>
+        <p class="section-subtitle">本月熱門投資選擇</p>
+      </div>
+      
+      <div class="featured-grid">
+        <div class="featured-card">
+          <span class="featured-badge">熱門</span>
+          <h3 class="product-title">美國國債基金</h3>
+          <p class="product-desc">投資於美國政府債券，風險較低，穩定收益。</p>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-4); margin-bottom: var(--spacing-6);">
+            <div>
+              <p style="font-size: var(--font-footnote); color: var(--gray-secondary);">參考年回報</p>
+              <p style="font-size: var(--font-title-3); font-weight: 600; color: var(--success);">4.5%</p>
+            </div>
+            <div>
+              <p style="font-size: var(--font-footnote); color: var(--gray-secondary);">最低投資額</p>
+              <p style="font-size: var(--font-title-3); font-weight: 600;">HK$1,000</p>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary">立即投資</a>
+        </div>
+        
+        <div class="featured-card">
+          <span class="featured-badge" style="background: var(--info);">新推出</span>
+          <h3 class="product-title">環球科技股票基金</h3>
+          <p class="product-desc">投資全球領先科技企業，捕捉科技發展機遇。</p>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-4); margin-bottom: var(--spacing-6);">
+            <div>
+              <p style="font-size: var(--font-footnote); color: var(--gray-secondary);">年初至今回報</p>
+              <p style="font-size: var(--font-title-3); font-weight: 600; color: var(--success);">+18.5%</p>
+            </div>
+            <div>
+              <p style="font-size: var(--font-footnote); color: var(--gray-secondary);">最低投資額</p>
+              <p style="font-size: var(--font-title-3); font-weight: 600;">HK$500</p>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary">立即投資</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 風險等級 -->
+  <section class="risk-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">產品風險等級</h2>
+        <p class="section-subtitle">了解不同產品的風險程度</p>
+      </div>
+      
+      <div class="risk-grid">
+        <div class="risk-item">
+          <div style="width: 20%; height: 8px; background: var(--success); border-radius: 4px; margin: 0 auto var(--spacing-4);"></div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">低風險</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">存款、國債</p>
+        </div>
+        
+        <div class="risk-item">
+          <div style="width: 40%; height: 8px; background: linear-gradient(to right, var(--success) 50%, var(--warning) 50%); border-radius: 4px; margin: 0 auto var(--spacing-4);"></div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">中低風險</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">債券基金</p>
+        </div>
+        
+        <div class="risk-item">
+          <div style="width: 60%; height: 8px; background: linear-gradient(to right, var(--success) 33%, var(--warning) 33%, var(--warning) 66%, var(--error) 66%); border-radius: 4px; margin: 0 auto var(--spacing-4);"></div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">中風險</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">混合基金</p>
+        </div>
+        
+        <div class="risk-item">
+          <div style="width: 80%; height: 8px; background: linear-gradient(to right, var(--success) 25%, var(--warning) 25%, var(--warning) 50%, var(--error) 50%, var(--error) 80%); border-radius: 4px; margin: 0 auto var(--spacing-4);"></div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">中高風險</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">股票基金</p>
+        </div>
+        
+        <div class="risk-item">
+          <div style="width: 100%; height: 8px; background: var(--error); border-radius: 4px; margin: 0 auto var(--spacing-4);"></div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">高風險</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">股票、衍生工具</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section-gray" style="text-align: center;">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: var(--spacing-6);">開始投資</h2>
+      <p class="section-subtitle" style="margin-bottom: var(--spacing-8);">
+        開立投資戶口，即可開始買賣各種投資產品
+      </p>
+      <div style="display: flex; gap: var(--spacing-4); justify-content: center; flex-wrap: wrap;">
+        <a href="#" class="btn btn-primary btn-large">開立投資戶口</a>
+        <a href="../consultation/" class="btn btn-secondary btn-large">預約顧問</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁尾 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 富邦銀行 (香港) 有限公司 版權所有</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商業貸款 | 富邦銀行</title>
+  <link rel="stylesheet" href="../../../css/main.css">
+  <style>
+    .page-header {
+      padding: var(--spacing-15) 0 var(--spacing-10);
+      background: linear-gradient(135deg, #1D1D1F 0%, #2D2D2F 100%);
+      color: var(--white);
+      text-align: center;
+    }
+    
+    .page-header .page-subtitle {
+      color: var(--gray-secondary);
+    }
+    
+    .loan-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-8);
+      padding: var(--spacing-12) 0;
+    }
+    
+    .loan-card {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-10);
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-normal);
+    }
+    
+    .loan-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    .loan-badge {
+      display: inline-block;
+      background: var(--fubon-orange);
+      color: var(--white);
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: var(--spacing-4);
+    }
+    
+    .loan-title {
+      font-size: var(--font-title-3);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: var(--spacing-3);
+    }
+    
+    .loan-rate {
+      font-size: 36px;
+      font-weight: var(--font-weight-bold);
+      color: var(--fubon-orange);
+      line-height: 1;
+      margin-bottom: var(--spacing-2);
+    }
+    
+    .loan-rate span {
+      font-size: var(--font-body);
+      color: var(--gray-primary);
+    }
+    
+    .loan-desc {
+      font-size: var(--font-callout);
+      color: var(--gray-primary);
+      margin-bottom: var(--spacing-6);
+    }
+    
+    .loan-features {
+      list-style: none;
+      margin-bottom: var(--spacing-8);
+    }
+    
+    .loan-features li {
+      padding: var(--spacing-2) 0;
+      font-size: var(--font-callout);
+      color: var(--gray-primary);
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-3);
+    }
+    
+    .loan-features li::before {
+      content: "✓";
+      color: var(--success);
+      font-weight: bold;
+    }
+    
+    .comparison-section {
+      background: var(--gray-quaternary);
+      padding: var(--spacing-14) 0;
+    }
+    
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+    
+    .comparison-table th,
+    .comparison-table td {
+      padding: var(--spacing-5);
+      text-align: left;
+      border-bottom: 1px solid var(--gray-tertiary);
+    }
+    
+    .comparison-table th {
+      background: var(--black);
+      color: var(--white);
+      font-weight: var(--font-weight-semibold);
+    }
+    
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    @media (max-width: 1023px) {
+      .loan-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 導航欄 -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <a href="../../../" class="navbar-logo">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="#F47920"/>
+          <text x="50" y="65" text-anchor="middle" fill="white" font-size="40" font-weight="bold">F</text>
+        </svg>
+        <span>富邦銀行</span>
+      </a>
+      
+      <div class="navbar-menu">
+        <a href="../../personal/" class="navbar-link">個人銀行</a>
+        <a href="../../commercial/" class="navbar-link" style="opacity: 1; color: var(--fubon-orange);">商業銀行</a>
+        <a href="../../wealth/" class="navbar-link">財富管理</a>
+        <a href="../../ebanking/" class="navbar-link">電子銀行</a>
+        <a href="../../about/" class="navbar-link">關於我們</a>
+      </div>
+      
+      <div class="navbar-actions">
+        <a href="#" class="btn btn-primary btn-small">商業網銀</a>
+        <button class="navbar-toggle" aria-label="選單">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 頁面標題 -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">商業貸款</h1>
+      <p class="page-subtitle">靈活多樣的貸款方案，配合您的業務發展需要</p>
+    </div>
+  </header>
+
+  <!-- 貸款產品 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">我們的貸款產品</h2>
+        <p class="section-subtitle">競爭性利率，靈活還款，快速審批</p>
+      </div>
+      
+      <div class="loan-grid">
+        <div class="loan-card">
+          <span class="loan-badge">熱門</span>
+          <h3 class="loan-title">營運資金貸款</h3>
+          <div class="loan-rate">P<sup>-0.5%**</sup></div>
+          <p class="loan-desc">支援日常營運資金需要，靈活提取及還款</p>
+          <ul class="loan-features">
+            <li>最高貸款額 HK$10,000,000</li>
+            <li>還款期長達 5 年</li>
+            <li>可循環使用信貸額</li>
+            <li>最快 3 個工作天審批</li>
+          </ul>
+          <a href="#" class="btn btn-primary">立即申請</a>
+        </div>
+        
+        <div class="loan-card">
+          <span class="loan-badge" style="background: var(--info);">新客戶</span>
+          <h3 class="loan-title">商業按揭貸款</h3>
+          <div class="loan-rate">2.95<span>%**</span></div>
+          <p class="loan-desc">購買商業物業或再融資，競爭性利率</p>
+          <ul class="loan-features">
+            <li>最高貸款額達物業估值 70%</li>
+            <li>還款期長達 25 年</li>
+            <li>可選擇港元或人民幣</li>
+            <li>免費物業估值</li>
+          </ul>
+          <a href="#" class="btn btn-primary">立即申請</a>
+        </div>
+        
+        <div class="loan-card">
+          <h3 class="loan-title">設備融資貸款</h3>
+          <div class="loan-rate">3.25<span>%**</span></div>
+          <p class="loan-desc">購買機器設備、車輛或科技升級</p>
+          <ul class="loan-features">
+            <li>融資額達設備價值 90%</li>
+            <li>還款期 1-7 年</li>
+            <li>設備本身作為抵押</li>
+            <li>稅務扣減優惠</li>
+          </ul>
+          <a href="#" class="btn btn-primary">立即申請</a>
+        </div>
+        
+        <div class="loan-card">
+          <h3 class="loan-title">進出口融資</h3>
+          <div class="loan-rate">5.5<span>%**</span></div>
+          <p class="loan-desc">支援貿易業務的短期融資需要</p>
+          <ul class="loan-features">
+            <li>信用狀融資</li>
+            <li>進出口貸款</li>
+            <li>發票融資</li>
+            <li>外匯對沖服務</li>
+          </ul>
+          <a href="#" class="btn btn-primary">立即申請</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 貸款比較 -->
+  <section class="comparison-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">貸款產品比較</h2>
+        <p class="section-subtitle">輕鬆比較不同貸款產品的特點</p>
+      </div>
+      
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>產品特點</th>
+            <th>營運資金貸款</th>
+            <th>商業按揭</th>
+            <th>設備融資</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>年利率</strong></td>
+            <td>P - 0.5%**</td>
+            <td>2.95%**</td>
+            <td>3.25%**</td>
+          </tr>
+          <tr>
+            <td><strong>最高貸款額</strong></td>
+            <td>HK$10,000,000</td>
+            <td>物業估值 70%</td>
+            <td>設備價值 90%</td>
+          </tr>
+          <tr>
+            <td><strong>還款期</strong></td>
+            <td>最長 5 年</td>
+            <td>最長 25 年</td>
+            <td>1-7 年</td>
+          </tr>
+          <tr>
+            <td><strong>審批時間</strong></td>
+            <td>3 個工作天</td>
+            <td>2-3 星期</td>
+            <td>5-7 個工作天</td>
+          </tr>
+          <tr>
+            <td><strong>抵押要求</strong></td>
+            <td>商業物業/擔保</td>
+            <td>物業按揭</td>
+            <td>設備抵押</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p style="font-size: var(--font-footnote); color: var(--gray-secondary); margin-top: var(--spacing-6);">
+        ** 實際利率及條款將根據客戶信貸狀況及市場情況而定。以上僅供參考，不構成貸款要約。
+      </p>
+    </div>
+  </section>
+
+  <!-- 申請流程 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">貸款申請流程</h2>
+        <p class="section-subtitle">簡單四步，輕鬆完成申請</p>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--spacing-6); margin-top: var(--spacing-12);">
+        <div style="text-align: center;">
+          <div style="width: 64px; height: 64px; border-radius: 50%; background: var(--fubon-orange); color: white; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; margin: 0 auto var(--spacing-5);">1</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">提交申請</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">網上或親臨分行填寫申請表格</p>
+        </div>
+        
+        <div style="text-align: center;">
+          <div style="width: 64px; height: 64px; border-radius: 50%; background: var(--fubon-orange); color: white; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; margin: 0 auto var(--spacing-5);">2</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">文件審核</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">提交公司及財務文件供審核</p>
+        </div>
+        
+        <div style="text-align: center;">
+          <div style="width: 64px; height: 64px; border-radius: 50%; background: var(--fubon-orange); color: white; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; margin: 0 auto var(--spacing-5);">3</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">信貸審批</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">專業團隊進行信貸評估</p>
+        </div>
+        
+        <div style="text-align: center;">
+          <div style="width: 64px; height: 64px; border-radius: 50%; background: var(--fubon-orange); color: white; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; margin: 0 auto var(--spacing-5);">4</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">放款</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">審批通過後快速放款</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section-gray" style="text-align: center;">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: var(--spacing-6);">需要貸款顧問協助？</h2>
+      <p class="section-subtitle" style="margin-bottom: var(--spacing-8);">
+        我們的專業團隊樂意為您提供個人化的貸款方案建議
+      </p>
+      <div style="display: flex; gap: var(--spacing-4); justify-content: center; flex-wrap: wrap;">
+        <a href="#" class="btn btn-primary btn-large">預約顧問</a>
+        <a href="tel:+85221001000" class="btn btn-secondary btn-large">致電 2100 1000</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁尾 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 富邦銀行 (香港) 有限公司 版權所有</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>事業機會 | 富邦銀行</title>
+  <link rel="stylesheet" href="../../../css/main.css">
+  <style>
+    .page-header {
+      padding: var(--spacing-15) 0 var(--spacing-10);
+      background: linear-gradient(135deg, #34C759 0%, #30D158 100%);
+      color: var(--white);
+      text-align: center;
+    }
+    
+    .page-header .page-subtitle {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .benefits-section {
+      padding: var(--spacing-14) 0;
+      background: var(--gray-quaternary);
+    }
+    
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--spacing-8);
+      margin-top: var(--spacing-12);
+    }
+    
+    .benefit-card {
+      text-align: center;
+      padding: var(--spacing-8);
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .benefit-icon {
+      font-size: 48px;
+      margin-bottom: var(--spacing-5);
+    }
+    
+    .jobs-section {
+      padding: var(--spacing-14) 0;
+    }
+    
+    .job-list {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .job-card {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-8);
+      box-shadow: var(--shadow-md);
+      margin-bottom: var(--spacing-6);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: var(--spacing-6);
+      align-items: center;
+    }
+    
+    .job-title {
+      font-size: var(--font-title-3);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: var(--spacing-2);
+    }
+    
+    .job-info {
+      font-size: var(--font-callout);
+      color: var(--gray-primary);
+    }
+    
+    .job-tags {
+      display: flex;
+      gap: var(--spacing-2);
+      margin-top: var(--spacing-4);
+    }
+    
+    .job-tag {
+      background: var(--gray-light);
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      font-size: 12px;
+      color: var(--gray-primary);
+    }
+    
+    @media (max-width: 1023px) {
+      .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .job-card {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media (max-width: 734px) {
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 導航欄 -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <a href="../../../" class="navbar-logo">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="#F47920"/>
+          <text x="50" y="65" text-anchor="middle" fill="white" font-size="40" font-weight="bold">F</text>
+        </svg>
+        <span>富邦銀行</span>
+      </a>
+      
+      <div class="navbar-menu">
+        <a href="../../personal/" class="navbar-link">個人銀行</a>
+        <a href="../../commercial/" class="navbar-link">商業銀行</a>
+        <a href="../../wealth/" class="navbar-link">財富管理</a>
+        <a href="../../ebanking/" class="navbar-link">電子銀行</a>
+        <a href="../../about/" class="navbar-link" style="opacity: 1; color: var(--fubon-orange);">關於我們</a>
+      </div>
+      
+      <div class="navbar-actions">
+        <a href="#" class="btn btn-primary btn-small">網上銀行</a>
+        <button class="navbar-toggle" aria-label="選單">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 頁面標題 -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">事業機會</h1>
+      <p class="page-subtitle">加入富邦銀行，與我們一起創造卓越</p>
+    </div>
+  </header>
+
+  <!-- 員工福利 -->
+  <section class="benefits-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">為甚麼選擇富邦</h2>
+        <p class="section-subtitle">我們為員工提供全面的福利及發展機會</p>
+      </div>
+      
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">💰</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">具競爭力薪酬</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">
+            提供市場領先的薪金及花紅制度
+          </p>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="benefit-icon">🏥</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">醫療保障</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">
+            全面醫療及牙科保險計劃
+          </p>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="benefit-icon">📚</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">培訓發展</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">
+            完善的培訓體系及進修資助
+          </p>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="benefit-icon">🏖️</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">工作生活平衡</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">
+            彈性工作安排及充足假期
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 職位空缺 -->
+  <section class="jobs-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">現時職位空缺</h2>
+        <p class="section-subtitle">尋找您的理想職位</p>
+      </div>
+      
+      <div class="job-list">
+        <div class="job-card">
+          <div>
+            <h3 class="job-title">財富管理顧問</h3>
+            <p class="job-info">
+              <strong>部門：</strong>財富管理部 | <strong>地點：</strong>中環總行
+            </p>
+            <div class="job-tags">
+              <span class="job-tag">全職</span>
+              <span class="job-tag">經驗不限</span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary">申請職位</a>
+        </div>
+        
+        <div class="job-card">
+          <div>
+            <h3 class="job-title">商業銀行主任</h3>
+            <p class="job-info">
+              <strong>部門：</strong>商業銀行部 | <strong>地點：</strong>尖沙咀分行
+            </p>
+            <div class="job-tags">
+              <span class="job-tag">全職</span>
+              <span class="job-tag">3 年經驗</span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary">申請職位</a>
+        </div>
+        
+        <div class="job-card">
+          <div>
+            <h3 class="job-title">客戶服務主任</h3>
+            <p class="job-info">
+              <strong>部門：</strong>客戶服務部 | <strong>地點：</strong>銅鑼灣分行
+            </p>
+            <div class="job-tags">
+              <span class="job-tag">全職</span>
+              <span class="job-tag">應屆畢業生</span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary">申請職位</a>
+        </div>
+        
+        <div class="job-card">
+          <div>
+            <h3 class="job-title">資訊科技工程師</h3>
+            <p class="job-info">
+              <strong>部門：</strong>資訊科技部 | <strong>地點：</strong>中環總行
+            </p>
+            <div class="job-tags">
+              <span class="job-tag">全職</span>
+              <span class="job-tag">5 年經驗</span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary">申請職位</a>
+        </div>
+        
+        <div class="job-card">
+          <div>
+            <h3 class="job-title">風險管理分析師</h3>
+            <p class="job-info">
+              <strong>部門：</strong>風險管理部 | <strong>地點：</strong>中環總行
+            </p>
+            <div class="job-tags">
+              <span class="job-tag">全職</span>
+              <span class="job-tag">2 年經驗</span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary">申請職位</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section-gray" style="text-align: center;">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: var(--spacing-6);">未找到合適職位？</h2>
+      <p class="section-subtitle" style="margin-bottom: var(--spacing-8);">
+        歡迎您遞交履歷，我們會將您的資料存入人才庫
+      </p>
+      <a href="#" class="btn btn-primary btn-large">遞交履歷</a>
+    </div>
+  </section>
+
+  <!-- 頁尾 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 富邦銀行 (香港) 有限公司 版權所有</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../../js/main.js"></script>
+</body>
+</html>

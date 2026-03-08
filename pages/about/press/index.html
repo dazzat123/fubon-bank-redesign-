@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新聞稿 | 富邦銀行</title>
+  <link rel="stylesheet" href="../../../css/main.css">
+  <style>
+    .page-header {
+      padding: var(--spacing-15) 0 var(--spacing-10);
+      background: linear-gradient(135deg, #5856D6 0%, #AF52DE 100%);
+      color: var(--white);
+      text-align: center;
+    }
+    
+    .page-header .page-subtitle {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-8);
+      padding: var(--spacing-12) 0;
+    }
+    
+    .news-card {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-8);
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-normal);
+      text-decoration: none;
+      color: var(--black);
+      display: block;
+    }
+    
+    .news-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    .news-date {
+      font-size: var(--font-footnote);
+      color: var(--gray-secondary);
+      margin-bottom: var(--spacing-3);
+    }
+    
+    .news-title {
+      font-size: var(--font-title-3);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: var(--spacing-3);
+      line-height: 1.4;
+    }
+    
+    .news-excerpt {
+      font-size: var(--font-callout);
+      color: var(--gray-primary);
+      margin-bottom: var(--spacing-5);
+      line-height: 1.6;
+    }
+    
+    .news-category {
+      display: inline-block;
+      background: var(--fubon-orange);
+      color: var(--white);
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      font-size: 12px;
+      font-weight: 600;
+    }
+    
+    .media-section {
+      background: var(--gray-quaternary);
+      padding: var(--spacing-14) 0;
+    }
+    
+    @media (max-width: 1023px) {
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 導航欄 -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <a href="../../../" class="navbar-logo">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="#F47920"/>
+          <text x="50" y="65" text-anchor="middle" fill="white" font-size="40" font-weight="bold">F</text>
+        </svg>
+        <span>富邦銀行</span>
+      </a>
+      
+      <div class="navbar-menu">
+        <a href="../../personal/" class="navbar-link">個人銀行</a>
+        <a href="../../commercial/" class="navbar-link">商業銀行</a>
+        <a href="../../wealth/" class="navbar-link">財富管理</a>
+        <a href="../../ebanking/" class="navbar-link">電子銀行</a>
+        <a href="../../about/" class="navbar-link" style="opacity: 1; color: var(--fubon-orange);">關於我們</a>
+      </div>
+      
+      <div class="navbar-actions">
+        <a href="#" class="btn btn-primary btn-small">網上銀行</a>
+        <button class="navbar-toggle" aria-label="選單">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 頁面標題 -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">新聞稿</h1>
+      <p class="page-subtitle">最新銀行動態及媒體資訊</p>
+    </div>
+  </header>
+
+  <!-- 新聞列表 -->
+  <section class="section">
+    <div class="container">
+      <div class="news-grid">
+        <a href="#" class="news-card">
+          <div class="news-date">2026 年 3 月 5 日</div>
+          <h3 class="news-title">富邦銀行推出全新手機銀行 5.0 版本</h3>
+          <p class="news-excerpt">
+            全新版本採用 Apple 設計風格，提供更流暢的用戶體驗及創新功能...
+          </p>
+          <span class="news-category">產品發布</span>
+        </a>
+        
+        <a href="#" class="news-card">
+          <div class="news-date">2026 年 2 月 28 日</div>
+          <h3 class="news-title">富邦銀行 2025 年全年業績增長強勁</h3>
+          <p class="news-excerpt">
+            稅後利潤按年上升 15%，財富管理業務表現突出...
+          </p>
+          <span class="news-category">財務業績</span>
+        </a>
+        
+        <a href="#" class="news-card">
+          <div class="news-date">2026 年 2 月 15 日</div>
+          <h3 class="news-title">富邦銀行榮獲「最佳中小企銀行」大獎</h3>
+          <p class="news-excerpt">
+            連續第三年獲此殊榮，表彰我們對中小企服務的承諾...
+          </p>
+          <span class="news-category">獎項榮譽</span>
+        </a>
+        
+        <a href="#" class="news-card">
+          <div class="news-date">2026 年 1 月 20 日</div>
+          <h3 class="news-title">富邦銀行擴大分支行網絡 觀塘新分行開幕</h3>
+          <p class="news-excerpt">
+            新分行位於創紀之城，為東九龍客戶提供更便捷服務...
+          </p>
+          <span class="news-category">業務擴展</span>
+        </a>
+        
+        <a href="#" class="news-card">
+          <div class="news-date">2026 年 1 月 10 日</div>
+          <h3 class="news-title">富邦銀行推出綠色金融計劃</h3>
+          <p class="news-excerpt">
+            承諾於 2030 年前提供 HK$100 億綠色信貸，支持可持續發展...
+          </p>
+          <span class="news-category">企業責任</span>
+        </a>
+        
+        <a href="#" class="news-card">
+          <div class="news-date">2025 年 12 月 18 日</div>
+          <h3 class="news-title">富邦銀行與科技公司合作 推出創新支付方案</h3>
+          <p class="news-excerpt">
+            整合多種電子錢包，為商戶提供一站式收款解決方案...
+          </p>
+          <span class="news-category">合作夥伴</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 媒體查詢 -->
+  <section class="media-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">媒體查詢</h2>
+        <p class="section-subtitle">歡迎傳媒朋友聯絡我們</p>
+      </div>
+      
+      <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+        <p style="font-size: var(--font-callout); color: var(--gray-primary); margin-bottom: var(--spacing-8);">
+          如需更多資料或安排採訪，請聯絡我們的企業傳訊部
+        </p>
+        <div style="display: flex; gap: var(--spacing-4); justify-content: center; flex-wrap: wrap;">
+          <a href="mailto:pr@fubonbank.com.hk" class="btn btn-primary btn-large">電郵聯絡我們</a>
+          <a href="tel:+85221001000" class="btn btn-secondary btn-large">致電 2100 1000</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁尾 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 富邦銀行 (香港) 有限公司 版權所有</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>市場資訊 | 富邦銀行</title>
+  <link rel="stylesheet" href="../../../css/main.css">
+  <style>
+    .page-header { padding: var(--spacing-15) 0 var(--spacing-10); background: linear-gradient(135deg, #007AFF 0%, #5AC8FA 100%); color: var(--white); text-align: center; }
+    .page-header .page-subtitle { color: rgba(255, 255, 255, 0.9); }
+    .market-page { max-width: 1200px; margin: 0 auto; padding: var(--spacing-12) 0; }
+    .market-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-8); margin-bottom: var(--spacing-12); }
+    .market-card { background: var(--white); border-radius: var(--radius-2xl); padding: var(--spacing-8); box-shadow: var(--shadow-md); }
+    .market-card h3 { font-size: var(--font-title-3); margin-bottom: var(--spacing-6); padding-bottom: var(--spacing-4); border-bottom: 2px solid var(--fubon-orange); }
+    .market-table { width: 100%; border-collapse: collapse; }
+    .market-table th, .market-table td { padding: var(--spacing-3); text-align: left; border-bottom: 1px solid var(--gray-tertiary); }
+    .market-table th { color: var(--gray-primary); font-weight: var(--font-weight-medium); }
+    .positive { color: var(--success); }
+    .negative { color: var(--error); }
+    .cta-section { background: linear-gradient(135deg, #007AFF 0%, #5AC8FA 100%); padding: var(--spacing-14) 0; text-align: center; color: var(--white); }
+    @media (max-width: 734px) { .market-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <nav class="navbar"><div class="navbar-content"><a href="../../../" class="navbar-logo"><svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="48" fill="#F47920"/><text x="50" y="65" text-anchor="middle" fill="white" font-size="40" font-weight="bold">F</text></svg><span>富邦銀行</span></a><div class="navbar-menu"><a href="../../personal/" class="navbar-link" style="opacity: 1; color: var(--fubon-orange);">個人銀行</a><a href="../../commercial/" class="navbar-link">商業銀行</a><a href="../../wealth/" class="navbar-link">財富管理</a><a href="../../ebanking/" class="navbar-link">電子銀行</a><a href="../../about/" class="navbar-link">關於我們</a></div><div class="navbar-actions"><a href="#" class="btn btn-primary btn-small">網上銀行</a><button class="navbar-toggle" aria-label="選單"><span></span><span></span><span></span></button></div></div></nav>
+  <header class="page-header"><div class="container"><h1 class="page-title">市場資訊</h1><p class="page-subtitle">即時市場數據及投資資訊</p></div></header>
+  <section class="market-page">
+    <div class="market-grid">
+      <div class="market-card"><h3>🇭🇰 港股指數</h3><table class="market-table"><tr><th>指數</th><th>現價</th><th>升跌</th></tr><tr><td>恒生指數</td><td>18,245</td><td class="positive">+125 (+0.69%)</td></tr><tr><td>國企指數</td><td>6,420</td><td class="positive">+45 (+0.71%)</td></tr><tr><td>科指</td><td>4,125</td><td class="negative">-18 (-0.43%)</td></tr></table></div>
+      <div class="market-card"><h3>🇺🇸 美股指數</h3><table class="market-table"><tr><th>指數</th><th>現價</th><th>升跌</th></tr><tr><td>道瓊斯</td><td>38,520</td><td class="positive">+215 (+0.56%)</td></tr><tr><td>標普 500</td><td>5,125</td><td class="positive">+32 (+0.63%)</td></tr><tr><td>納斯達克</td><td>16,240</td><td class="positive">+125 (+0.78%)</td></tr></table></div>
+      <div class="market-card"><h3>💱 外匯匯率</h3><table class="market-table"><tr><th>貨幣對</th><th>匯率</th><th>升跌</th></tr><tr><td>USD/HKD</td><td>7.8250</td><td>+0.0015</td></tr><tr><td>EUR/USD</td><td>1.0850</td><td class="positive">+0.0025</td></tr><tr><td>GBP/USD</td><td>1.2650</td><td class="negative">-0.0018</td></tr></table></div>
+      <div class="market-card"><h3>🥇 商品價格</h3><table class="market-table"><tr><th>商品</th><th>現價</th><th>升跌</th></tr><tr><td>黃金</td><td>US$2,185/盎司</td><td class="positive">+12 (+0.55%)</td></tr><tr><td>原油 (WTI)</td><td>US$78.50/桶</td><td class="negative">-0.85 (-1.07%)</td></tr><tr><td>白銀</td><td>US$24.80/盎司</td><td class="positive">+0.35 (+1.43%)</td></tr></table></div>
+    </div>
+  </section>
+  <section class="cta-section"><div class="container"><h2 class="section-title" style="margin-bottom: var(--spacing-6);">需要更多市場資訊？</h2><p class="section-subtitle" style="margin-bottom: var(--spacing-8); color: rgba(255,255,255,0.9);">訂閱我們的市場快訊，獲取最新投資資訊</p><div style="display: flex; gap: var(--spacing-4); justify-content: center; flex-wrap: wrap;"><a href="#" class="btn btn-primary btn-large">訂閱快訊</a><a href="tel:+85221001000" class="btn btn-secondary btn-large" style="background: rgba(255,255,255,0.2);">致電 2100 1000</a></div></div></section>
+  <footer class="footer"><div class="container"><div class="footer-bottom"><p class="footer-copyright">© 2026 富邦銀行 (香港) 有限公司 版權所有</p></div></div></footer>
+  <script src="../../../js/main.js"></script>
+</body>
+</html>

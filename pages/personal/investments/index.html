@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>投資服務 | 富邦銀行</title>
+  <link rel="stylesheet" href="../../../css/main.css">
+  <style>
+    .page-header {
+      padding: var(--spacing-15) 0 var(--spacing-10);
+      background: linear-gradient(135deg, #007AFF 0%, #5AC8FA 100%);
+      color: var(--white);
+      text-align: center;
+    }
+    
+    .page-header .page-subtitle {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-8);
+      padding: var(--spacing-12) 0;
+    }
+    
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-10);
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-normal);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    .service-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, #007AFF 0%, #5AC8FA 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      margin-bottom: var(--spacing-6);
+    }
+    
+    .service-title {
+      font-size: var(--font-title-3);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: var(--spacing-3);
+    }
+    
+    .service-desc {
+      font-size: var(--font-callout);
+      color: var(--gray-primary);
+      margin-bottom: var(--spacing-6);
+    }
+    
+    .platform-section {
+      background: var(--gray-quaternary);
+      padding: var(--spacing-14) 0;
+    }
+    
+    @media (max-width: 1023px) {
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 734px) {
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 導航欄 -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <a href="../../../" class="navbar-logo">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="#F47920"/>
+          <text x="50" y="65" text-anchor="middle" fill="white" font-size="40" font-weight="bold">F</text>
+        </svg>
+        <span>富邦銀行</span>
+      </a>
+      
+      <div class="navbar-menu">
+        <a href="../../personal/" class="navbar-link" style="opacity: 1; color: var(--fubon-orange);">個人銀行</a>
+        <a href="../../commercial/" class="navbar-link">商業銀行</a>
+        <a href="../../wealth/" class="navbar-link">財富管理</a>
+        <a href="../../ebanking/" class="navbar-link">電子銀行</a>
+        <a href="../../about/" class="navbar-link">關於我們</a>
+      </div>
+      
+      <div class="navbar-actions">
+        <a href="#" class="btn btn-primary btn-small">網上銀行</a>
+        <button class="navbar-toggle" aria-label="選單">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 頁面標題 -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">投資服務</h1>
+      <p class="page-subtitle">多元化投資產品，專業顧問服務</p>
+    </div>
+  </header>
+
+  <!-- 投資服務 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">投資產品</h2>
+        <p class="section-subtitle">配合不同風險偏好及投資目標</p>
+      </div>
+      
+      <div class="service-grid">
+        <div class="service-card">
+          <div class="service-icon">📈</div>
+          <h3 class="service-title">股票買賣</h3>
+          <p class="service-desc">買賣港股、美股、A 股通</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 佣金低至 0.08%</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 免費即時報價</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 網上交易平台</li>
+          </ul>
+          <a href="#" class="btn btn-primary">開始買賣</a>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">💰</div>
+          <h3 class="service-title">基金投資</h3>
+          <p class="service-desc">超過 500 隻基金選擇</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 全球頂級基金</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 每月投資計劃</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 基金轉換優惠</li>
+          </ul>
+          <a href="#" class="btn btn-primary">瀏覽基金</a>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">📜</div>
+          <h3 class="service-title">債券投資</h3>
+          <p class="service-desc">政府及企業債券</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 港元及人民幣</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 穩定收益</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 投資級別</li>
+          </ul>
+          <a href="#" class="btn btn-primary">查詢詳情</a>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">🎯</div>
+          <h3 class="service-title">結構性產品</h3>
+          <p class="service-desc">股票及貨幣掛鈎投資</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 保本選擇</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 彈性期限</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 潛在高回報</li>
+          </ul>
+          <a href="#" class="btn btn-primary">了解詳情</a>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">💱</div>
+          <h3 class="service-title">外匯投資</h3>
+          <p class="service-desc">外幣兌換及投資</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 多種貨幣</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓  competitve 匯率</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 遠期外匯</li>
+          </ul>
+          <a href="#" class="btn btn-primary">兌換外幣</a>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">👨‍💼</div>
+          <h3 class="service-title">投資顧問</h3>
+          <p class="service-desc">專業投資建議及組合管理</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 個人化建議</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 組合檢視</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 市場分析</li>
+          </ul>
+          <a href="#" class="btn btn-primary">預約顧問</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 投資平台 -->
+  <section class="platform-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">投資交易平台</h2>
+        <p class="section-subtitle">隨時隨地管理您的投資組合</p>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-8); margin-top: var(--spacing-12);">
+        <div style="text-align: center; padding: var(--spacing-8); background: var(--white); border-radius: var(--radius-2xl); box-shadow: var(--shadow-md);">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-5);">💻</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">網上交易平台</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">
+            功能齊全的網頁版交易平台
+          </p>
+        </div>
+        
+        <div style="text-align: center; padding: var(--spacing-8); background: var(--white); border-radius: var(--radius-2xl); box-shadow: var(--shadow-md);">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-5);">📱</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">手機應用程式</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">
+            隨時隨地買賣股票及基金
+          </p>
+        </div>
+        
+        <div style="text-align: center; padding: var(--spacing-8); background: var(--white); border-radius: var(--radius-2xl); box-shadow: var(--shadow-md);">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-5);">📊</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">市場資訊</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">
+            即時報價及市場新聞
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="text-align: center;">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: var(--spacing-6);">開始投資</h2>
+      <p class="section-subtitle" style="margin-bottom: var(--spacing-8);">
+        開立投資戶口，即可開始買賣各種投資產品
+      </p>
+      <div style="display: flex; gap: var(--spacing-4); justify-content: center; flex-wrap: wrap;">
+        <a href="#" class="btn btn-primary btn-large">開立投資戶口</a>
+        <a href="#" class="btn btn-secondary btn-large">預約顧問</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁尾 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 富邦銀行 (香港) 有限公司 版權所有</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../../js/main.js"></script>
+</body>
+</html>

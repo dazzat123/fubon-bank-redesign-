@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>中小企服務 | 富邦銀行</title>
+  <link rel="stylesheet" href="../../../css/main.css">
+  <style>
+    .page-header {
+      padding: var(--spacing-15) 0 var(--spacing-10);
+      background: linear-gradient(135deg, #F47920 0%, #FF6B35 100%);
+      color: var(--white);
+      text-align: center;
+    }
+    
+    .page-header .page-subtitle {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-8);
+      padding: var(--spacing-12) 0;
+    }
+    
+    .program-card {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-10);
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-normal);
+      border-left: 4px solid var(--fubon-orange);
+    }
+    
+    .program-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    .program-badge {
+      display: inline-block;
+      background: var(--fubon-orange);
+      color: var(--white);
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: var(--spacing-4);
+    }
+    
+    .program-title {
+      font-size: var(--font-title-3);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: var(--spacing-3);
+    }
+    
+    .program-desc {
+      font-size: var(--font-callout);
+      color: var(--gray-primary);
+      margin-bottom: var(--spacing-6);
+    }
+    
+    .program-features {
+      list-style: none;
+      margin-bottom: var(--spacing-8);
+    }
+    
+    .program-features li {
+      padding: var(--spacing-2) 0;
+      font-size: var(--font-callout);
+      color: var(--gray-primary);
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-3);
+    }
+    
+    .program-features li::before {
+      content: "✓";
+      color: var(--success);
+      font-weight: bold;
+    }
+    
+    .gov-section {
+      background: var(--gray-quaternary);
+      padding: var(--spacing-14) 0;
+    }
+    
+    .gov-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-8);
+      margin-top: var(--spacing-12);
+    }
+    
+    .gov-card {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-8);
+      text-align: center;
+      box-shadow: var(--shadow-md);
+    }
+    
+    .gov-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto var(--spacing-5);
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, #5856D6 0%, #AF52DE 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+    }
+    
+    .support-section {
+      background: var(--black);
+      color: var(--white);
+      padding: var(--spacing-14) 0;
+    }
+    
+    .support-section .section-subtitle {
+      color: var(--gray-secondary);
+    }
+    
+    @media (max-width: 1023px) {
+      .program-grid,
+      .gov-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 導航欄 -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <a href="../../../" class="navbar-logo">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="#F47920"/>
+          <text x="50" y="65" text-anchor="middle" fill="white" font-size="40" font-weight="bold">F</text>
+        </svg>
+        <span>富邦銀行</span>
+      </a>
+      
+      <div class="navbar-menu">
+        <a href="../../personal/" class="navbar-link">個人銀行</a>
+        <a href="../../commercial/" class="navbar-link" style="opacity: 1; color: var(--fubon-orange);">商業銀行</a>
+        <a href="../../wealth/" class="navbar-link">財富管理</a>
+        <a href="../../ebanking/" class="navbar-link">電子銀行</a>
+        <a href="../../about/" class="navbar-link">關於我們</a>
+      </div>
+      
+      <div class="navbar-actions">
+        <a href="#" class="btn btn-primary btn-small">商業網銀</a>
+        <button class="navbar-toggle" aria-label="選單">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 頁面標題 -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">中小企服務</h1>
+      <p class="page-subtitle">專為中小企業設計的綜合金融方案，助力業務成長</p>
+    </div>
+  </header>
+
+  <!-- 融資計劃 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">中小企融資計劃</h2>
+        <p class="section-subtitle">政府擔保，低息貸款，支援企業發展</p>
+      </div>
+      
+      <div class="program-grid">
+        <div class="program-card">
+          <span class="program-badge">熱門</span>
+          <h3 class="program-title">中小企融資擔保計劃 (SFGS)</h3>
+          <p class="program-desc">政府擔保，協助中小企業向參與貸款機構申請貸款，用於營運資金及長期貸款。</p>
+          <ul class="program-features">
+            <li>最高擔保比率 80%</li>
+            <li>營運資金貸款：最高 HK$6,000,000</li>
+            <li>長期貸款：最高 HK$12,000,000</li>
+            <li>還款期長達 8 年</li>
+            <li>特惠擔保費率</li>
+          </ul>
+          <a href="#" class="btn btn-primary">立即申請</a>
+        </div>
+        
+        <div class="program-card">
+          <span class="program-badge" style="background: var(--info);">新</span>
+          <h3 class="program-title">BUD 專項基金貸款</h3>
+          <p class="program-desc">配合政府「發展品牌、升級轉型及拓展內銷」專項基金，提供配套貸款服務。</p>
+          <ul class="program-features">
+            <li>配合 BUD 基金資助項目</li>
+            <li>最高貸款額 HK$3,000,000</li>
+            <li>優惠利率</li>
+            <li>還款期長達 5 年</li>
+            <li>快速審批</li>
+          </ul>
+          <a href="#" class="btn btn-primary">了解詳情</a>
+        </div>
+        
+        <div class="program-card">
+          <h3 class="program-title">科技企業貸款</h3>
+          <p class="program-desc">專為科技初設企業及創新企業設計，無需傳統抵押，快速審批。</p>
+          <ul class="program-features">
+            <li>無需物業抵押</li>
+            <li>最高貸款額 HK$5,000,000</li>
+            <li>以知識產權/合約作擔保</li>
+            <li>還款期 1-5 年</li>
+            <li>彈性還款安排</li>
+          </ul>
+          <a href="#" class="btn btn-primary">立即申請</a>
+        </div>
+        
+        <div class="program-card">
+          <h3 class="program-title">應收賬款融資</h3>
+          <p class="program-desc">以應收賬款作抵押，提前獲取資金，改善現金流。</p>
+          <ul class="program-features">
+            <li>融資額達應收賬款 80%</li>
+            <li>循環信貸額</li>
+            <li>按實際使用金額計息</li>
+            <li>靈活提取及還款</li>
+            <li>賬款管理服務</li>
+          </ul>
+          <a href="#" class="btn btn-primary">了解詳情</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 政府資助計劃 -->
+  <section class="gov-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">政府資助計劃</h2>
+        <p class="section-subtitle">了解政府各項中小企業資助計劃</p>
+      </div>
+      
+      <div class="gov-grid">
+        <div class="gov-card">
+          <div class="gov-icon">📋</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">SFGS</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary); margin-bottom: var(--spacing-4);">
+            中小企融資擔保計劃
+          </p>
+          <a href="#" class="btn-link">了解詳情 ›</a>
+        </div>
+        
+        <div class="gov-card">
+          <div class="gov-icon">🚀</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">BUD Fund</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary); margin-bottom: var(--spacing-4);">
+            發展品牌、升級轉型及拓展內銷
+          </p>
+          <a href="#" class="btn-link">了解詳情 ›</a>
+        </div>
+        
+        <div class="gov-card">
+          <div class="gov-icon">💻</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">DTS</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary); margin-bottom: var(--spacing-4);">
+            科技券計劃
+          </p>
+          <a href="#" class="btn-link">了解詳情 ›</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 增值服務 -->
+  <section class="support-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" style="color: white;">中小企增值服務</h2>
+        <p class="section-subtitle">除了融資，我們更提供全方位的業務支援</p>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--spacing-8); margin-top: var(--spacing-12);">
+        <div style="text-align: center;">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-5);">📊</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">財務顧問</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-secondary);">專業財務分析及建議</p>
+        </div>
+        
+        <div style="text-align: center;">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-5);">📚</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">培訓課程</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-secondary);">免費商業培訓及工作坊</p>
+        </div>
+        
+        <div style="text-align: center;">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-5);">🤝</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">商配服務</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-secondary);">配對商業合作機會</p>
+        </div>
+        
+        <div style="text-align: center;">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-5);">📱</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">數位工具</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-secondary);">免費會計及發票軟體</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 申請資格 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">申請資格</h2>
+        <p class="section-subtitle">符合以下條件的中小企業均可申請</p>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-8); margin-top: var(--spacing-12);">
+        <div style="padding: var(--spacing-8); background: var(--gray-light); border-radius: var(--radius-xl);">
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-4);">🏢 企業類型</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">
+            在香港登記的非上市公司，包括獨資、合夥或有限公司
+          </p>
+        </div>
+        
+        <div style="padding: var(--spacing-8); background: var(--gray-light); border-radius: var(--radius-xl);">
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-4);">👥 僱員人數</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">
+            製造業：不超過 100 人<br/>
+            非製造業：不超過 50 人
+          </p>
+        </div>
+        
+        <div style="padding: var(--spacing-8); background: var(--gray-light); border-radius: var(--radius-xl);">
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-4);">📈 資產規模</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">
+            資產總額不超過 HK$50,000,000
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section-gray" style="text-align: center;">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: var(--spacing-6);">需要中小企融資協助？</h2>
+      <p class="section-subtitle" style="margin-bottom: var(--spacing-8);">
+        我們的中小企服務團隊樂意為您提供免費諮詢及申請協助
+      </p>
+      <div style="display: flex; gap: var(--spacing-4); justify-content: center; flex-wrap: wrap;">
+        <a href="#" class="btn btn-primary btn-large">預約諮詢</a>
+        <a href="tel:+85221001000" class="btn btn-secondary btn-large">致電 2100 1000</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁尾 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 富邦銀行 (香港) 有限公司 版權所有</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../../js/main.js"></script>
+</body>
+</html>

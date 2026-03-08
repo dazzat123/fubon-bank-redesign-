@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>財富規劃 | 富邦銀行</title>
+  <link rel="stylesheet" href="../../../css/main.css">
+  <style>
+    .page-header {
+      padding: var(--spacing-15) 0 var(--spacing-10);
+      background: linear-gradient(135deg, #8E8E93 0%, #636366 100%);
+      color: var(--white);
+      text-align: center;
+    }
+    
+    .page-header .page-subtitle {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .process-section {
+      padding: var(--spacing-14) 0;
+    }
+    
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: var(--spacing-4);
+      margin-top: var(--spacing-12);
+    }
+    
+    .process-step {
+      text-align: center;
+      padding: var(--spacing-6);
+      position: relative;
+    }
+    
+    .process-step::after {
+      content: "→";
+      position: absolute;
+      right: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      color: var(--gray-tertiary);
+    }
+    
+    .process-step:last-child::after {
+      display: none;
+    }
+    
+    .process-number {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #8E8E93 0%, #636366 100%);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 20px;
+      margin: 0 auto var(--spacing-4);
+    }
+    
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-8);
+      padding: var(--spacing-12) 0;
+    }
+    
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-10);
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-normal);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    .service-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, #8E8E93 0%, #636366 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      margin-bottom: var(--spacing-6);
+    }
+    
+    .tools-section {
+      background: var(--gray-quaternary);
+      padding: var(--spacing-14) 0;
+    }
+    
+    .tool-card {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-8);
+      box-shadow: var(--shadow-md);
+      text-align: center;
+    }
+    
+    @media (max-width: 1023px) {
+      .process-steps,
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .process-step::after {
+        display: none;
+      }
+    }
+    
+    @media (max-width: 734px) {
+      .process-steps,
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 導航欄 -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <a href="../../../" class="navbar-logo">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="#F47920"/>
+          <text x="50" y="65" text-anchor="middle" fill="white" font-size="40" font-weight="bold">F</text>
+        </svg>
+        <span>富邦銀行</span>
+      </a>
+      
+      <div class="navbar-menu">
+        <a href="../../personal/" class="navbar-link">個人銀行</a>
+        <a href="../../commercial/" class="navbar-link">商業銀行</a>
+        <a href="../../wealth/" class="navbar-link" style="opacity: 1; color: var(--fubon-orange);">財富管理</a>
+        <a href="../../ebanking/" class="navbar-link">電子銀行</a>
+        <a href="../../about/" class="navbar-link">關於我們</a>
+      </div>
+      
+      <div class="navbar-actions">
+        <a href="#" class="btn btn-primary btn-small">登入</a>
+        <button class="navbar-toggle" aria-label="選單">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 頁面標題 -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">財富規劃</h1>
+      <p class="page-subtitle">專業理財顧問，助您達成人生每一個財務目標</p>
+    </div>
+  </header>
+
+  <!-- 規劃流程 -->
+  <section class="process-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">財富規劃流程</h2>
+        <p class="section-subtitle">五步驟，打造您的個人化財富藍圖</p>
+      </div>
+      
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="process-number">1</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">了解需要</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">分析您的財務狀況及目標</p>
+        </div>
+        
+        <div class="process-step">
+          <div class="process-number">2</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">風險評估</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">評估您的風險承受能力</p>
+        </div>
+        
+        <div class="process-step">
+          <div class="process-number">3</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">制定策略</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">設計個人化投資組合</p>
+        </div>
+        
+        <div class="process-step">
+          <div class="process-number">4</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">執行計劃</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">落實投資及保險配置</p>
+        </div>
+        
+        <div class="process-step">
+          <div class="process-number">5</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">定期檢視</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">按時檢討及調整策略</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 規劃服務 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">財富規劃服務</h2>
+        <p class="section-subtitle">全方位的理財規劃，涵蓋人生各階段需要</p>
+      </div>
+      
+      <div class="service-grid">
+        <div class="service-card">
+          <div class="service-icon">🎯</div>
+          <h3 class="service-title">退休規劃</h3>
+          <p class="service-desc">計算退休資金需要，制定儲蓄及投資策略，確保退休生活優悠。</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 退休資金計算</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 強積金整合建議</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 退休收入策略</li>
+          </ul>
+          <a href="#" class="btn btn-primary">開始規劃</a>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">🎓</div>
+          <h3 class="service-title">教育基金</h3>
+          <p class="service-desc">為子女教育預早準備，累積充足教育經費。</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 教育費用估算</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 長期儲蓄計劃</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 教育保險方案</li>
+          </ul>
+          <a href="#" class="btn btn-primary">開始規劃</a>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">🏠</div>
+          <h3 class="service-title">置業規劃</h3>
+          <p class="service-desc">籌劃置業資金，分析按揭方案，實現安居夢想。</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 置業預算分析</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 按揭方案比較</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 稅務優惠建議</li>
+          </ul>
+          <a href="#" class="btn btn-primary">開始規劃</a>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">🛡️</div>
+          <h3 class="service-title">風險管理</h3>
+          <p class="service-desc">全面保障分析，配置適當保險，守護財富安全。</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 保障缺口分析</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 保險產品配置</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 遺產規劃建議</li>
+          </ul>
+          <a href="#" class="btn btn-primary">開始規劃</a>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">💼</div>
+          <h3 class="service-title">投資規劃</h3>
+          <p class="service-desc">根據風險偏好及目標，設計多元化投資組合。</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 投資目標設定</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 資產配置建議</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 產品選擇指導</li>
+          </ul>
+          <a href="#" class="btn btn-primary">開始規劃</a>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">👨‍👩‍👧</div>
+          <h3 class="service-title">傳承規劃</h3>
+          <p class="service-desc">財富傳承安排，確保資產順利轉移下一代。</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 遺產規劃諮詢</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 信託服務介紹</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 稅務規劃建議</li>
+          </ul>
+          <a href="#" class="btn btn-primary">開始規劃</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 理財工具 -->
+  <section class="tools-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">理財計算工具</h2>
+        <p class="section-subtitle">免費使用，助您輕鬆規劃財務</p>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--spacing-6); margin-top: var(--spacing-12);">
+        <div class="tool-card">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-4);">🧮</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">退休計算機</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary); margin-bottom: var(--spacing-4);">
+            計算退休資金需要
+          </p>
+          <a href="#" class="btn-link">立即使用 ›</a>
+        </div>
+        
+        <div class="tool-card">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-4);">📊</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">投資回報計算機</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary); margin-bottom: var(--spacing-4);">
+            估算投資潛在回報
+          </p>
+          <a href="#" class="btn-link">立即使用 ›</a>
+        </div>
+        
+        <div class="tool-card">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-4);">🏠</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">按揭計算機</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary); margin-bottom: var(--spacing-4);">
+            計算每月供款額
+          </p>
+          <a href="#" class="btn-link">立即使用 ›</a>
+        </div>
+        
+        <div class="tool-card">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-4);">💰</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">儲蓄目標計算機</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary); margin-bottom: var(--spacing-4);">
+            規劃儲蓄計劃
+          </p>
+          <a href="#" class="btn-link">立即使用 ›</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="text-align: center;">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: var(--spacing-6);">需要專業理財建議？</h2>
+      <p class="section-subtitle" style="margin-bottom: var(--spacing-8);">
+        預約我們的專業理財顧問，為您量身打造財富規劃方案
+      </p>
+      <div style="display: flex; gap: var(--spacing-4); justify-content: center; flex-wrap: wrap;">
+        <a href="../consultation/" class="btn btn-primary btn-large">預約諮詢</a>
+        <a href="#" class="btn btn-secondary btn-large">聯絡我們</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁尾 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 富邦銀行 (香港) 有限公司 版權所有</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../../js/main.js"></script>
+</body>
+</html>

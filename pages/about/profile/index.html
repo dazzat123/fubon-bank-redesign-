@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>銀行簡介 | 富邦銀行</title>
+  <link rel="stylesheet" href="../../../css/main.css">
+  <style>
+    .page-header {
+      padding: var(--spacing-15) 0 var(--spacing-10);
+      background: linear-gradient(135deg, #1D1D1F 0%, #4A4A4C 100%);
+      color: var(--white);
+      text-align: center;
+    }
+    
+    .page-header .page-subtitle {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .about-section {
+      padding: var(--spacing-14) 0;
+    }
+    
+    .content-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: var(--spacing-12);
+      margin-top: var(--spacing-12);
+    }
+    
+    .info-card {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-10);
+      box-shadow: var(--shadow-md);
+      margin-bottom: var(--spacing-8);
+    }
+    
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-6);
+    }
+    
+    .stat-item {
+      text-align: center;
+      padding: var(--spacing-6);
+      background: var(--gray-light);
+      border-radius: var(--radius-xl);
+    }
+    
+    .stat-number {
+      font-size: var(--font-title-2);
+      font-weight: var(--font-weight-bold);
+      color: var(--fubon-orange);
+      margin-bottom: var(--spacing-2);
+    }
+    
+    .stat-label {
+      font-size: var(--font-callout);
+      color: var(--gray-primary);
+    }
+    
+    .leadership-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-8);
+      margin-top: var(--spacing-12);
+    }
+    
+    .leader-card {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-8);
+      text-align: center;
+      box-shadow: var(--shadow-md);
+    }
+    
+    .leader-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1D1D1F 0%, #4A4A4C 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      margin: 0 auto var(--spacing-5);
+    }
+    
+    @media (max-width: 1023px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .leadership-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 734px) {
+      .leadership-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 導航欄 -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <a href="../../../" class="navbar-logo">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="#F47920"/>
+          <text x="50" y="65" text-anchor="middle" fill="white" font-size="40" font-weight="bold">F</text>
+        </svg>
+        <span>富邦銀行</span>
+      </a>
+      
+      <div class="navbar-menu">
+        <a href="../../personal/" class="navbar-link">個人銀行</a>
+        <a href="../../commercial/" class="navbar-link">商業銀行</a>
+        <a href="../../wealth/" class="navbar-link">財富管理</a>
+        <a href="../../ebanking/" class="navbar-link">電子銀行</a>
+        <a href="../../about/" class="navbar-link" style="opacity: 1; color: var(--fubon-orange);">關於我們</a>
+      </div>
+      
+      <div class="navbar-actions">
+        <a href="#" class="btn btn-primary btn-small">網上銀行</a>
+        <button class="navbar-toggle" aria-label="選單">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 頁面標題 -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">銀行簡介</h1>
+      <p class="page-subtitle">認識富邦銀行（香港）有限公司</p>
+    </div>
+  </header>
+
+  <!-- 銀行介紹 -->
+  <section class="about-section">
+    <div class="container">
+      <div class="content-grid">
+        <div>
+          <div class="info-card">
+            <h2 class="section-title" style="margin-bottom: var(--spacing-6);">關於富邦銀行</h2>
+            <p style="font-size: var(--font-body); color: var(--gray-primary); line-height: 1.8; margin-bottom: var(--spacing-6);">
+              富邦銀行（香港）有限公司（「富邦銀行」）成立於 1999 年，是富邦金融控股股份有限公司的全資附屬公司。富邦金控為台灣領先的金融機構之一，業務涵蓋銀行、保險、證券等領域。
+            </p>
+            <p style="font-size: var(--font-body); color: var(--gray-primary); line-height: 1.8; margin-bottom: var(--spacing-6);">
+              富邦銀行致力於為香港客戶提供全面的金融服務，包括個人銀行、商業銀行、財富管理及貿易融資等。憑藉穩健的資本基礎、專業的服務團隊及先進的數位平台，我們已成為香港市場重要的金融服務提供者。
+            </p>
+            <p style="font-size: var(--font-body); color: var(--gray-primary); line-height: 1.8;">
+              我們秉承「客戶為先、誠信可靠、創新進取」的核心價值，不斷提升服務質量，為客戶創造長遠價值。
+            </p>
+          </div>
+          
+          <div class="info-card">
+            <h3 style="font-size: var(--font-title-3); margin-bottom: var(--spacing-6);">企業管治</h3>
+            <p style="font-size: var(--font-callout); color: var(--gray-primary); line-height: 1.8; margin-bottom: var(--spacing-6);">
+              富邦銀行採用高標準的企業管治常規，設有董事會及多個專門委員會，包括風險委員會、審計委員會及薪酬委員會，確保業務營運符合監管要求及最佳常規。
+            </p>
+            <p style="font-size: var(--font-callout); color: var(--gray-primary); line-height: 1.8;">
+              我們嚴格遵守香港金融監管理局的監管規定，並定期進行內部審核及風險評估，確保業務穩健發展。
+            </p>
+          </div>
+        </div>
+        
+        <div>
+          <div class="info-card">
+            <h3 style="font-size: var(--font-title-3); margin-bottom: var(--spacing-6);">銀行數據</h3>
+            <div class="stat-grid">
+              <div class="stat-item">
+                <div class="stat-number">1999</div>
+                <div class="stat-label">成立年份</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">15</div>
+                <div class="stat-label">分支行</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">50 億</div>
+                <div class="stat-label">資本總額</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">800+</div>
+                <div class="stat-label">員工</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="info-card">
+            <h3 style="font-size: var(--font-title-3); margin-bottom: var(--spacing-6);">聯絡資料</h3>
+            <p style="font-size: var(--font-callout); color: var(--gray-primary); margin-bottom: var(--spacing-4);">
+              <strong>總行地址：</strong><br/>
+              香港中環德輔道中 38 號<br/>
+              富邦銀行大廈
+            </p>
+            <p style="font-size: var(--font-callout); color: var(--gray-primary); margin-bottom: var(--spacing-4);">
+              <strong>客戶服務熱線：</strong><br/>
+              (852) 2100 1000
+            </p>
+            <p style="font-size: var(--font-callout); color: var(--gray-primary);">
+              <strong>電郵：</strong><br/>
+              info@fubonbank.com.hk
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 管理團隊 -->
+  <section class="section section-gray">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">管理團隊</h2>
+        <p class="section-subtitle">經驗豐富的領導團隊</p>
+      </div>
+      
+      <div class="leadership-grid">
+        <div class="leader-card">
+          <div class="leader-avatar">👨‍💼</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-2);">林俊宏</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary); margin-bottom: var(--spacing-2);">董事長</p>
+        </div>
+        
+        <div class="leader-card">
+          <div class="leader-avatar">👩‍💼</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-2);">陳美玲</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary); margin-bottom: var(--spacing-2);">行政總裁</p>
+        </div>
+        
+        <div class="leader-card">
+          <div class="leader-avatar">👨‍💼</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-2);">張志強</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary); margin-bottom: var(--spacing-2);">財務總監</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁尾 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 富邦銀行 (香港) 有限公司 版權所有</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../../js/main.js"></script>
+</body>
+</html>

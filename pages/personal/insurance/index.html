@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>保險服務 | 富邦銀行</title>
+  <link rel="stylesheet" href="../../../css/main.css">
+  <style>
+    .page-header {
+      padding: var(--spacing-15) 0 var(--spacing-10);
+      background: linear-gradient(135deg, #5856D6 0%, #AF52DE 100%);
+      color: var(--white);
+      text-align: center;
+    }
+    
+    .page-header .page-subtitle {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .insurance-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-8);
+      padding: var(--spacing-12) 0;
+    }
+    
+    .insurance-card {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-10);
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-normal);
+    }
+    
+    .insurance-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    .insurance-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, #5856D6 0%, #AF52DE 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      margin-bottom: var(--spacing-6);
+    }
+    
+    .insurance-title {
+      font-size: var(--font-title-3);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: var(--spacing-3);
+    }
+    
+    .insurance-desc {
+      font-size: var(--font-callout);
+      color: var(--gray-primary);
+      margin-bottom: var(--spacing-6);
+    }
+    
+    .planner-section {
+      background: var(--gray-quaternary);
+      padding: var(--spacing-14) 0;
+    }
+    
+    @media (max-width: 1023px) {
+      .insurance-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 734px) {
+      .insurance-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 導航欄 -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <a href="../../../" class="navbar-logo">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="#F47920"/>
+          <text x="50" y="65" text-anchor="middle" fill="white" font-size="40" font-weight="bold">F</text>
+        </svg>
+        <span>富邦銀行</span>
+      </a>
+      
+      <div class="navbar-menu">
+        <a href="../../personal/" class="navbar-link" style="opacity: 1; color: var(--fubon-orange);">個人銀行</a>
+        <a href="../../commercial/" class="navbar-link">商業銀行</a>
+        <a href="../../wealth/" class="navbar-link">財富管理</a>
+        <a href="../../ebanking/" class="navbar-link">電子銀行</a>
+        <a href="../../about/" class="navbar-link">關於我們</a>
+      </div>
+      
+      <div class="navbar-actions">
+        <a href="#" class="btn btn-primary btn-small">網上銀行</a>
+        <button class="navbar-toggle" aria-label="選單">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 頁面標題 -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">保險服務</h1>
+      <p class="page-subtitle">全面保障您和家人的未來</p>
+    </div>
+  </header>
+
+  <!-- 保險產品 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">保險產品</h2>
+        <p class="section-subtitle">配合不同人生階段的保障需要</p>
+      </div>
+      
+      <div class="insurance-grid">
+        <div class="insurance-card">
+          <div class="insurance-icon">🛡️</div>
+          <h3 class="insurance-title">人壽保險</h3>
+          <p class="insurance-desc">為家人提供經濟保障</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 定期人壽保險</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 終身人壽保險</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 萬用壽險</li>
+          </ul>
+          <a href="#" class="btn btn-primary">了解詳情</a>
+        </div>
+        
+        <div class="insurance-card">
+          <div class="insurance-icon">🏥</div>
+          <h3 class="insurance-title">醫療保險</h3>
+          <p class="insurance-desc">保障醫療開支需要</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 住院保障</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 門診保障</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 自願醫保計劃</li>
+          </ul>
+          <a href="#" class="btn btn-primary">了解詳情</a>
+        </div>
+        
+        <div class="insurance-card">
+          <div class="insurance-icon">💰</div>
+          <h3 class="insurance-title">儲蓄保險</h3>
+          <p class="insurance-desc">長遠儲蓄及財富增值</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 儲蓄計劃</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 教育基金</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 退休計劃</li>
+          </ul>
+          <a href="#" class="btn btn-primary">了解詳情</a>
+        </div>
+        
+        <div class="insurance-card">
+          <div class="insurance-icon">✈️</div>
+          <h3 class="insurance-title">旅遊保險</h3>
+          <p class="insurance-desc">外遊安心保障</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 單次旅遊保險</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 全年旅遊保險</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 24 小時支援</li>
+          </ul>
+          <a href="#" class="btn btn-primary">了解詳情</a>
+        </div>
+        
+        <div class="insurance-card">
+          <div class="insurance-icon">🏠</div>
+          <h3 class="insurance-title">家居保險</h3>
+          <p class="insurance-desc">保障家居財物安全</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 樓宇結構保障</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 家居財物保障</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 第三者責任</li>
+          </ul>
+          <a href="#" class="btn btn-primary">了解詳情</a>
+        </div>
+        
+        <div class="insurance-card">
+          <div class="insurance-icon">🚗</div>
+          <h3 class="insurance-title">汽車保險</h3>
+          <p class="insurance-desc">愛車全面保障</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 第三者風險</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 綜合汽車保險</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 24 小時道路救援</li>
+          </ul>
+          <a href="#" class="btn btn-primary">了解詳情</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 保險規劃 -->
+  <section class="planner-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">保險需要分析</h2>
+        <p class="section-subtitle">了解您的人生階段及保障需要</p>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--spacing-8); margin-top: var(--spacing-12);">
+        <div style="text-align: center; padding: var(--spacing-6);">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-4);">🎓</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">單身貴族</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">
+            醫療保險、意外保險
+          </p>
+        </div>
+        
+        <div style="text-align: center; padding: var(--spacing-6);">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-4);">💑</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">新婚夫婦</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">
+            人壽保險、儲蓄計劃
+          </p>
+        </div>
+        
+        <div style="text-align: center; padding: var(--spacing-6);">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-4);">👨‍👩‍👧</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">有孩家庭</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">
+            教育基金、家庭保障
+          </p>
+        </div>
+        
+        <div style="text-align: center; padding: var(--spacing-6);">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-4);">👴</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">退休規劃</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">
+            退休收入、醫療保障
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="text-align: center;">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: var(--spacing-6);">預約保險顧問</h2>
+      <p class="section-subtitle" style="margin-bottom: var(--spacing-8);">
+        專業保險顧問為您分析保障需要，量身打造保險方案
+      </p>
+      <div style="display: flex; gap: var(--spacing-4); justify-content: center; flex-wrap: wrap;">
+        <a href="#" class="btn btn-primary btn-large">預約諮詢</a>
+        <a href="tel:+85221001000" class="btn btn-secondary btn-large">致電 2100 1000</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁尾 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 富邦銀行 (香港) 有限公司 版權所有</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../../js/main.js"></script>
+</body>
+</html>

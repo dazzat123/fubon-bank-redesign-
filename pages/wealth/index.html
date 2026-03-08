@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>財富管理 | 富邦銀行</title>
+  <link rel="stylesheet" href="../../css/main.css">
+  <style>
+    .page-header {
+      padding: var(--spacing-15) 0 var(--spacing-10);
+      background: linear-gradient(135deg, #8E8E93 0%, #636366 100%);
+      color: var(--white);
+      text-align: center;
+    }
+    
+    .page-header .page-subtitle {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-8);
+      padding: var(--spacing-12) 0;
+    }
+    
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-10);
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-normal);
+      text-decoration: none;
+      color: var(--black);
+      display: block;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    .service-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, #8E8E93 0%, #636366 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      margin-bottom: var(--spacing-6);
+    }
+    
+    .service-title {
+      font-size: var(--font-title-3);
+      font-weight: var(--font-weight-semibold);
+      margin-bottom: var(--spacing-3);
+    }
+    
+    .service-desc {
+      font-size: var(--font-callout);
+      color: var(--gray-primary);
+      margin-bottom: var(--spacing-5);
+    }
+    
+    .vip-section {
+      background: linear-gradient(135deg, #1D1D1F 0%, #2D2D2F 100%);
+      color: var(--white);
+      padding: var(--spacing-15) 0;
+    }
+    
+    .vip-section .section-subtitle {
+      color: var(--gray-secondary);
+    }
+    
+    .vip-benefits {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--spacing-8);
+      margin-top: var(--spacing-12);
+    }
+    
+    .vip-benefit {
+      text-align: center;
+      padding: var(--spacing-6);
+    }
+    
+    .vip-benefit-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto var(--spacing-5);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+    }
+    
+    .market-section {
+      background: var(--gray-quaternary);
+      padding: var(--spacing-14) 0;
+    }
+    
+    .market-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-6);
+      margin-top: var(--spacing-12);
+    }
+    
+    .market-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: var(--spacing-6);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .market-name {
+      font-size: var(--font-headline);
+      font-weight: var(--font-weight-semibold);
+      margin-bottom: var(--spacing-2);
+    }
+    
+    .market-value {
+      font-size: 28px;
+      font-weight: var(--font-weight-bold);
+      margin-bottom: var(--spacing-2);
+    }
+    
+    .market-change {
+      font-size: var(--font-callout);
+      font-weight: var(--font-weight-medium);
+    }
+    
+    .market-change.up {
+      color: var(--success);
+    }
+    
+    .market-change.down {
+      color: var(--error);
+    }
+    
+    @media (max-width: 1023px) {
+      .service-grid,
+      .vip-benefits,
+      .market-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 734px) {
+      .service-grid,
+      .vip-benefits,
+      .market-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 導航欄 -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <a href="../../" class="navbar-logo">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="#F47920"/>
+          <text x="50" y="65" text-anchor="middle" fill="white" font-size="40" font-weight="bold">F</text>
+        </svg>
+        <span>富邦銀行</span>
+      </a>
+      
+      <div class="navbar-menu">
+        <a href="../personal/" class="navbar-link">個人銀行</a>
+        <a href="../commercial/" class="navbar-link">商業銀行</a>
+        <a href="../wealth/" class="navbar-link" style="opacity: 1; color: var(--fubon-orange);">財富管理</a>
+        <a href="../ebanking/" class="navbar-link">電子銀行</a>
+        <a href="../about/" class="navbar-link">關於我們</a>
+      </div>
+      
+      <div class="navbar-actions">
+        <a href="#" class="btn btn-primary btn-small">登入</a>
+        <button class="navbar-toggle" aria-label="選單">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 頁面標題 -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">財富管理</h1>
+      <p class="page-subtitle">專業理財顧問，為您量身打造財富增值方案</p>
+    </div>
+  </header>
+
+  <!-- 服務類別 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">我們的服務</h2>
+        <p class="section-subtitle">全方位的財富管理解決方案</p>
+      </div>
+      
+      <div class="service-grid">
+        <a href="planning/" class="service-card">
+          <div class="service-icon">📊</div>
+          <h2 class="service-title">財富規劃</h2>
+          <p class="service-desc">專業理財顧問為您分析財務狀況，制定個人化的財富增值策略。</p>
+          <span class="btn-link">了解更多 ›</span>
+        </a>
+        
+        <a href="products/" class="service-card">
+          <div class="service-icon">💼</div>
+          <h2 class="service-title">投資產品</h2>
+          <p class="service-desc">多元化的投資產品，包括股票、基金、債券及結構性產品。</p>
+          <span class="btn-link">了解更多 ›</span>
+        </a>
+        
+        <a href="insights/" class="service-card">
+          <div class="service-icon">📈</div>
+          <h2 class="service-title">市場分析</h2>
+          <p class="service-desc">每日市場評論、投資策略及經濟分析，助您把握投資機遇。</p>
+          <span class="btn-link">了解更多 ›</span>
+        </a>
+        
+        <a href="consultation/" class="service-card">
+          <div class="service-icon">👥</div>
+          <h2 class="service-title">預約諮詢</h2>
+          <p class="service-desc">預約專業理財顧問，一對一詳細分析您的財務需要。</p>
+          <span class="btn-link">立即預約 ›</span>
+        </a>
+        
+        <a href="insurance/" class="service-card">
+          <div class="service-icon">🛡️</div>
+          <h2 class="service-title">保險規劃</h2>
+          <p class="service-desc">人壽、醫療、儲蓄保險，全面保障您和家人的未來。</p>
+          <span class="btn-link">了解更多 ›</span>
+        </a>
+        
+        <a href="trust/" class="service-card">
+          <div class="service-icon">🏛️</div>
+          <h2 class="service-title">信託服務</h2>
+          <p class="service-desc">家族信託、遺產規劃，確保財富傳承世代。</p>
+          <span class="btn-link">了解更多 ›</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 富邦理財優先 -->
+  <section class="vip-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" style="color: white;">富邦理財優先</h2>
+        <p class="section-subtitle">專為尊貴客戶設計的理財服務</p>
+      </div>
+      
+      <div class="vip-benefits">
+        <div class="vip-benefit">
+          <div class="vip-benefit-icon">👨‍💼</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">專屬顧問</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-secondary);">一對一理財顧問服務</p>
+        </div>
+        
+        <div class="vip-benefit">
+          <div class="vip-benefit-icon">📊</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">投資研究</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-secondary);">獨家投資報告及分析</p>
+        </div>
+        
+        <div class="vip-benefit">
+          <div class="vip-benefit-icon">💰</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">優惠利率</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-secondary);">存款及貸款優惠利率</p>
+        </div>
+        
+        <div class="vip-benefit">
+          <div class="vip-benefit-icon">🎁</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">專屬獎賞</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-secondary);">理財產品獨家優惠</p>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: var(--spacing-12);">
+        <p style="font-size: var(--font-callout); color: var(--gray-secondary); margin-bottom: var(--spacing-6);">
+          存款總額達 HK$500,000 或以上即可成為富邦理財優先客戶
+        </p>
+        <a href="#" class="btn btn-primary btn-large" style="background: white; color: var(--black);">立即升級</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 市場行情 -->
+  <section class="market-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">市場行情</h2>
+        <p class="section-subtitle">即時金融市場數據（延遲 15 分鐘）</p>
+      </div>
+      
+      <div class="market-grid">
+        <div class="market-card">
+          <div class="market-name">恒生指數</div>
+          <div class="market-value">18,245.67</div>
+          <div class="market-change up">+256.34 (+1.42%)</div>
+        </div>
+        
+        <div class="market-card">
+          <div class="market-name">國企指數</div>
+          <div class="market-value">6,523.89</div>
+          <div class="market-change up">+89.12 (+1.38%)</div>
+        </div>
+        
+        <div class="market-card">
+          <div class="market-name">上證綜合</div>
+          <div class="market-value">3,087.45</div>
+          <div class="market-change down">-12.56 (-0.41%)</div>
+        </div>
+        
+        <div class="market-card">
+          <div class="market-name">標普 500</div>
+          <div class="market-value">4,789.23</div>
+          <div class="market-change up">+34.67 (+0.73%)</div>
+        </div>
+        
+        <div class="market-card">
+          <div class="market-name">納斯達克</div>
+          <div class="market-value">15,234.56</div>
+          <div class="market-change up">+123.45 (+0.82%)</div>
+        </div>
+        
+        <div class="market-card">
+          <div class="market-name">美元/港元</div>
+          <div class="market-value">7.8245</div>
+          <div class="market-change up">+0.0012 (+0.02%)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 投資教育 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">投資教育中心</h2>
+        <p class="section-subtitle">提升您的理財知識，做出更明智的投資決策</p>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-8); margin-top: var(--spacing-12);">
+        <div style="background: var(--gray-light); border-radius: var(--radius-2xl); padding: var(--spacing-8);">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-5);">📚</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">投資入門</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary); margin-bottom: var(--spacing-5);">
+            基礎投資知識，適合投資新手
+          </p>
+          <a href="#" class="btn-link">開始學習 ›</a>
+        </div>
+        
+        <div style="background: var(--gray-light); border-radius: var(--radius-2xl); padding: var(--spacing-8);">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-5);">🎥</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">網上研討會</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary); margin-bottom: var(--spacing-5);">
+            定期舉辦投資講座及市場分析
+          </p>
+          <a href="#" class="btn-link">查看日程 ›</a>
+        </div>
+        
+        <div style="background: var(--gray-light); border-radius: var(--radius-2xl); padding: var(--spacing-8);">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-5);">📖</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">理財文章</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary); margin-bottom: var(--spacing-5);">
+            專業理財專欄及市場評論
+          </p>
+          <a href="#" class="btn-link">閱讀文章 ›</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section-gray" style="text-align: center;">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: var(--spacing-6);">開始您的財富增值之旅</h2>
+      <p class="section-subtitle" style="margin-bottom: var(--spacing-8);">
+        立即預約專業理財顧問，為您量身打造投資組合
+      </p>
+      <div style="display: flex; gap: var(--spacing-4); justify-content: center; flex-wrap: wrap;">
+        <a href="consultation/" class="btn btn-primary btn-large">預約諮詢</a>
+        <a href="products/" class="btn btn-secondary btn-large">瀏覽產品</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁尾 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 富邦銀行 (香港) 有限公司 版權所有</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>

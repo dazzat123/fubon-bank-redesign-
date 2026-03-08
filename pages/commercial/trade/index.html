@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>貿易服務 | 富邦銀行</title>
+  <link rel="stylesheet" href="../../../css/main.css">
+  <style>
+    .page-header {
+      padding: var(--spacing-15) 0 var(--spacing-10);
+      background: linear-gradient(135deg, #007AFF 0%, #5AC8FA 100%);
+      color: var(--white);
+      text-align: center;
+    }
+    
+    .page-header .page-subtitle {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-8);
+      padding: var(--spacing-12) 0;
+    }
+    
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-10);
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-normal);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    .service-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, #007AFF 0%, #5AC8FA 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      margin-bottom: var(--spacing-6);
+    }
+    
+    .service-title {
+      font-size: var(--font-title-3);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: var(--spacing-3);
+    }
+    
+    .service-desc {
+      font-size: var(--font-callout);
+      color: var(--gray-primary);
+      margin-bottom: var(--spacing-6);
+    }
+    
+    .trade-flow {
+      background: var(--gray-quaternary);
+      padding: var(--spacing-14) 0;
+    }
+    
+    .flow-steps {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: var(--spacing-4);
+      margin-top: var(--spacing-12);
+    }
+    
+    .flow-step {
+      text-align: center;
+      padding: var(--spacing-6);
+      position: relative;
+    }
+    
+    .flow-step::after {
+      content: "→";
+      position: absolute;
+      right: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      color: var(--gray-tertiary);
+    }
+    
+    .flow-step:last-child::after {
+      display: none;
+    }
+    
+    .flow-number {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--info);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin: 0 auto var(--spacing-4);
+    }
+    
+    @media (max-width: 1023px) {
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .flow-steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .flow-step::after {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 導航欄 -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <a href="../../../" class="navbar-logo">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="#F47920"/>
+          <text x="50" y="65" text-anchor="middle" fill="white" font-size="40" font-weight="bold">F</text>
+        </svg>
+        <span>富邦銀行</span>
+      </a>
+      
+      <div class="navbar-menu">
+        <a href="../../personal/" class="navbar-link">個人銀行</a>
+        <a href="../../commercial/" class="navbar-link" style="opacity: 1; color: var(--fubon-orange);">商業銀行</a>
+        <a href="../../wealth/" class="navbar-link">財富管理</a>
+        <a href="../../ebanking/" class="navbar-link">電子銀行</a>
+        <a href="../../about/" class="navbar-link">關於我們</a>
+      </div>
+      
+      <div class="navbar-actions">
+        <a href="#" class="btn btn-primary btn-small">商業網銀</a>
+        <button class="navbar-toggle" aria-label="選單">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 頁面標題 -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">貿易服務</h1>
+      <p class="page-subtitle">全方位的進出口融資及貿易解決方案，支援您的全球業務</p>
+    </div>
+  </header>
+
+  <!-- 貿易服務 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">我們的貿易服務</h2>
+        <p class="section-subtitle">專業團隊，全球網絡，安全高效</p>
+      </div>
+      
+      <div class="service-grid">
+        <div class="service-card">
+          <div class="service-icon">📄</div>
+          <h3 class="service-title">信用狀服務</h3>
+          <p class="service-desc">開立、通知、確認及議付信用狀，保障買賣雙方權益。</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 進出口信用狀</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 備用信用狀</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 轉讓信用狀</li>
+          </ul>
+          <a href="#" class="btn-link">了解詳情 ›</a>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">💰</div>
+          <h3 class="service-title">進出口貸款</h3>
+          <p class="service-desc">為進出口商提供短期融資，解決資金周轉需要。</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 打包貸款</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 進出口押匯</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 發票融資</li>
+          </ul>
+          <a href="#" class="btn-link">了解詳情 ›</a>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">📬</div>
+          <h3 class="service-title">託收服務</h3>
+          <p class="service-desc">代為收取貨款，簡單手續，費用相宜。</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 付款交單 (D/P)</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 承兌交單 (D/A)</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 全球代理網絡</li>
+          </ul>
+          <a href="#" class="btn-link">了解詳情 ›</a>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">💱</div>
+          <h3 class="service-title">外匯服務</h3>
+          <p class="service-desc">即時外匯兌換及對沖工具，管理匯率風險。</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 即期外匯</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 遠期外匯</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 外匯期權</li>
+          </ul>
+          <a href="#" class="btn-link">了解詳情 ›</a>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">🛡️</div>
+          <h3 class="service-title">貿易保險</h3>
+          <p class="service-desc">出口信用保險，保障應收賬款安全。</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 出口信用保險</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 政治風險保險</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 信用評估服務</li>
+          </ul>
+          <a href="#" class="btn-link">了解詳情 ›</a>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">🌏</div>
+          <h3 class="service-title">跨境人民幣</h3>
+          <p class="service-desc">人民幣貿易結算及融資，把握大灣區機遇。</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 人民幣信用狀</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 人民幣貸款</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 人民幣兌換</li>
+          </ul>
+          <a href="#" class="btn-link">了解詳情 ›</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 貿易流程 -->
+  <section class="trade-flow">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">進出口貿易流程</h2>
+        <p class="section-subtitle">簡單清晰的貿易融資流程</p>
+      </div>
+      
+      <div class="flow-steps">
+        <div class="flow-step">
+          <div class="flow-number">1</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">簽訂合約</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">與買賣雙方簽訂貿易合約</p>
+        </div>
+        
+        <div class="flow-step">
+          <div class="flow-number">2</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">申請融資</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">向銀行申請貿易融資服務</p>
+        </div>
+        
+        <div class="flow-step">
+          <div class="flow-number">3</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">文件審核</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">提交及審核貿易單據</p>
+        </div>
+        
+        <div class="flow-step">
+          <div class="flow-number">4</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">貨物付運</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">安排貨物運輸及保險</p>
+        </div>
+        
+        <div class="flow-step">
+          <div class="flow-number">5</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">收取貨款</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">完成結算及收取款項</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 為甚麼選擇我們 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">為甚麼選擇富邦貿易服務</h2>
+        <p class="section-subtitle">專業、高效、安全的貿易夥伴</p>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--spacing-8); margin-top: var(--spacing-12);">
+        <div style="text-align: center;">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-5);">🌐</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">全球網絡</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">超過 100 個國家的代理銀行網絡</p>
+        </div>
+        
+        <div style="text-align: center;">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-5);">⚡</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">快速處理</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">電子化單據處理，縮短審批時間</p>
+        </div>
+        
+        <div style="text-align: center;">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-5);">👥</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">專業團隊</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">經驗豐富的貿易融資專家</p>
+        </div>
+        
+        <div style="text-align: center;">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-5);">🔒</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">風險管理</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">完善的風險評估及監控機制</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section-gray" style="text-align: center;">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: var(--spacing-6);">需要貿易融資服務？</h2>
+      <p class="section-subtitle" style="margin-bottom: var(--spacing-8);">
+        聯絡我們的貿易服務團隊，為您量身打造貿易解決方案
+      </p>
+      <div style="display: flex; gap: var(--spacing-4); justify-content: center; flex-wrap: wrap;">
+        <a href="#" class="btn btn-primary btn-large">預約諮詢</a>
+        <a href="#" class="btn btn-secondary btn-large">下載服務指南</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁尾 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 富邦銀行 (香港) 有限公司 版權所有</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>購物卡 | 富邦銀行</title>
+  <link rel="stylesheet" href="../../../css/main.css">
+  <style>
+    .page-header {
+      padding: var(--spacing-15) 0 var(--spacing-10);
+      background: linear-gradient(135deg, #FF2D55 0%, #FF6482 100%);
+      color: var(--white);
+      text-align: center;
+    }
+    .page-header .page-subtitle { color: rgba(255, 255, 255, 0.9); }
+    .card-detail { max-width: 900px; margin: 0 auto; padding: var(--spacing-12) 0; }
+    .card-showcase {
+      background: linear-gradient(135deg, #FF2D55 0%, #FF6482 100%);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-12);
+      color: var(--white);
+      text-align: center;
+      margin-bottom: var(--spacing-12);
+    }
+    .card-visual {
+      width: 100%; max-width: 500px; height: 300px;
+      background: linear-gradient(135deg, #FF6482 0%, #FF2D55 100%);
+      border-radius: var(--radius-xl);
+      margin: 0 auto var(--spacing-8);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 120px; box-shadow: var(--shadow-2xl);
+    }
+    .feature-section { background: var(--gray-quaternary); padding: var(--spacing-12) 0; margin-bottom: var(--spacing-12); }
+    .feature-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-8); max-width: 1000px; margin: 0 auto; }
+    .feature-item {
+      background: var(--white); padding: var(--spacing-8);
+      border-radius: var(--radius-2xl); box-shadow: var(--shadow-md);
+    }
+    .feature-icon {
+      width: 56px; height: 56px; border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, #FF2D55 0%, #FF6482 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 28px; margin-bottom: var(--spacing-5);
+    }
+    .rate-highlight {
+      font-size: 48px; font-weight: var(--font-weight-bold);
+      color: var(--fubon-orange); line-height: 1; margin: var(--spacing-4) 0;
+    }
+    .rate-highlight span { font-size: var(--font-body); color: var(--gray-primary); }
+    .comparison-table {
+      width: 100%; border-collapse: collapse; background: var(--white);
+      border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-md); margin-top: var(--spacing-8);
+    }
+    .comparison-table th, .comparison-table td {
+      padding: var(--spacing-5); text-align: left; border-bottom: 1px solid var(--gray-tertiary);
+    }
+    .comparison-table th { background: var(--black); color: var(--white); font-weight: var(--font-weight-semibold); }
+    .cta-section {
+      background: linear-gradient(135deg, #FF2D55 0%, #FF6482 100%);
+      padding: var(--spacing-14) 0; text-align: center; color: var(--white);
+    }
+    @media (max-width: 734px) {
+      .feature-grid { grid-template-columns: 1fr; }
+      .card-visual { height: 200px; font-size: 80px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-content">
+      <a href="../../../" class="navbar-logo">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="#F47920"/>
+          <text x="50" y="65" text-anchor="middle" fill="white" font-size="40" font-weight="bold">F</text>
+        </svg>
+        <span>富邦銀行</span>
+      </a>
+      <div class="navbar-menu">
+        <a href="../../personal/" class="navbar-link" style="opacity: 1; color: var(--fubon-orange);">個人銀行</a>
+        <a href="../../commercial/" class="navbar-link">商業銀行</a>
+        <a href="../../wealth/" class="navbar-link">財富管理</a>
+        <a href="../../ebanking/" class="navbar-link">電子銀行</a>
+        <a href="../../about/" class="navbar-link">關於我們</a>
+      </div>
+      <div class="navbar-actions">
+        <a href="#" class="btn btn-primary btn-small">網上銀行</a>
+        <button class="navbar-toggle" aria-label="選單"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">富邦 Master 購物卡</h1>
+      <p class="page-subtitle">購物娛樂專屬獎賞，盡享購物樂趣</p>
+    </div>
+  </header>
+
+  <section class="card-detail">
+    <div class="card-showcase">
+      <div class="card-visual">🛍️</div>
+      <h2 style="font-size: var(--font-title-2); margin-bottom: var(--spacing-4);">富邦 Master 購物卡</h2>
+      <p style="font-size: var(--font-headline); opacity: 0.9;">為您帶來最佳購物及娛樂體驗</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <div class="feature-icon">🏬</div>
+        <h3 style="font-size: var(--font-title-3); margin-bottom: var(--spacing-3);">商場簽賬</h3>
+        <div class="rate-highlight">5%<span>現金回贈</span></div>
+        <p style="color: var(--gray-primary);">指定商場及百貨公司享 5% 現金回贈</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🎬</div>
+        <h3 style="font-size: var(--font-title-3); margin-bottom: var(--spacing-3);">電影優惠</h3>
+        <div class="rate-highlight">買一<span>送一</span></div>
+        <p style="color: var(--gray-primary);">指定戲院電影票買一送一優惠</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🎮</div>
+        <h3 style="font-size: var(--font-title-3); margin-bottom: var(--spacing-3);">網上購物</h3>
+        <div class="rate-highlight">3%<span>現金回贈</span></div>
+        <p style="color: var(--gray-primary);">所有網上購物簽賬享 3% 現金回贈</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🎵</div>
+        <h3 style="font-size: var(--font-title-3); margin-bottom: var(--spacing-3);">娛樂訂閱</h3>
+        <div class="rate-highlight">10%<span>現金回贈</span></div>
+        <p style="color: var(--gray-primary);">Netflix、Spotify 等訂閱服務享 10% 回贈</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature-section">
+    <div class="container">
+      <div class="section-header" style="text-align: center; margin-bottom: var(--spacing-10);">
+        <h2 class="section-title">全方位購物優惠</h2>
+        <p class="section-subtitle">購物卡會員專屬購物及娛樂優惠</p>
+      </div>
+      <div style="max-width: 800px; margin: 0 auto;">
+        <table class="comparison-table">
+          <thead><tr><th>優惠類別</th><th>詳情</th></tr></thead>
+          <tbody>
+            <tr><td><strong>商場簽賬</strong></td><td>指定商場及百貨公司 5% 現金回贈</td></tr>
+            <tr><td><strong>電影優惠</strong></td><td>MCL、UA 戲院電影票買一送一</td></tr>
+            <tr><td><strong>網上購物</strong></td><td>所有網上簽賬 3% 現金回贈</td></tr>
+            <tr><td><strong>娛樂訂閱</strong></td><td>Netflix、Spotify、Disney+ 10% 回贈</td></tr>
+            <tr><td><strong>餐飲優惠</strong></td><td>指定餐廳 7 折優惠</td></tr>
+            <tr><td><strong>美容優惠</strong></td><td>指定美容及化妝品牌 8 折優惠</td></tr>
+            <tr><td><strong>服飾優惠</strong></td><td>指定服飾品牌額外 5% 回贈</td></tr>
+            <tr><td><strong>購物保障</strong></td><td>90 天購物保障及延長保養</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header" style="text-align: center;">
+        <h2 class="section-title">迎新限時優惠</h2>
+        <p class="section-subtitle">把握機會，享受豐厚迎新獎賞</p>
+      </div>
+      <div style="max-width: 700px; margin: var(--spacing-10) auto; background: linear-gradient(135deg, #FF2D55 0%, #FF6482 100%); border-radius: var(--radius-2xl); padding: var(--spacing-10); color: var(--white); text-align: center;">
+        <div style="font-size: 64px; margin-bottom: var(--spacing-4);">🎁</div>
+        <h3 style="font-size: var(--font-title-2); margin-bottom: var(--spacing-4);">HK$600 現金回贈</h3>
+        <p style="font-size: var(--font-headline); margin-bottom: var(--spacing-6); opacity: 0.9;">於簽賬期內累計簽賬滿 HK$6,000 即可獲得</p>
+        <div style="background: rgba(255,255,255,0.1); padding: var(--spacing-6); border-radius: var(--radius-xl); margin-bottom: var(--spacing-8);">
+          <p style="font-size: var(--font-callout);">➕ 免費購物券 HK$500</p>
+          <p style="font-size: var(--font-callout);">➕ 首年免年費（原價 HK$600）</p>
+        </div>
+        <a href="#" class="btn btn-primary btn-large">立即申請</a>
+        <p style="font-size: var(--font-footnote); margin-top: var(--spacing-6); opacity: 0.7;">優惠受條款及細則約束</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--gray-quaternary);">
+    <div class="container">
+      <div class="section-header" style="text-align: center;">
+        <h2 class="section-title">年費及申請資格</h2>
+      </div>
+      <div style="max-width: 800px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-8);">
+        <div style="background: var(--white); padding: var(--spacing-8); border-radius: var(--radius-2xl); box-shadow: var(--shadow-md);">
+          <h3 style="font-size: var(--font-title-3); margin-bottom: var(--spacing-4);">💳 年費</h3>
+          <div style="font-size: 36px; font-weight: var(--font-weight-bold); color: var(--fubon-orange); margin-bottom: var(--spacing-2);">HK$600<span style="font-size: var(--font-body); color: var(--gray-primary);">/年</span></div>
+          <p style="color: var(--gray-primary); font-size: var(--font-callout);">首年免年費｜全年簽賬滿 HK$60,000 豁免次年費</p>
+        </div>
+        <div style="background: var(--white); padding: var(--spacing-8); border-radius: var(--radius-2xl); box-shadow: var(--shadow-md);">
+          <h3 style="font-size: var(--font-title-3); margin-bottom: var(--spacing-4);">📋 申請資格</h3>
+          <ul style="list-style: none; color: var(--gray-primary); font-size: var(--font-callout);">
+            <li style="padding: var(--spacing-2) 0;">✓ 年滿 21 歲</li>
+            <li style="padding: var(--spacing-2) 0;">✓ 月收入 HK$10,000 或以上</li>
+            <li style="padding: var(--spacing-2) 0;">✓ 持有有效香港身份證</li>
+            <li style="padding: var(--spacing-2) 0;">✓ 良好信貸記錄</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: var(--spacing-6);">立即申請購物卡</h2>
+      <p class="section-subtitle" style="margin-bottom: var(--spacing-8); color: rgba(255,255,255,0.9);">
+        5 分鐘完成申請，3 個工作天內獲悉結果
+      </p>
+      <div style="display: flex; gap: var(--spacing-4); justify-content: center; flex-wrap: wrap;">
+        <a href="#" class="btn btn-primary btn-large">網上申請</a>
+        <a href="tel:+85221001000" class="btn btn-secondary btn-large" style="background: rgba(255,255,255,0.2);">致電 2100 1000</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 富邦銀行 (香港) 有限公司 版權所有</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../../js/main.js"></script>
+</body>
+</html>

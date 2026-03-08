@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>利率查詢 | 富邦銀行</title>
+  <link rel="stylesheet" href="../../../css/main.css">
+  <style>
+    .page-header {
+      padding: var(--spacing-15) 0 var(--spacing-10);
+      background: linear-gradient(135deg, #1D1D1F 0%, #4A4A4C 100%);
+      color: var(--white);
+      text-align: center;
+    }
+    .page-header .page-subtitle { color: rgba(255, 255, 255, 0.9); }
+    .rates-page { max-width: 1200px; margin: 0 auto; padding: var(--spacing-12) 0; }
+    .last-update {
+      text-align: center;
+      padding: var(--spacing-6);
+      background: var(--gray-quaternary);
+      border-radius: var(--radius-xl);
+      margin-bottom: var(--spacing-10);
+    }
+    .rate-section {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-10);
+      box-shadow: var(--shadow-md);
+      margin-bottom: var(--spacing-8);
+    }
+    .rate-section h3 {
+      font-size: var(--font-title-3);
+      margin-bottom: var(--spacing-6);
+      padding-bottom: var(--spacing-4);
+      border-bottom: 2px solid var(--fubon-orange);
+    }
+    .rate-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .rate-table th,
+    .rate-table td {
+      padding: var(--spacing-4);
+      text-align: left;
+      border-bottom: 1px solid var(--gray-tertiary);
+    }
+    .rate-table th {
+      background: var(--gray-quaternary);
+      font-weight: var(--font-weight-semibold);
+      color: var(--black);
+    }
+    .rate-table tr:hover {
+      background: var(--gray-light);
+    }
+    .highlight-rate {
+      color: var(--fubon-orange);
+      font-weight: var(--font-weight-bold);
+    }
+    .cta-section {
+      background: linear-gradient(135deg, #1D1D1F 0%, #4A4A4C 100%);
+      padding: var(--spacing-14) 0;
+      text-align: center;
+      color: var(--white);
+    }
+    @media (max-width: 734px) {
+      .rate-table {
+        font-size: var(--font-callout);
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-content">
+      <a href="../../../" class="navbar-logo">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="#F47920"/>
+          <text x="50" y="65" text-anchor="middle" fill="white" font-size="40" font-weight="bold">F</text>
+        </svg>
+        <span>富邦銀行</span>
+      </a>
+      <div class="navbar-menu">
+        <a href="../../personal/" class="navbar-link" style="opacity: 1; color: var(--fubon-orange);">個人銀行</a>
+        <a href="../../commercial/" class="navbar-link">商業銀行</a>
+        <a href="../../wealth/" class="navbar-link">財富管理</a>
+        <a href="../../ebanking/" class="navbar-link">電子銀行</a>
+        <a href="../../about/" class="navbar-link">關於我們</a>
+      </div>
+      <div class="navbar-actions">
+        <a href="#" class="btn btn-primary btn-small">網上銀行</a>
+        <button class="navbar-toggle" aria-label="選單"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">利率查詢</h1>
+      <p class="page-subtitle">最新存款及貸款利率一覽</p>
+    </div>
+  </header>
+
+  <section class="rates-page">
+    <div class="last-update">
+      <p style="color: var(--gray-primary);">最後更新：2026 年 3 月 8 日</p>
+      <p style="font-size: var(--font-footnote); color: var(--gray-secondary); margin-top: var(--spacing-2);">利率會隨市場情況變動，詳情請參閱產品說明或致電客戶服務熱線</p>
+    </div>
+
+    <!-- 港元存款利率 -->
+    <div class="rate-section">
+      <h3>🇭🇰 港元存款利率</h3>
+      <table class="rate-table">
+        <thead>
+          <tr>
+            <th>存款類型</th>
+            <th>金額</th>
+            <th>年利率</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>活期存款</td>
+            <td>任何金額</td>
+            <td class="highlight-rate">0.01%</td>
+          </tr>
+          <tr>
+            <td>定期存款 - 1 個月</td>
+            <td>HK$10,000 起</td>
+            <td class="highlight-rate">3.5%</td>
+          </tr>
+          <tr>
+            <td>定期存款 - 3 個月</td>
+            <td>HK$10,000 起</td>
+            <td class="highlight-rate">3.8%</td>
+          </tr>
+          <tr>
+            <td>定期存款 - 6 個月</td>
+            <td>HK$10,000 起</td>
+            <td class="highlight-rate">4.0%</td>
+          </tr>
+          <tr>
+            <td>定期存款 - 12 個月</td>
+            <td>HK$10,000 起</td>
+            <td class="highlight-rate">4.2%</td>
+          </tr>
+          <tr>
+            <td>定期存款 - 24 個月</td>
+            <td>HK$50,000 起</td>
+            <td class="highlight-rate">4.5%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 美元存款利率 -->
+    <div class="rate-section">
+      <h3>🇺🇸 美元存款利率</h3>
+      <table class="rate-table">
+        <thead>
+          <tr>
+            <th>存款類型</th>
+            <th>金額</th>
+            <th>年利率</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>活期存款</td>
+            <td>任何金額</td>
+            <td class="highlight-rate">0.05%</td>
+          </tr>
+          <tr>
+            <td>定期存款 - 1 個月</td>
+            <td>USD 1,000 起</td>
+            <td class="highlight-rate">4.5%</td>
+          </tr>
+          <tr>
+            <td>定期存款 - 3 個月</td>
+            <td>USD 1,000 起</td>
+            <td class="highlight-rate">4.6%</td>
+          </tr>
+          <tr>
+            <td>定期存款 - 6 個月</td>
+            <td>USD 1,000 起</td>
+            <td class="highlight-rate">4.7%</td>
+          </tr>
+          <tr>
+            <td>定期存款 - 12 個月</td>
+            <td>USD 1,000 起</td>
+            <td class="highlight-rate">4.8%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 人民幣存款利率 -->
+    <div class="rate-section">
+      <h3>🇨🇳 人民幣存款利率</h3>
+      <table class="rate-table">
+        <thead>
+          <tr>
+            <th>存款類型</th>
+            <th>金額</th>
+            <th>年利率</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>活期存款</td>
+            <td>任何金額</td>
+            <td class="highlight-rate">0.3%</td>
+          </tr>
+          <tr>
+            <td>定期存款 - 1 個月</td>
+            <td>CNY 10,000 起</td>
+            <td class="highlight-rate">2.5%</td>
+          </tr>
+          <tr>
+            <td>定期存款 - 3 個月</td>
+            <td>CNY 10,000 起</td>
+            <td class="highlight-rate">2.8%</td>
+          </tr>
+          <tr>
+            <td>定期存款 - 6 個月</td>
+            <td>CNY 10,000 起</td>
+            <td class="highlight-rate">3.2%</td>
+          </tr>
+          <tr>
+            <td>定期存款 - 12 個月</td>
+            <td>CNY 10,000 起</td>
+            <td class="highlight-rate">3.5%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 最優惠利率 -->
+    <div class="rate-section">
+      <h3>📊 貸款參考利率</h3>
+      <table class="rate-table">
+        <thead>
+          <tr>
+            <th>利率類型</th>
+            <th>年利率</th>
+            <th>備註</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>最優惠利率 (P)</td>
+            <td class="highlight-rate">6.625%</td>
+            <td>港元貸款基準利率</td>
+          </tr>
+          <tr>
+            <td>香港銀行同業拆息 (HIBOR)</td>
+            <td class="highlight-rate">4.2%</td>
+            <td>1 個月 HIBOR</td>
+          </tr>
+          <tr>
+            <td>美元最優惠利率</td>
+            <td class="highlight-rate">8.5%</td>
+            <td>美元貸款基準利率</td>
+          </tr>
+          <tr>
+            <td>住宅按揭利率</td>
+            <td class="highlight-rate">P-2.5%</td>
+            <td>實際利率約 4.125%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: var(--spacing-6);">需要進一步協助？</h2>
+      <p class="section-subtitle" style="margin-bottom: var(--spacing-8); color: rgba(255,255,255,0.9);">
+        我們的客戶服務團隊樂意為您解答
+      </p>
+      <div style="display: flex; gap: var(--spacing-4); justify-content: center; flex-wrap: wrap;">
+        <a href="tel:+85221001000" class="btn btn-primary btn-large">致電 2100 1000</a>
+        <a href="#" class="btn btn-secondary btn-large" style="background: rgba(255,255,255,0.2);">網上查詢</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 富邦銀行 (香港) 有限公司 版權所有</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../../js/main.js"></script>
+</body>
+</html>

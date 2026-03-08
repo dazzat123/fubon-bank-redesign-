@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>聯絡我們 | 富邦銀行</title>
+  <link rel="stylesheet" href="../../../css/main.css">
+  <style>
+    .page-header {
+      padding: var(--spacing-15) 0 var(--spacing-10);
+      background: linear-gradient(135deg, #34C759 0%, #30D158 100%);
+      color: var(--white);
+      text-align: center;
+    }
+    
+    .page-header .page-subtitle {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .contact-section {
+      padding: var(--spacing-14) 0;
+    }
+    
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: var(--spacing-12);
+    }
+    
+    .form-card {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-10);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .form-group {
+      margin-bottom: var(--spacing-6);
+    }
+    
+    .form-label {
+      display: block;
+      font-size: var(--font-callout);
+      font-weight: var(--font-weight-medium);
+      margin-bottom: var(--spacing-3);
+    }
+    
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      padding: 14px 16px;
+      font-size: var(--font-body);
+      border: 1px solid var(--gray-tertiary);
+      border-radius: var(--radius-md);
+      background: var(--white);
+    }
+    
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      outline: none;
+      border-color: var(--fubon-orange);
+      box-shadow: 0 0 0 3px rgba(244, 121, 32, 0.15);
+    }
+    
+    .form-textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+    
+    .info-card {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-8);
+      box-shadow: var(--shadow-md);
+      margin-bottom: var(--spacing-6);
+    }
+    
+    .info-title {
+      font-size: var(--font-headline);
+      font-weight: var(--font-weight-semibold);
+      margin-bottom: var(--spacing-4);
+    }
+    
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--spacing-4);
+      margin-bottom: var(--spacing-5);
+    }
+    
+    .info-icon {
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+    
+    @media (max-width: 1023px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 導航欄 -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <a href="../../../" class="navbar-logo">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="#F47920"/>
+          <text x="50" y="65" text-anchor="middle" fill="white" font-size="40" font-weight="bold">F</text>
+        </svg>
+        <span>富邦銀行</span>
+      </a>
+      
+      <div class="navbar-menu">
+        <a href="../../personal/" class="navbar-link">個人銀行</a>
+        <a href="../../commercial/" class="navbar-link">商業銀行</a>
+        <a href="../../wealth/" class="navbar-link">財富管理</a>
+        <a href="../../ebanking/" class="navbar-link">電子銀行</a>
+        <a href="../../about/" class="navbar-link" style="opacity: 1; color: var(--fubon-orange);">關於我們</a>
+      </div>
+      
+      <div class="navbar-actions">
+        <a href="#" class="btn btn-primary btn-small">網上銀行</a>
+        <button class="navbar-toggle" aria-label="選單">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 頁面標題 -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">聯絡我們</h1>
+      <p class="page-subtitle">我們樂意為您提供協助</p>
+    </div>
+  </header>
+
+  <!-- 聯絡我們 -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="form-card">
+          <h2 class="section-title" style="margin-bottom: var(--spacing-8);">發送訊息</h2>
+          <form>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-6);">
+              <div class="form-group">
+                <label class="form-label">姓名 *</label>
+                <input type="text" class="form-input" required>
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label">聯絡電話</label>
+                <input type="tel" class="form-input">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label">電郵 *</label>
+              <input type="email" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label">服務類別 *</label>
+              <select class="form-select" required>
+                <option value="">請選擇</option>
+                <option>個人銀行</option>
+                <option>商業銀行</option>
+                <option>財富管理</option>
+                <option>電子銀行</option>
+                <option>其他查詢</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label">訊息內容 *</label>
+              <textarea class="form-textarea" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-large">發送訊息</button>
+          </form>
+        </div>
+        
+        <div>
+          <div class="info-card">
+            <h3 class="info-title">📞 客戶服務熱線</h3>
+            <div class="info-item">
+              <span class="info-icon">📱</span>
+              <div>
+                <strong>一般查詢：</strong><br/>
+                (852) 2100 1000
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">🔒</span>
+              <div>
+                <strong>報失信用卡：</strong><br/>
+                (852) 2100 1100
+              </div>
+            </div>
+            <p style="font-size: var(--font-footnote); color: var(--gray-secondary);">
+              服務時間：星期一至五 9:00-18:00<br/>
+              星期六 9:00-13:00<br/>
+              星期日及公眾假期休息
+            </p>
+          </div>
+          
+          <div class="info-card">
+            <h3 class="info-title">📍 總行地址</h3>
+            <div class="info-item">
+              <span class="info-icon">🏢</span>
+              <div>
+                香港中環德輔道中 38 號<br/>
+                富邦銀行大廈
+              </div>
+            </div>
+          </div>
+          
+          <div class="info-card">
+            <h3 class="info-title">📧 電郵聯絡</h3>
+            <div class="info-item">
+              <span class="info-icon">✉️</span>
+              <div>
+                <strong>一般查詢：</strong><br/>
+                info@fubonbank.com.hk
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">✉️</span>
+              <div>
+                <strong>財富管理：</strong><br/>
+                wealth@fubonbank.com.hk
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁尾 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 富邦銀行 (香港) 有限公司 版權所有</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../../js/main.js"></script>
+</body>
+</html>

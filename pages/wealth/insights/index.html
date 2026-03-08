@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>市場分析 | 富邦銀行</title>
+  <link rel="stylesheet" href="../../../css/main.css">
+  <style>
+    .page-header {
+      padding: var(--spacing-15) 0 var(--spacing-10);
+      background: linear-gradient(135deg, #34C759 0%, #30D158 100%);
+      color: var(--white);
+      text-align: center;
+    }
+    
+    .page-header .page-subtitle {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-8);
+      padding: var(--spacing-12) 0;
+    }
+    
+    .article-card {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-normal);
+      text-decoration: none;
+      color: var(--black);
+      display: block;
+    }
+    
+    .article-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    .article-image {
+      height: 200px;
+      background: linear-gradient(135deg, var(--gray-quaternary) 0%, var(--gray-tertiary) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 64px;
+    }
+    
+    .article-content {
+      padding: var(--spacing-8);
+    }
+    
+    .article-category {
+      display: inline-block;
+      background: var(--fubon-orange);
+      color: var(--white);
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: var(--spacing-4);
+    }
+    
+    .article-title {
+      font-size: var(--font-title-3);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: var(--spacing-3);
+      line-height: 1.4;
+    }
+    
+    .article-excerpt {
+      font-size: var(--font-callout);
+      color: var(--gray-primary);
+      margin-bottom: var(--spacing-5);
+      line-height: 1.6;
+    }
+    
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-4);
+      font-size: var(--font-footnote);
+      color: var(--gray-secondary);
+    }
+    
+    .report-section {
+      background: var(--gray-quaternary);
+      padding: var(--spacing-14) 0;
+    }
+    
+    .report-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-6);
+      margin-top: var(--spacing-12);
+    }
+    
+    .report-item {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: var(--spacing-8);
+      box-shadow: var(--shadow-md);
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-6);
+    }
+    
+    .report-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, #34C759 0%, #30D158 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+    
+    .webinar-section {
+      padding: var(--spacing-14) 0;
+    }
+    
+    .webinar-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-8);
+      margin-top: var(--spacing-12);
+    }
+    
+    .webinar-card {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-8);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--gray-tertiary);
+    }
+    
+    .webinar-date {
+      display: inline-block;
+      background: var(--info);
+      color: var(--white);
+      padding: 8px 16px;
+      border-radius: var(--radius-lg);
+      font-size: var(--font-footnote);
+      font-weight: 600;
+      margin-bottom: var(--spacing-4);
+    }
+    
+    @media (max-width: 1023px) {
+      .article-grid,
+      .report-list,
+      .webinar-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 734px) {
+      .article-grid,
+      .report-list,
+      .webinar-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .report-item {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 導航欄 -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <a href="../../../" class="navbar-logo">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="#F47920"/>
+          <text x="50" y="65" text-anchor="middle" fill="white" font-size="40" font-weight="bold">F</text>
+        </svg>
+        <span>富邦銀行</span>
+      </a>
+      
+      <div class="navbar-menu">
+        <a href="../../personal/" class="navbar-link">個人銀行</a>
+        <a href="../../commercial/" class="navbar-link">商業銀行</a>
+        <a href="../../wealth/" class="navbar-link" style="opacity: 1; color: var(--fubon-orange);">財富管理</a>
+        <a href="../../ebanking/" class="navbar-link">電子銀行</a>
+        <a href="../../about/" class="navbar-link">關於我們</a>
+      </div>
+      
+      <div class="navbar-actions">
+        <a href="#" class="btn btn-primary btn-small">登入</a>
+        <button class="navbar-toggle" aria-label="選單">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 頁面標題 -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">市場分析</h1>
+      <p class="page-subtitle">專業投資研究團隊，為您提供最新市場洞察及投資策略</p>
+    </div>
+  </header>
+
+  <!-- 最新文章 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">最新分析</h2>
+        <p class="section-subtitle">掌握市場脈搏，把握投資機遇</p>
+      </div>
+      
+      <div class="article-grid">
+        <a href="#" class="article-card">
+          <div class="article-image">📊</div>
+          <div class="article-content">
+            <span class="article-category">市場評論</span>
+            <h3 class="article-title">港股展望：政策利好帶動反弹，科技股領漲</h3>
+            <p class="article-excerpt">內地經濟數據好轉，加上政策支持，港股有望延續升勢。科技、消費板塊值得關注...</p>
+            <div class="article-meta">
+              <span>2026 年 3 月 8 日</span>
+              <span>•</span>
+              <span>研究部</span>
+            </div>
+          </div>
+        </a>
+        
+        <a href="#" class="article-card">
+          <div class="article-image">🇺🇸</div>
+          <div class="article-content">
+            <span class="article-category">環球市場</span>
+            <h3 class="article-title">美聯儲利率決策前瞻：降息預期升溫</h3>
+            <p class="article-excerpt">通脹數據持續回落，就業市場放緩，市場預期美聯儲或於年中開始降息週期...</p>
+            <div class="article-meta">
+              <span>2026 年 3 月 7 日</span>
+              <span>•</span>
+              <span>研究部</span>
+            </div>
+          </div>
+        </a>
+        
+        <a href="#" class="article-card">
+          <div class="article-image">💱</div>
+          <div class="article-content">
+            <span class="article-category">外匯分析</span>
+            <h3 class="article-title">美元走勢分析：強美元週期或告終結</h3>
+            <p class="article-excerpt">隨著美聯儲轉向寬鬆，美元指數可能見頂回落。非美貨幣有望反彈...</p>
+            <div class="article-meta">
+              <span>2026 年 3 月 6 日</span>
+              <span>•</span>
+              <span>研究部</span>
+            </div>
+          </div>
+        </a>
+        
+        <a href="#" class="article-card">
+          <div class="article-image">📈</div>
+          <div class="article-content">
+            <span class="article-category">投資策略</span>
+            <h3 class="article-title">2026 年第二季投資策略：均衡配置，聚焦質量</h3>
+            <p class="article-excerpt">建議投資者採取均衡配置策略，增持優質股票及投資級債券，降低組合波動...</p>
+            <div class="article-meta">
+              <span>2026 年 3 月 5 日</span>
+              <span>•</span>
+              <span>研究部</span>
+            </div>
+          </div>
+        </a>
+        
+        <a href="#" class="article-card">
+          <div class="article-image">🏠</div>
+          <div class="article-content">
+            <span class="article-category">樓市分析</span>
+            <h3 class="article-title">香港樓市：政策鬆綁帶動成交，價格趨穩</h3>
+            <p class="article-excerpt">撤辣措施後，樓市成交明顯回升，價格止跌回穩。剛性需求釋放，投資需求仍謹慎...</p>
+            <div class="article-meta">
+              <span>2026 年 3 月 4 日</span>
+              <span>•</span>
+              <span>研究部</span>
+            </div>
+          </div>
+        </a>
+        
+        <a href="#" class="article-card">
+          <div class="article-image">💰</div>
+          <div class="article-content">
+            <span class="article-category">基金推薦</span>
+            <h3 class="article-title">每月基金之選：科技創新基金</h3>
+            <p class="article-excerpt">本月精選全球科技創新基金，投資於人工智能、雲端計算、電動車等長遠增長主題...</p>
+            <div class="article-meta">
+              <span>2026 年 3 月 1 日</span>
+              <span>•</span>
+              <span>研究部</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 研究報告 -->
+  <section class="report-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">研究報告</h2>
+        <p class="section-subtitle">深度分析報告，助您了解市場趨勢</p>
+      </div>
+      
+      <div class="report-list">
+        <div class="report-item">
+          <div class="report-icon">📄</div>
+          <div>
+            <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-2);">2026 年投資展望</h4>
+            <p style="font-size: var(--font-callout); color: var(--gray-primary); margin-bottom: var(--spacing-4);">
+              全面分析環球經濟及市場前景，提供資產配置建議
+            </p>
+            <a href="#" class="btn-link">下載報告 ›</a>
+          </div>
+        </div>
+        
+        <div class="report-item">
+          <div class="report-icon">📄</div>
+          <div>
+            <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-2);">大灣區投資機遇</h4>
+            <p style="font-size: var(--font-callout); color: var(--gray-primary); margin-bottom: var(--spacing-4);">
+              深入剖析大灣區發展規劃及投資主題
+            </p>
+            <a href="#" class="btn-link">下載報告 ›</a>
+          </div>
+        </div>
+        
+        <div class="report-item">
+          <div class="report-icon">📄</div>
+          <div>
+            <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-2);">ESG 投資指南</h4>
+            <p style="font-size: var(--font-callout); color: var(--gray-primary); margin-bottom: var(--spacing-4);">
+              可持續投資趨勢及產品介紹
+            </p>
+            <a href="#" class="btn-link">下載報告 ›</a>
+          </div>
+        </div>
+        
+        <div class="report-item">
+          <div class="report-icon">📄</div>
+          <div>
+            <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-2);">退休規劃手冊</h4>
+            <p style="font-size: var(--font-callout); color: var(--gray-primary); margin-bottom: var(--spacing-4);">
+              全面退休規劃策略及產品配置建議
+            </p>
+            <a href="#" class="btn-link">下載報告 ›</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 網上研討會 -->
+  <section class="webinar-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">投資講座</h2>
+        <p class="section-subtitle">免費參加網上研討會，與專家面對面交流</p>
+      </div>
+      
+      <div class="webinar-grid">
+        <div class="webinar-card">
+          <span class="webinar-date">3 月 15 日 18:30</span>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">第二季投資策略講座</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary); margin-bottom: var(--spacing-5);">
+            首席投資策略師分析市場走勢及投資機會
+          </p>
+          <a href="#" class="btn btn-primary">立即報名</a>
+        </div>
+        
+        <div class="webinar-card">
+          <span class="webinar-date">3 月 22 日 19:00</span>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">退休規劃工作坊</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary); margin-bottom: var(--spacing-5);">
+            學習如何規劃充足的退休資金
+          </p>
+          <a href="#" class="btn btn-primary">立即報名</a>
+        </div>
+        
+        <div class="webinar-card">
+          <span class="webinar-date">3 月 29 日 18:00</span>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">美股投資入門</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary); margin-bottom: var(--spacing-5);">
+            認識美股市場及投資策略
+          </p>
+          <a href="#" class="btn btn-primary">立即報名</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section-gray" style="text-align: center;">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: var(--spacing-6);">訂閱市場資訊</h2>
+      <p class="section-subtitle" style="margin-bottom: var(--spacing-8);">
+        每日接收最新市場評論及投資分析
+      </p>
+      <div style="display: flex; gap: var(--spacing-4); justify-content: center; flex-wrap: wrap;">
+        <a href="#" class="btn btn-primary btn-large">立即訂閱</a>
+        <a href="../consultation/" class="btn btn-secondary btn-large">預約顧問</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁尾 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 富邦銀行 (香港) 有限公司 版權所有</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../../js/main.js"></script>
+</body>
+</html>

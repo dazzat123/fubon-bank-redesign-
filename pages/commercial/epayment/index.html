@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>網上收款 | 富邦銀行</title>
+  <link rel="stylesheet" href="../../../css/main.css">
+  <style>
+    .page-header {
+      padding: var(--spacing-15) 0 var(--spacing-10);
+      background: linear-gradient(135deg, #5856D6 0%, #AF52DE 100%);
+      color: var(--white);
+      text-align: center;
+    }
+    
+    .page-header .page-subtitle {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .payment-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-8);
+      padding: var(--spacing-12) 0;
+    }
+    
+    .payment-card {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-10);
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-normal);
+      text-align: center;
+    }
+    
+    .payment-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    .payment-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto var(--spacing-6);
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, #5856D6 0%, #AF52DE 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+    }
+    
+    .payment-title {
+      font-size: var(--font-title-3);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: var(--spacing-3);
+    }
+    
+    .payment-desc {
+      font-size: var(--font-callout);
+      color: var(--gray-primary);
+      margin-bottom: var(--spacing-6);
+    }
+    
+    .fee-section {
+      background: var(--gray-quaternary);
+      padding: var(--spacing-14) 0;
+    }
+    
+    .fee-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+    
+    .fee-table th,
+    .fee-table td {
+      padding: var(--spacing-5);
+      text-align: left;
+      border-bottom: 1px solid var(--gray-tertiary);
+    }
+    
+    .fee-table th {
+      background: var(--black);
+      color: var(--white);
+      font-weight: var(--font-weight-semibold);
+    }
+    
+    .integration-section {
+      background: var(--black);
+      color: var(--white);
+      padding: var(--spacing-14) 0;
+    }
+    
+    .integration-section .section-subtitle {
+      color: var(--gray-secondary);
+    }
+    
+    .integration-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--spacing-8);
+      margin-top: var(--spacing-12);
+    }
+    
+    .integration-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-8);
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    @media (max-width: 1023px) {
+      .payment-grid,
+      .integration-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 734px) {
+      .payment-grid,
+      .integration-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 導航欄 -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <a href="../../../" class="navbar-logo">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="#F47920"/>
+          <text x="50" y="65" text-anchor="middle" fill="white" font-size="40" font-weight="bold">F</text>
+        </svg>
+        <span>富邦銀行</span>
+      </a>
+      
+      <div class="navbar-menu">
+        <a href="../../personal/" class="navbar-link">個人銀行</a>
+        <a href="../../commercial/" class="navbar-link" style="opacity: 1; color: var(--fubon-orange);">商業銀行</a>
+        <a href="../../wealth/" class="navbar-link">財富管理</a>
+        <a href="../../ebanking/" class="navbar-link">電子銀行</a>
+        <a href="../../about/" class="navbar-link">關於我們</a>
+      </div>
+      
+      <div class="navbar-actions">
+        <a href="#" class="btn btn-primary btn-small">商業網銀</a>
+        <button class="navbar-toggle" aria-label="選單">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 頁面標題 -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">網上收款</h1>
+      <p class="page-subtitle">多元化的電子支付解決方案，簡化您的收款流程</p>
+    </div>
+  </header>
+
+  <!-- 支付方案 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">支付方案</h2>
+        <p class="section-subtitle">支援多種支付方式，滿足不同業務需要</p>
+      </div>
+      
+      <div class="payment-grid">
+        <div class="payment-card">
+          <div class="payment-icon">💳</div>
+          <h3 class="payment-title">信用卡收款</h3>
+          <p class="payment-desc">接受 Visa、Mastercard、銀聯等主要信用卡，安全快捷。</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 支援 3D 安全認證</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 即時交易通知</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 自動對賬服務</li>
+          </ul>
+          <a href="#" class="btn btn-primary">申請服務</a>
+        </div>
+        
+        <div class="payment-card">
+          <div class="payment-icon">📱</div>
+          <h3 class="payment-title">電子錢包</h3>
+          <p class="payment-desc">接受 AlipayHK、WeChat Pay、PayMe 等流行電子錢包。</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 一掃即付</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 低交易費用</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 即時過數</li>
+          </ul>
+          <a href="#" class="btn btn-primary">申請服務</a>
+        </div>
+        
+        <div class="payment-card">
+          <div class="payment-icon">🏦</div>
+          <h3 class="payment-title">FPS 轉數快</h3>
+          <p class="payment-desc">香港快速支付系統，24 小時即時轉賬。</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 零手續費</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 即時確認</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 支援 QR Code</li>
+          </ul>
+          <a href="#" class="btn btn-primary">申請服務</a>
+        </div>
+        
+        <div class="payment-card">
+          <div class="payment-icon">🌐</div>
+          <h3 class="payment-title">網上支付閘道</h3>
+          <p class="payment-desc">完整的網上支付解決方案，整合到您的網站或應用程式。</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ API/SDK 整合</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 多種貨幣支援</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 防詐騙保護</li>
+          </ul>
+          <a href="#" class="btn btn-primary">申請服務</a>
+        </div>
+        
+        <div class="payment-card">
+          <div class="payment-icon">📧</div>
+          <h3 class="payment-title">電子發票</h3>
+          <p class="payment-desc">發送電子發票，客戶可即時網上繳付。</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 自動化發票系統</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 付款提醒服務</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 財務報表整合</li>
+          </ul>
+          <a href="#" class="btn btn-primary">申請服務</a>
+        </div>
+        
+        <div class="payment-card">
+          <div class="payment-icon">🔧</div>
+          <h3 class="payment-title">定制方案</h3>
+          <p class="payment-desc">根據您的業務需要，量身打造支付解決方案。</p>
+          <ul style="list-style: none; margin-bottom: var(--spacing-6);">
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 專屬客戶經理</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 技術支援服務</li>
+            <li style="padding: var(--spacing-2) 0; color: var(--gray-primary);">✓ 彈性收費安排</li>
+          </ul>
+          <a href="#" class="btn btn-primary">聯絡我們</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 收費表 -->
+  <section class="fee-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">服務收費</h2>
+        <p class="section-subtitle">透明合理的收費結構</p>
+      </div>
+      
+      <table class="fee-table">
+        <thead>
+          <tr>
+            <th>服務類型</th>
+            <th>設置費</th>
+            <th>月費</th>
+            <th>交易手續費</th>
+            <th>結算週期</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>信用卡收款</strong></td>
+            <td>HK$800</td>
+            <td>HK$200</td>
+            <td>2.5% - 3.5%</td>
+            <td>T+2</td>
+          </tr>
+          <tr>
+            <td><strong>電子錢包</strong></td>
+            <td>免費</td>
+            <td>免費</td>
+            <td>1.0% - 1.5%</td>
+            <td>T+1</td>
+          </tr>
+          <tr>
+            <td><strong>FPS 轉數快</strong></td>
+            <td>免費</td>
+            <td>免費</td>
+            <td>免費</td>
+            <td>即時</td>
+          </tr>
+          <tr>
+            <td><strong>網上支付閘道</strong></td>
+            <td>HK$2,000</td>
+            <td>HK$500</td>
+            <td>2.0% - 3.0%</td>
+            <td>T+2</td>
+          </tr>
+          <tr>
+            <td><strong>電子發票</strong></td>
+            <td>免費</td>
+            <td>HK$150</td>
+            <td>免費</td>
+            <td>即時</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p style="font-size: var(--font-footnote); color: var(--gray-secondary); margin-top: var(--spacing-6);">
+        以上收費僅供參考，實際收費將根據業務類型、交易量及風險評估而定。歡迎聯絡我們查詢優惠方案。
+      </p>
+    </div>
+  </section>
+
+  <!-- 系統整合 -->
+  <section class="integration-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" style="color: white;">無縫系統整合</h2>
+        <p class="section-subtitle">輕鬆整合到您現有的業務系統</p>
+      </div>
+      
+      <div class="integration-grid">
+        <div class="integration-card">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-5);">🛒</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">電商平台</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-secondary);">Shopify, WooCommerce, Magento</p>
+        </div>
+        
+        <div class="integration-card">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-5);">📊</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">會計軟體</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-secondary);">Xero, QuickBooks, 用友</p>
+        </div>
+        
+        <div class="integration-card">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-5);">📱</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">手機應用程式</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-secondary);">iOS, Android SDK</p>
+        </div>
+        
+        <div class="integration-card">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-5);">🔌</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">API 整合</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-secondary);">RESTful API, Webhook</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 安全保證 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">安全與合規</h2>
+        <p class="section-subtitle">最高標準的保安措施，保障您的交易安全</p>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--spacing-8); margin-top: var(--spacing-12);">
+        <div style="text-align: center;">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-5);">🔒</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">PCI DSS</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">符合國際支付卡行業安全標準</p>
+        </div>
+        
+        <div style="text-align: center;">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-5);">🛡️</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">防詐騙系統</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">AI 驅動的可疑交易偵測</p>
+        </div>
+        
+        <div style="text-align: center;">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-5);">🔐</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">數據加密</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">端到端加密保護</p>
+        </div>
+        
+        <div style="text-align: center;">
+          <div style="font-size: 48px; margin-bottom: var(--spacing-5);">✅</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">合規監管</h4>
+          <p style="font-size: var(--font-callout); color: var(--gray-primary);">符合金管局監管要求</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section-gray" style="text-align: center;">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: var(--spacing-6);">開始接受電子支付</h2>
+      <p class="section-subtitle" style="margin-bottom: var(--spacing-8);">
+        立即申請網上收款服務，提升您的業務競爭力
+      </p>
+      <div style="display: flex; gap: var(--spacing-4); justify-content: center; flex-wrap: wrap;">
+        <a href="#" class="btn btn-primary btn-large">立即申請</a>
+        <a href="#" class="btn btn-secondary btn-large">預約示範</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁尾 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 富邦銀行 (香港) 有限公司 版權所有</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../../js/main.js"></script>
+</body>
+</html>

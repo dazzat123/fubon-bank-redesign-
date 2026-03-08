@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商業銀行 | 富邦銀行</title>
+  <link rel="stylesheet" href="../../css/main.css">
+  <style>
+    .page-header {
+      padding: var(--spacing-15) 0 var(--spacing-10);
+      background: linear-gradient(135deg, #1D1D1F 0%, #2D2D2F 100%);
+      color: var(--white);
+      text-align: center;
+    }
+    
+    .page-header .page-subtitle {
+      color: var(--gray-secondary);
+    }
+    
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-8);
+      padding: var(--spacing-12) 0;
+    }
+    
+    .category-card {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-10);
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-normal);
+      text-decoration: none;
+      color: var(--black);
+      display: block;
+    }
+    
+    .category-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    .category-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, #1D1D1F 0%, #4A4A4C 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      margin-bottom: var(--spacing-6);
+    }
+    
+    .category-title {
+      font-size: var(--font-title-3);
+      font-weight: var(--font-weight-semibold);
+      margin-bottom: var(--spacing-3);
+    }
+    
+    .category-desc {
+      font-size: var(--font-callout);
+      color: var(--gray-primary);
+      margin-bottom: var(--spacing-5);
+    }
+    
+    .sme-section {
+      background: var(--fubon-orange);
+      color: var(--white);
+      padding: var(--spacing-14) 0;
+    }
+    
+    .sme-section .section-subtitle {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .sme-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-8);
+      margin-top: var(--spacing-12);
+    }
+    
+    .sme-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-8);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .stats-section {
+      background: var(--gray-quaternary);
+      padding: var(--spacing-13) 0;
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--spacing-8);
+      text-align: center;
+    }
+    
+    .stat-number {
+      font-size: var(--font-title-1);
+      font-weight: var(--font-weight-bold);
+      color: var(--fubon-orange);
+      margin-bottom: var(--spacing-3);
+    }
+    
+    @media (max-width: 1023px) {
+      .category-grid,
+      .sme-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 734px) {
+      .category-grid,
+      .sme-grid,
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 導航欄 -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <a href="../../" class="navbar-logo">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="#F47920"/>
+          <text x="50" y="65" text-anchor="middle" fill="white" font-size="40" font-weight="bold">F</text>
+        </svg>
+        <span>富邦銀行</span>
+      </a>
+      
+      <div class="navbar-menu">
+        <a href="../personal/" class="navbar-link">個人銀行</a>
+        <a href="../commercial/" class="navbar-link" style="opacity: 1; color: var(--fubon-orange);">商業銀行</a>
+        <a href="../wealth/" class="navbar-link">財富管理</a>
+        <a href="../ebanking/" class="navbar-link">電子銀行</a>
+        <a href="../about/" class="navbar-link">關於我們</a>
+      </div>
+      
+      <div class="navbar-actions">
+        <a href="#" class="btn btn-primary btn-small">商業網銀</a>
+        <button class="navbar-toggle" aria-label="選單">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 頁面標題 -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">商業銀行</h1>
+      <p class="page-subtitle">為企業客戶提供全面的金融解決方案，助力業務增長</p>
+    </div>
+  </header>
+
+  <!-- 服務類別 -->
+  <section class="section">
+    <div class="container">
+      <div class="category-grid">
+        <a href="loans/" class="category-card">
+          <div class="category-icon">💼</div>
+          <h2 class="category-title">商業貸款</h2>
+          <p class="category-desc">靈活貸款方案，包括營運資金貸款、設備融資及商業按揭，配合您的業務發展需要。</p>
+          <span class="btn-link">了解更多 ›</span>
+        </a>
+        
+        <a href="deposits/" class="category-card">
+          <div class="category-icon">🏦</div>
+          <h2 class="category-title">商業存款</h2>
+          <p class="category-desc">多種存款選擇，包括活期、定期及通知存款，讓您的企業資金靈活增值。</p>
+          <span class="btn-link">了解更多 ›</span>
+        </a>
+        
+        <a href="trade/" class="category-card">
+          <div class="category-icon">🌏</div>
+          <h2 class="category-title">貿易服務</h2>
+          <p class="category-desc">進出口融資、信用狀、託收服務，支援您的國際貿易業務。</p>
+          <span class="btn-link">了解更多 ›</span>
+        </a>
+        
+        <a href="sme/" class="category-card">
+          <div class="category-icon">🚀</div>
+          <h2 class="category-title">中小企服務</h2>
+          <p class="category-desc">專為中小企業設計的綜合金融方案，包括貸款、現金管理及顧問服務。</p>
+          <span class="btn-link">了解更多 ›</span>
+        </a>
+        
+        <a href="epayment/" class="category-card">
+          <div class="category-icon">💳</div>
+          <h2 class="category-title">網上收款</h2>
+          <p class="category-desc">電子支付解決方案，支援多種支付方式，簡化您的收款流程。</p>
+          <span class="btn-link">了解更多 ›</span>
+        </a>
+        
+        <a href="cash/" class="category-card">
+          <div class="category-icon">💰</div>
+          <h2 class="category-title">現金管理</h2>
+          <p class="category-desc">高效的資金管理工具，優化企業現金流，提升資金運用效率。</p>
+          <span class="btn-link">了解更多 ›</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 中小企專區 -->
+  <section class="sme-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" style="color: white;">中小企融資方案</h2>
+        <p class="section-subtitle">政府擔保計劃，低息貸款助您業務擴展</p>
+      </div>
+      
+      <div class="sme-grid">
+        <div class="sme-card">
+          <h3 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">BUD 專項基金</h3>
+          <p style="color: rgba(255, 255, 255, 0.9); margin-bottom: var(--spacing-5);">
+            資助企業升級轉型、拓展內銷市場，最高資助 HK$1,000,000
+          </p>
+          <a href="sme/bud.html" class="btn btn-primary" style="background: white; color: var(--fubon-orange);">了解詳情</a>
+        </div>
+        
+        <div class="sme-card">
+          <h3 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">中小企融資擔保計劃</h3>
+          <p style="color: rgba(255, 255, 255, 0.9); margin-bottom: var(--spacing-5);">
+            政府擔保，低息貸款，還款期長達 8 年
+          </p>
+          <a href="sme/sfgs.html" class="btn btn-link" style="color: white;">了解詳情 ›</a>
+        </div>
+        
+        <div class="sme-card">
+          <h3 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">科技企業貸款</h3>
+          <p style="color: rgba(255, 255, 255, 0.9); margin-bottom: var(--spacing-5);">
+            專為科技初設企業設計，無需抵押，快速審批
+          </p>
+          <a href="sme/tech-loan.html" class="btn btn-link" style="color: white;">了解詳情 ›</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 統計數據 -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number" data-counter="10000">0</div>
+          <p class="stat-label">商業客戶</p>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-counter="50">0</div>
+          <p class="stat-label">億港元貸款額</p>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-counter="98">0</div>
+          <p class="stat-label">客戶滿意度 %</p>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-counter="24">0</div>
+          <p class="stat-label">小時專屬服務</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 為什麼選擇我們 -->
+  <section class="section section-gray">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">為什麼選擇富邦商業銀行</h2>
+        <p class="section-subtitle">超過 25 年服務企業客戶的專業經驗</p>
+      </div>
+      
+      <div class="category-grid">
+        <div class="category-card" style="text-align: center;">
+          <div class="category-icon" style="margin: 0 auto var(--spacing-6);">⚡</div>
+          <h3 class="category-title">快速審批</h3>
+          <p class="category-desc">簡化申請流程，最快 24 小時內完成審批。</p>
+        </div>
+        
+        <div class="category-card" style="text-align: center;">
+          <div class="category-icon" style="margin: 0 auto var(--spacing-6);">👥</div>
+          <h3 class="category-title">專屬團隊</h3>
+          <p class="category-desc">經驗豐富的客戶經理，提供一對一專業服務。</p>
+        </div>
+        
+        <div class="category-card" style="text-align: center;">
+          <div class="category-icon" style="margin: 0 auto var(--spacing-6);">🌐</div>
+          <h3 class="category-title">跨境服務</h3>
+          <p class="category-desc">支援大灣區及國際業務，提供跨境金融解決方案。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="text-align: center;">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: var(--spacing-6);">準備好擴展您的業務了嗎？</h2>
+      <p class="section-subtitle" style="margin-bottom: var(--spacing-8);">
+        立即聯絡我們的商業銀行團隊，為您量身打造金融方案
+      </p>
+      <div style="display: flex; gap: var(--spacing-4); justify-content: center; flex-wrap: wrap;">
+        <a href="#" class="btn btn-primary btn-large">預約諮詢</a>
+        <a href="#" class="btn btn-secondary btn-large">聯絡我們</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁尾 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h4>個人銀行</h4>
+          <ul class="footer-links">
+            <li><a href="../personal/deposits/">存款服務</a></li>
+            <li><a href="../personal/loans/">貸款服務</a></li>
+            <li><a href="../personal/cards/">信用卡</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>商業銀行</h4>
+          <ul class="footer-links">
+            <li><a href="loans/">商業貸款</a></li>
+            <li><a href="deposits/">商業存款</a></li>
+            <li><a href="trade/">貿易服務</a></li>
+            <li><a href="sme/">中小企服務</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>電子銀行</h4>
+          <ul class="footer-links">
+            <li><a href="../ebanking/internet/">網上銀行</a></li>
+            <li><a href="../ebanking/mobile/">手機銀行</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>關於我們</h4>
+          <ul class="footer-links">
+            <li><a href="../about/profile/">銀行簡介</a></li>
+            <li><a href="../about/branches/">分支行網絡</a></li>
+            <li><a href="../about/contact/">聯絡我們</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 富邦銀行 (香港) 有限公司 版權所有</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
