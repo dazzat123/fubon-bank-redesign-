@@ -4,13 +4,10 @@
 name = "fubon-bank-redesign"
 compatibility_date = "2024-01-01"
 
-[site]
-bucket = "./"
-entry-point = "."
-
+# Pages 靜態網站配置
 [build]
 command = ""
-publish = "."
+publish_dir = "."
 
 # 環境變數
 [vars]
