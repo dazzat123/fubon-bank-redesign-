@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>電子銀行 | 富邦銀行</title>
+  <link rel="stylesheet" href="../../css/main.css">
+  <style>
+    .hero-ebanking {
+      background: linear-gradient(135deg, #007AFF 0%, #5AC8FA 100%);
+      color: var(--white);
+      padding: var(--spacing-15) 0;
+    }
+    
+    .hero-ebanking .hero-subtitle {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-8);
+      padding: var(--spacing-12) 0;
+    }
+    
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-10);
+      box-shadow: var(--shadow-md);
+      text-align: center;
+      transition: all var(--transition-normal);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    .service-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto var(--spacing-6);
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, #007AFF 0%, #5AC8FA 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+    }
+    
+    .service-title {
+      font-size: var(--font-title-3);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: var(--spacing-3);
+    }
+    
+    .service-desc {
+      font-size: var(--font-callout);
+      color: var(--gray-primary);
+      margin-bottom: var(--spacing-6);
+    }
+    
+    .app-showcase {
+      background: var(--black);
+      color: var(--white);
+      padding: var(--spacing-15) 0;
+    }
+    
+    .app-showcase .section-subtitle {
+      color: var(--gray-secondary);
+    }
+    
+    .app-mockup {
+      max-width: 800px;
+      margin: var(--spacing-12) auto;
+      text-align: center;
+    }
+    
+    .app-features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-8);
+      margin-top: var(--spacing-12);
+    }
+    
+    .app-feature {
+      text-align: center;
+      padding: var(--spacing-6);
+    }
+    
+    .app-feature-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto var(--spacing-5);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+    }
+    
+    .security-section {
+      background: var(--gray-quaternary);
+      padding: var(--spacing-14) 0;
+    }
+    
+    .security-features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--spacing-6);
+      margin-top: var(--spacing-12);
+    }
+    
+    .security-item {
+      text-align: center;
+      padding: var(--spacing-6);
+    }
+    
+    .security-icon {
+      font-size: 48px;
+      margin-bottom: var(--spacing-4);
+    }
+    
+    @media (max-width: 1023px) {
+      .services-grid,
+      .app-features,
+      .security-features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 734px) {
+      .services-grid,
+      .app-features,
+      .security-features {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 導航欄 -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <a href="../../" class="navbar-logo">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="#F47920"/>
+          <text x="50" y="65" text-anchor="middle" fill="white" font-size="40" font-weight="bold">F</text>
+        </svg>
+        <span>富邦銀行</span>
+      </a>
+      
+      <div class="navbar-menu">
+        <a href="../personal/" class="navbar-link">個人銀行</a>
+        <a href="../commercial/" class="navbar-link">商業銀行</a>
+        <a href="../wealth/" class="navbar-link">財富管理</a>
+        <a href="../ebanking/" class="navbar-link" style="opacity: 1; color: var(--info);">電子銀行</a>
+        <a href="../about/" class="navbar-link">關於我們</a>
+      </div>
+      
+      <div class="navbar-actions">
+        <a href="#" class="btn btn-primary btn-small">登入</a>
+        <button class="navbar-toggle" aria-label="選單">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 英雄區塊 -->
+  <section class="hero-ebanking">
+    <div class="container" style="text-align: center;">
+      <p class="hero-eyebrow" style="color: rgba(255, 255, 255, 0.8);">數位銀行體驗</p>
+      <h1 class="hero-title" style="color: var(--white);">銀行服務，<br>觸手可及。</h1>
+      <p class="hero-subtitle">隨時隨地管理您的財務，享受流暢、安全的數位銀行體驗。</p>
+      <div class="hero-cta">
+        <a href="#" class="btn btn-primary btn-large" style="background: white; color: var(--info);">立即登入</a>
+        <a href="mobile/" class="btn btn-link" style="color: white;">下載手機應用程式 ›</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 電子銀行服務 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">我們的電子銀行服務</h2>
+        <p class="section-subtitle">全方位的數位銀行服務，滿足您的各種需要</p>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">💻</div>
+          <h3 class="service-title">網上銀行</h3>
+          <p class="service-desc">透過電腦隨時隨地管理您的戶口、轉賬、繳費及投資。</p>
+          <a href="internet/" class="btn-link">了解更多 ›</a>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">📱</div>
+          <h3 class="service-title">手機銀行</h3>
+          <p class="service-desc">下載手機應用程式，享受便捷的行動銀行服務。</p>
+          <a href="mobile/" class="btn-link">下載應用程式 ›</a>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">📧</div>
+          <h3 class="service-title">電子支票</h3>
+          <p class="service-desc">簽發及存入電子支票，簡單、安全、環保。</p>
+          <a href="echeque/" class="btn-link">了解更多 ›</a>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">💳</div>
+          <h3 class="service-title">繳費服務</h3>
+          <p class="service-desc">網上繳付賬單、稅款及各種費用，方便快捷。</p>
+          <a href="billpayment/" class="btn-link">立即繳費 ›</a>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">🔔</div>
+          <h3 class="service-title">通知服務</h3>
+          <p class="service-desc">即時接收戶口變動通知，掌握最新狀況。</p>
+          <a href="notifications/" class="btn-link">設定通知 ›</a>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">🔒</div>
+          <h3 class="service-title">保安服務</h3>
+          <p class="service-desc">多重保安認證，保障您的資金和資料安全。</p>
+          <a href="security/" class="btn-link">了解保安措施 ›</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 手機銀行展示 -->
+  <section class="app-showcase">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" style="color: white;">富邦手機銀行</h2>
+        <p class="section-subtitle">您的隨身銀行，隨時隨地為您服務</p>
+      </div>
+      
+      <div class="app-mockup">
+        <div style="background: rgba(255, 255, 255, 0.1); border-radius: var(--radius-2xl); padding: var(--spacing-10); backdrop-filter: blur(20px);">
+          <div style="font-size: 80px; margin-bottom: var(--spacing-6);">📱</div>
+          <h3 style="font-size: var(--font-title-2); margin-bottom: var(--spacing-4);">一應俱全的銀行體驗</h3>
+          <p style="color: var(--gray-secondary); font-size: var(--font-body);">
+            轉賬、繳費、投資、保險，所有銀行服務盡在指尖
+          </p>
+        </div>
+      </div>
+      
+      <div class="app-features">
+        <div class="app-feature">
+          <div class="app-feature-icon">⚡</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">快速便捷</h4>
+          <p style="color: var(--gray-secondary);">簡潔介面，輕鬆完成各種交易</p>
+        </div>
+        
+        <div class="app-feature">
+          <div class="app-feature-icon">🔒</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">安全可靠</h4>
+          <p style="color: var(--gray-secondary);">生物認證、雙重驗證多重保障</p>
+        </div>
+        
+        <div class="app-feature">
+          <div class="app-feature-icon">🎁</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">獨家優惠</h4>
+          <p style="color: var(--gray-secondary);">手機銀行用戶專屬獎賞及優惠</p>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: var(--spacing-12);">
+        <div class="app-buttons" style="display: flex; gap: var(--spacing-4); justify-content: center; flex-wrap: wrap;">
+          <a href="#" class="app-btn" style="background: white; color: var(--black);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-.8 1.94-.8s.16 1.09-.83 2.15c-.96 1.03-2.06 1.06-2.06 1.06s-.2-1.21.95-2.41z"/>
+            </svg>
+            <div>
+              <div style="font-size: 10px;">Download on the</div>
+              <div style="font-size: 16px; font-weight: 600;">App Store</div>
+            </div>
+          </a>
+          <a href="#" class="app-btn" style="background: white; color: var(--black);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L3.84,2.15C3.84,2.15 6.05,2.66 6.05,2.66Z"/>
+            </svg>
+            <div>
+              <div style="font-size: 10px;">GET IT ON</div>
+              <div style="font-size: 16px; font-weight: 600;">Google Play</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 保安措施 -->
+  <section class="security-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">全方位保安保障</h2>
+        <p class="section-subtitle">我們採用最先進的保安技術，保障您的資金和資料安全</p>
+      </div>
+      
+      <div class="security-features">
+        <div class="security-item">
+          <div class="security-icon">🔐</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">雙重認證</h4>
+          <p style="color: var(--gray-primary); font-size: var(--font-callout);">登入及交易需雙重驗證</p>
+        </div>
+        
+        <div class="security-item">
+          <div class="security-icon">👆</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">生物認證</h4>
+          <p style="color: var(--gray-primary); font-size: var(--font-callout);">指紋及面部識別登入</p>
+        </div>
+        
+        <div class="security-item">
+          <div class="security-icon">🔔</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">即時通知</h4>
+          <p style="color: var(--gray-primary); font-size: var(--font-callout);">戶口變動即時通知</p>
+        </div>
+        
+        <div class="security-item">
+          <div class="security-icon">🛡️</div>
+          <h4 style="font-size: var(--font-headline); margin-bottom: var(--spacing-3);">詐騙防護</h4>
+          <p style="color: var(--gray-primary); font-size: var(--font-callout);">24 小時監控可疑交易</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="text-align: center;">
+    <div class="container">
+      <h2 class="section-title">準備好體驗數位銀行了嗎？</h2>
+      <p class="section-subtitle" style="margin-bottom: var(--spacing-8);">
+        立即登記網上銀行或下載手機應用程式
+      </p>
+      <div style="display: flex; gap: var(--spacing-4); justify-content: center; flex-wrap: wrap;">
+        <a href="#" class="btn btn-primary btn-large">登記網上銀行</a>
+        <a href="mobile/" class="btn btn-secondary btn-large">下載手機應用程式</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁尾 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 富邦銀行 (香港) 有限公司 版權所有</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>

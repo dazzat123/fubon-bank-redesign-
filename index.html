@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="富邦銀行 (香港) - 提供全面的個人銀行、商業銀行、財富管理服務。Apple 風格全新設計體驗。">
+  <meta name="keywords" content="富邦銀行，銀行服務，理財，貸款，信用卡，投資，保險，香港銀行">
+  <meta name="author" content="Fubon Bank (Hong Kong) Limited">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="富邦銀行 | Fubon Bank">
+  <meta property="og:description" content="Apple 風格全新設計體驗，為您提供卓越的銀行服務">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.fubonbank.com.hk/">
+  
+  <title>富邦銀行 | Fubon Bank (Hong Kong) - Apple 風格全新設計</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  
+  <style>
+    /* 首頁特定樣式 */
+    .hero-product {
+      background: var(--black);
+      color: var(--white);
+    }
+    
+    .hero-product .hero-subtitle {
+      color: var(--gray-secondary);
+    }
+    
+    .promo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-6);
+      padding: var(--spacing-12) 0;
+    }
+    
+    .promo-card {
+      position: relative;
+      border-radius: var(--radius-2xl);
+      overflow: hidden;
+      min-height: 400px;
+      display: flex;
+      align-items: flex-end;
+      padding: var(--spacing-10);
+      background-size: cover;
+      background-position: center;
+      transition: transform var(--transition-normal);
+    }
+    
+    .promo-card:hover {
+      transform: scale(1.02);
+    }
+    
+    .promo-card-content {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      border-radius: var(--radius-xl);
+      padding: var(--spacing-8);
+      width: 100%;
+    }
+    
+    .promo-card-title {
+      font-size: var(--font-title-3);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: var(--spacing-3);
+      color: var(--black);
+    }
+    
+    .promo-card-text {
+      font-size: var(--font-callout);
+      color: var(--gray-primary);
+      margin-bottom: var(--spacing-5);
+    }
+    
+    .stats-section {
+      background: var(--gray-quaternary);
+      padding: var(--spacing-13) 0;
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--spacing-8);
+      text-align: center;
+    }
+    
+    .stat-item {
+      padding: var(--spacing-6);
+    }
+    
+    .stat-number {
+      font-size: var(--font-title-1);
+      font-weight: var(--font-weight-bold);
+      color: var(--fubon-orange);
+      margin-bottom: var(--spacing-3);
+    }
+    
+    .stat-label {
+      font-size: var(--font-callout);
+      color: var(--gray-primary);
+    }
+    
+    .services-section {
+      padding: var(--spacing-15) 0;
+    }
+    
+    .services-nav {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: var(--spacing-6);
+      margin-top: var(--spacing-12);
+    }
+    
+    .service-nav-item {
+      text-align: center;
+      padding: var(--spacing-8);
+      border-radius: var(--radius-xl);
+      background: var(--white);
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-normal);
+      text-decoration: none;
+      color: var(--black);
+    }
+    
+    .service-nav-item:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    .service-nav-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto var(--spacing-5);
+      border-radius: var(--radius-lg);
+      background: var(--gradient-hero);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 28px;
+    }
+    
+    .service-nav-title {
+      font-size: var(--font-headline);
+      font-weight: var(--font-weight-semibold);
+      margin-bottom: var(--spacing-2);
+    }
+    
+    .service-nav-text {
+      font-size: var(--font-footnote);
+      color: var(--gray-primary);
+    }
+    
+    .app-download-section {
+      background: var(--gradient-dark);
+      color: var(--white);
+      padding: var(--spacing-15) 0;
+      text-align: center;
+    }
+    
+    .app-download-section p {
+      color: var(--gray-secondary);
+      max-width: 600px;
+      margin: 0 auto var(--spacing-8);
+    }
+    
+    .app-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--spacing-5);
+      flex-wrap: wrap;
+    }
+    
+    .app-btn {
+      background: var(--black);
+      color: var(--white);
+      padding: 12px 24px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-3);
+      transition: all var(--transition-fast);
+      border: 1px solid var(--gray-tertiary);
+    }
+    
+    .app-btn:hover {
+      background: var(--gray-primary);
+      transform: scale(1.05);
+    }
+    
+    /* 響應式 */
+    @media (max-width: 1023px) {
+      .promo-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .services-nav {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 734px) {
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .services-nav {
+        grid-template-columns: 1fr;
+      }
+      
+      .app-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      
+      .app-btn {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 導航欄 -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <a href="/" class="navbar-logo">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="#F47920"/>
+          <text x="50" y="65" text-anchor="middle" fill="white" font-size="40" font-weight="bold">F</text>
+        </svg>
+        <span>富邦銀行</span>
+      </a>
+      
+      <div class="navbar-menu">
+        <a href="pages/personal/" class="navbar-link">個人銀行</a>
+        <a href="pages/commercial/" class="navbar-link">商業銀行</a>
+        <a href="pages/wealth/" class="navbar-link">財富管理</a>
+        <a href="pages/ebanking/" class="navbar-link">電子銀行</a>
+        <a href="pages/about/" class="navbar-link">關於我們</a>
+      </div>
+      
+      <div class="navbar-actions">
+        <a href="#" class="btn btn-primary btn-small">網上銀行</a>
+        <button class="navbar-toggle" aria-label="選單">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 英雄區塊 -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">全新體驗</p>
+      <h1 class="hero-title">銀行服務，<br>前所未有的簡單。</h1>
+      <p class="hero-subtitle">富邦銀行為您帶來 Apple 風格的全新數位體驗。直觀、流暢、安全，讓理財變得更加輕鬆自在。</p>
+      <div class="hero-cta">
+        <a href="pages/personal/" class="btn btn-primary btn-large">探索服務</a>
+        <a href="#" class="btn btn-secondary btn-large">預約諮詢</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 主打產品 -->
+  <section class="hero hero-product">
+    <div class="hero-content">
+      <p class="hero-eyebrow">限時優惠</p>
+      <h2 class="hero-title">富邦稅務貸款</h2>
+      <p class="hero-subtitle">年利率低至 2.88%*，最高貸款額 HK$2,000,000。立即申請，輕鬆解決財務需要。</p>
+      <div class="hero-cta">
+        <a href="pages/personal/loans/tax-loan.html" class="btn btn-primary btn-large">立即申請</a>
+        <a href="#" class="btn btn-link">了解更多 ›</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 推廣專區 -->
+  <section class="section">
+    <div class="container">
+      <div class="promo-grid">
+        <div class="promo-card" style="background-image: linear-gradient(135deg, #F47920 0%, #FF6B35 100%);">
+          <div class="promo-card-content">
+            <h3 class="promo-card-title">信用卡迎新優惠</h3>
+            <p class="promo-card-text">簽賬滿 HK$10,000 即享 HK$1,200 現金回贈</p>
+            <a href="pages/personal/cards/" class="btn-link">立即申请 ›</a>
+          </div>
+        </div>
+        
+        <div class="promo-card" style="background-image: linear-gradient(135deg, #007AFF 0%, #5AC8FA 100%);">
+          <div class="promo-card-content">
+            <h3 class="promo-card-title">投資服務</h3>
+            <p class="promo-card-text">港股交易佣金低至 0.08%，免費即時報價</p>
+            <a href="pages/personal/investments/" class="btn-link">開始投資 ›</a>
+          </div>
+        </div>
+        
+        <div class="promo-card" style="background-image: linear-gradient(135deg, #34C759 0%, #30D158 100%);">
+          <div class="promo-card-content">
+            <h3 class="promo-card-title">人壽保險計劃</h3>
+            <p class="promo-card-text">財富傳承 whole life plan，保障家人未來</p>
+            <a href="pages/personal/insurance/" class="btn-link">了解計劃 ›</a>
+          </div>
+        </div>
+        
+        <div class="promo-card" style="background-image: linear-gradient(135deg, #5856D6 0%, #AF52DE 100%);">
+          <div class="promo-card-content">
+            <h3 class="promo-card-title">手機銀行</h3>
+            <p class="promo-card-text">隨時隨地管理財務，下載即享 HK$100 現金券</p>
+            <a href="pages/ebanking/mobile/" class="btn-link">立即下載 ›</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 服務導航 -->
+  <section class="services-section section-gray">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">我們的服務</h2>
+        <p class="section-subtitle">全面的金融服務，滿足您個人及商業需要</p>
+      </div>
+      
+      <div class="services-nav">
+        <a href="pages/personal/deposits/" class="service-nav-item">
+          <div class="service-nav-icon">💰</div>
+          <h3 class="service-nav-title">存款服務</h3>
+          <p class="service-nav-text">活期、定期、外幣存款</p>
+        </a>
+        
+        <a href="pages/personal/loans/" class="service-nav-item">
+          <div class="service-nav-icon">🏠</div>
+          <h3 class="service-nav-title">貸款服務</h3>
+          <p class="service-nav-text">稅貸、按揭、私人貸款</p>
+        </a>
+        
+        <a href="pages/personal/cards/" class="service-nav-item">
+          <div class="service-nav-icon">💳</div>
+          <h3 class="service-nav-title">信用卡</h3>
+          <p class="service-nav-text">簽賬獎賞、分期服務</p>
+        </a>
+        
+        <a href="pages/personal/investments/" class="service-nav-item">
+          <div class="service-nav-icon">📈</div>
+          <h3 class="service-nav-title">投資服務</h3>
+          <p class="service-nav-text">股票、基金、債券</p>
+        </a>
+        
+        <a href="pages/personal/insurance/" class="service-nav-item">
+          <div class="service-nav-icon">🛡️</div>
+          <h3 class="service-nav-title">保險服務</h3>
+          <p class="service-nav-text">人壽、醫療、旅遊保險</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 統計數據 -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number" data-counter="15">0</div>
+          <p class="stat-label">分支行</p>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-counter="500000">0</div>
+          <p class="stat-label">服務客戶</p>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-counter="25">0</div>
+          <p class="stat-label">年經驗</p>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-counter="24">0</div>
+          <p class="stat-label">小時服務</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 手機銀行下載 -->
+  <section class="app-download-section">
+    <div class="container">
+      <h2 class="section-title" style="color: white;">富邦手機銀行</h2>
+      <p>隨時隨地管理您的財務。下載富邦手機銀行應用程式，享受無縫的數位銀行體驗。</p>
+      <div class="app-buttons">
+        <a href="#" class="app-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-.8 1.94-.8s.16 1.09-.83 2.15c-.96 1.03-2.06 1.06-2.06 1.06s-.2-1.21.95-2.41z"/>
+          </svg>
+          <div>
+            <div style="font-size: 10px;">Download on the</div>
+            <div style="font-size: 16px; font-weight: 600;">App Store</div>
+          </div>
+        </a>
+        <a href="#" class="app-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L3.84,2.15C3.84,2.15 6.05,2.66 6.05,2.66Z"/>
+          </svg>
+          <div>
+            <div style="font-size: 10px;">GET IT ON</div>
+            <div style="font-size: 16px; font-weight: 600;">Google Play</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁尾 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h4>個人銀行</h4>
+          <ul class="footer-links">
+            <li><a href="pages/personal/deposits/">存款服務</a></li>
+            <li><a href="pages/personal/loans/">貸款服務</a></li>
+            <li><a href="pages/personal/cards/">信用卡</a></li>
+            <li><a href="pages/personal/investments/">投資服務</a></li>
+            <li><a href="pages/personal/insurance/">保險服務</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>商業銀行</h4>
+          <ul class="footer-links">
+            <li><a href="pages/commercial/loans/">商業貸款</a></li>
+            <li><a href="pages/commercial/deposits/">商業存款</a></li>
+            <li><a href="pages/commercial/trade/">貿易服務</a></li>
+            <li><a href="pages/commercial/sme/">中小企服務</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>電子銀行</h4>
+          <ul class="footer-links">
+            <li><a href="pages/ebanking/internet/">網上銀行</a></li>
+            <li><a href="pages/ebanking/mobile/">手機銀行</a></li>
+            <li><a href="pages/ebanking/echeque/">電子支票</a></li>
+            <li><a href="pages/ebanking/security/">保安服務</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>關於我們</h4>
+          <ul class="footer-links">
+            <li><a href="pages/about/profile/">銀行簡介</a></li>
+            <li><a href="pages/about/branches/">分支行網絡</a></li>
+            <li><a href="pages/about/contact/">聯絡我們</a></li>
+            <li><a href="pages/about/careers/">事業機會</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 富邦銀行 (香港) 有限公司 版權所有</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.15 5.96C15.21 5.96 16.12 6.04 16.12 6.04V8.51H15.01C13.77 8.51 13.38 9.28 13.38 10.07V12.06H16.16L15.71 14.96H13.38V21.96C18.16 21.21 21.82 17.06 21.82 12.06C21.82 6.53 17.32 2.04 12 2.04Z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="YouTube">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom" style="border-top: none; padding-top: var(--spacing-6);">
+        <p class="footer-copyright" style="font-size: 11px;">
+          <a href="#">條款及細則</a> | 
+          <a href="#">私隱政策</a> | 
+          <a href="#">免責聲明</a> | 
+          <a href="#">保安提示</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
