@@ -1,0 +1,16 @@
+# Cloudflare Pages Configuration
+# Run `wrangler login` first to authenticate
+# Then run `wrangler pages deploy . --project-name=fubon-bank-redesign`
+
+name = "fubon-bank-redesign"
+compatibility_date = "2024-01-01"
+
+[site]
+bucket = "."
+
+# Build settings (for Git-based deployment)
+# Build command: (leave empty for static site)
+# Build output directory: /
+
+# Environment variables (add in Cloudflare Dashboard)
+# ANALYTICS_ID=your-cloudflare-web-analytics-id

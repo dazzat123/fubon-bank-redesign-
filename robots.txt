@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fubon-bank-redesign.pages.dev/sitemap.xml
+
+# 禁止爬取登入頁面
+Disallow: /login/

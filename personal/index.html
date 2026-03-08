@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="富邦銀行個人銀行服務 - 賬戶、貸款、信用卡、投資、保險，全方位的金融解決方案。">
+  <title>個人銀行服務 | 富邦銀行</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">跳至主要內容</a>
+  
+  <!-- Header (same as index.html) -->
+  <header class="global-header" role="banner">
+    <nav class="nav-container" role="navigation" aria-label="主選單">
+      <a href="/" class="nav-logo">
+        <svg width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <text x="0" y="24" font-family="system-ui, -apple-system" font-size="20" font-weight="bold" fill="#1D1D1F">富邦銀行</text>
+        </svg>
+      </a>
+      
+      <ul class="nav-menu">
+        <li class="nav-item has-dropdown">
+          <a href="/personal/" class="nav-link">
+            個人銀行
+            <svg class="nav-arrow" viewBox="0 0 12 12" fill="currentColor">
+              <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            </svg>
+          </a>
+          <div class="nav-dropdown">
+            <div class="dropdown-content">
+              <a href="/personal/accounts/" class="dropdown-item">
+                <span class="dropdown-title">賬戶服務</span>
+                <span class="dropdown-desc">儲蓄、往來、定期</span>
+              </a>
+              <a href="/personal/loans/" class="dropdown-item">
+                <span class="dropdown-title">貸款服務</span>
+                <span class="dropdown-desc">稅貸、私貸、按揭</span>
+              </a>
+              <a href="/personal/cards/" class="dropdown-item">
+                <span class="dropdown-title">信用卡</span>
+                <span class="dropdown-desc">現金回贈、里數獎賞</span>
+              </a>
+              <a href="/personal/investment/" class="dropdown-item">
+                <span class="dropdown-title">投資服務</span>
+                <span class="dropdown-desc">股票、基金、債券</span>
+              </a>
+              <a href="/personal/insurance/" class="dropdown-item">
+                <span class="dropdown-title">保險服務</span>
+                <span class="dropdown-desc">人壽、醫療、旅遊</span>
+              </a>
+              <a href="/personal/e-banking/" class="dropdown-item">
+                <span class="dropdown-title">電子銀行</span>
+                <span class="dropdown-desc">網上銀行、手機銀行</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        
+        <li class="nav-item has-dropdown">
+          <a href="/corporate/" class="nav-link">
+            企業銀行
+            <svg class="nav-arrow" viewBox="0 0 12 12" fill="currentColor">
+              <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            </svg>
+          </a>
+          <div class="nav-dropdown">
+            <div class="dropdown-content">
+              <a href="/corporate/accounts/" class="dropdown-item">
+                <span class="dropdown-title">商業賬戶</span>
+                <span class="dropdown-desc">SME、企業賬戶</span>
+              </a>
+              <a href="/corporate/loans/" class="dropdown-item">
+                <span class="dropdown-title">企業貸款</span>
+                <span class="dropdown-desc">創業貸款、營運資金</span>
+              </a>
+              <a href="/corporate/sme/" class="dropdown-item">
+                <span class="dropdown-title">SME 服務</span>
+                <span class="dropdown-desc">中小企業專屬方案</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        
+        <li class="nav-item has-dropdown">
+          <a href="/wealth/" class="nav-link">
+            財富管理
+            <svg class="nav-arrow" viewBox="0 0 12 12" fill="currentColor">
+              <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            </svg>
+          </a>
+          <div class="nav-dropdown">
+            <div class="dropdown-content">
+              <a href="/wealth/investment/" class="dropdown-item">
+                <span class="dropdown-title">投資產品</span>
+                <span class="dropdown-desc">基金、股票、結構性產品</span>
+              </a>
+              <a href="/wealth/private-banking/" class="dropdown-item">
+                <span class="dropdown-title">私人銀行</span>
+                <span class="dropdown-desc">高端理財服務</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        
+        <li class="nav-item has-dropdown">
+          <a href="/about/" class="nav-link">
+            關於我們
+            <svg class="nav-arrow" viewBox="0 0 12 12" fill="currentColor">
+              <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            </svg>
+          </a>
+          <div class="nav-dropdown">
+            <div class="dropdown-content">
+              <a href="/about/contact/" class="dropdown-item">
+                <span class="dropdown-title">聯絡我們</span>
+                <span class="dropdown-desc">分行、熱線、查詢</span>
+              </a>
+              <a href="/about/network/" class="dropdown-item">
+                <span class="dropdown-title">分行網絡</span>
+                <span class="dropdown-desc">15 間分行遍佈港九新界</span>
+              </a>
+              <a href="/about/compliance/" class="dropdown-item">
+                <span class="dropdown-title">合規與披露</span>
+                <span class="dropdown-desc">監管資訊、免責聲明</span>
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+      
+      <div class="nav-actions">
+        <button class="nav-search" aria-label="搜尋">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="2"/>
+            <path d="M14 14L17 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <a href="/login/" class="btn btn-primary btn-sm">登入</a>
+      </div>
+      
+      <button class="nav-toggle" aria-label="選單" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+    </nav>
+  </header>
+  
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 60vh;">
+      <div class="container">
+        <div class="hero-content">
+          <h1>個人銀行服務</h1>
+          <p class="hero-subtitle">
+            全方位的金融解決方案，<br>
+            滿足您人生的每個階段。
+          </p>
+          <div class="hero-cta">
+            <a href="/personal/accounts/open/" class="btn btn-primary btn-large">
+              開立賬戶
+            </a>
+            <a href="/personal/" class="btn btn-secondary">
+              探索服務
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <svg width="500" height="400" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="500" height="400" rx="24" fill="#F5F5F7"/>
+            <circle cx="250" cy="200" r="120" fill="#0066CC" opacity="0.1"/>
+            <rect x="150" y="120" width="200" height="160" rx="16" fill="white" stroke="#D2D2D7" stroke-width="2"/>
+            <text x="250" y="200" text-anchor="middle" font-family="system-ui" font-size="20" fill="#1D1D1F">個人理財</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Service Categories Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>探索我們的服務</h2>
+          <p>從日常理財到長遠規劃，我們為您提供全面支援</p>
+        </div>
+        
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="8" width="24" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M8 14H24" stroke="currentColor" stroke-width="2"/>
+                <path d="M8 18H18" stroke="currentColor" stroke-width="2"/>
+                <path d="M8 22H14" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3>賬戶服務</h3>
+            <p>開立儲蓄、往來或定期賬戶，享受靈活理財體驗。</p>
+            <a href="/personal/accounts/" class="card-link">
+              了解詳情 <span class="arrow">›</span>
+            </a>
+          </article>
+          
+          <article class="service-card">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="2"/>
+                <path d="M16 10V22" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 14L16 10L20 14" stroke="currentColor" stroke-width="2" fill="none"/>
+              </svg>
+            </div>
+            <h3>貸款服務</h3>
+            <p>稅務貸款、私人貸款、按揭貸款，助您實現人生目標。</p>
+            <a href="/personal/loans/" class="card-link">
+              了解詳情 <span class="arrow">›</span>
+            </a>
+          </article>
+          
+          <article class="service-card">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="8" width="24" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M4 12H28" stroke="currentColor" stroke-width="2"/>
+                <path d="M16 20C17.1046 20 18 20.8954 18 22C18 23.1046 17.1046 24 16 24C14.8954 24 14 23.1046 14 22C14 20.8954 14.8954 20 16 20Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3>信用卡</h3>
+            <p>現金回贈、里數獎賞、商戶優惠，盡享消費樂趣。</p>
+            <a href="/personal/cards/" class="card-link">
+              了解詳情 <span class="arrow">›</span>
+            </a>
+          </article>
+          
+          <article class="service-card">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 20L16 4L26 20" stroke="currentColor" stroke-width="2" fill="none"/>
+                <path d="M8 20H24V26C24 27.1046 23.1046 28 22 28H10C8.89543 28 8 27.1046 8 26V20Z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3>投資服務</h3>
+            <p>股票、基金、債券，專業平台助您把握投資機會。</p>
+            <a href="/personal/investment/" class="card-link">
+              了解詳情 <span class="arrow">›</span>
+            </a>
+          </article>
+          
+          <article class="service-card">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 4C10.4772 4 6 8.47715 6 14C6 22 16 28 16 28C16 28 26 22 26 14C26 8.47715 21.5228 4 16 4Z" stroke="currentColor" stroke-width="2"/>
+                <circle cx="16" cy="14" r="4" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3>保險服務</h3>
+            <p>人壽、醫療、旅遊保險，為您和家人提供全面保障。</p>
+            <a href="/personal/insurance/" class="card-link">
+              了解詳情 <span class="arrow">›</span>
+            </a>
+          </article>
+          
+          <article class="service-card">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="6" width="24" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M8 10H24" stroke="currentColor" stroke-width="2"/>
+                <circle cx="16" cy="20" r="3" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3>電子銀行</h3>
+            <p>網上銀行、手機銀行，24 小時隨時管理財富。</p>
+            <a href="/personal/e-banking/" class="card-link">
+              了解詳情 <span class="arrow">›</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Popular Products Carousel -->
+    <section class="section" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <h2>熱門產品</h2>
+          <p>客戶最選擇的銀行產品與服務</p>
+        </div>
+        
+        <div class="service-grid" style="grid-template-columns: repeat(3, 1fr);">
+          <article class="card card-highlight">
+            <div class="card-badge">熱門</div>
+            <div class="card-image" style="background: linear-gradient(135deg, #F37021 0%, #D95A0F 100%);">
+              <div style="height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 48px;">💳</div>
+            </div>
+            <div class="card-content">
+              <p class="card-category">信用卡</p>
+              <h3 class="card-title">富邦信用卡</h3>
+              <p class="card-description">高達 6% 現金回贈，指定商戶額外獎賞。</p>
+              <a href="/personal/cards/products/fubon-card/" class="card-link">
+                立即申請 <span class="arrow">›</span>
+              </a>
+            </div>
+          </article>
+          
+          <article class="card">
+            <div class="card-image" style="background: linear-gradient(135deg, #0066CC 0%, #004499 100%);">
+              <div style="height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 48px;">💰</div>
+            </div>
+            <div class="card-content">
+              <p class="card-category">貸款</p>
+              <h3 class="card-title">稅務貸款</h3>
+              <p class="card-description">年利率低至 2.88%，貸款額高達 HK$600,000。</p>
+              <a href="/personal/loans/tax-loan/" class="card-link">
+                立即申請 <span class="arrow">›</span>
+              </a>
+            </div>
+          </article>
+          
+          <article class="card">
+            <div class="card-image" style="background: linear-gradient(135deg, #00A651 0%, #008A42 100%);">
+              <div style="height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 48px;">🏠</div>
+            </div>
+            <div class="card-content">
+              <p class="card-category">貸款</p>
+              <h3 class="card-title">按揭貸款</h3>
+              <p class="card-description">最優惠利率低至 P-2.5%，90% 高成按揭。</p>
+              <a href="/personal/loans/mortgage/" class="card-link">
+                了解詳情 <span class="arrow">›</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Financial Tools -->
+    <section class="features">
+      <div class="container">
+        <div class="section-header">
+          <h2>理財工具</h2>
+          <p>協助您做出明智的財務決策</p>
+        </div>
+        
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-icon">🧮</div>
+            <h3>貸款計算機</h3>
+            <p>計算每月還款額，規劃您的貸款計劃。</p>
+            <a href="/personal/loans/calculator/" class="card-link" style="margin-top: var(--space-4);">
+              使用工具 <span class="arrow">›</span>
+            </a>
+          </article>
+          
+          <article class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>存款比較</h3>
+            <p>比較不同存款產品的利率與條款。</p>
+            <a href="/personal/accounts/deposit-comparison/" class="card-link" style="margin-top: var(--space-4);">
+              比較產品 <span class="arrow">›</span>
+            </a>
+          </article>
+          
+          <article class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>投資風險評估</h3>
+            <p>了解您的風險承受能力，選擇合適產品。</p>
+            <a href="/personal/investment/risk-assessment/" class="card-link" style="margin-top: var(--space-4);">
+              開始評估 <span class="arrow">›</span>
+            </a>
+          </article>
+          
+          <article class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3>手機銀行下載</h3>
+            <p>隨時隨地管理您的財富。</p>
+            <a href="/personal/e-banking/mobile-banking/" class="card-link" style="margin-top: var(--space-4);">
+              立即下載 <span class="arrow">›</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="section">
+      <div class="container" style="max-width: 800px;">
+        <div class="section-header">
+          <h2>常見問題</h2>
+          <p>解答您最關心的問題</p>
+        </div>
+        
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span class="accordion-title">如何開立銀行賬戶？</span>
+              <svg class="accordion-icon" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10 4V16M4 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <div class="accordion-content" hidden>
+              <div class="accordion-body">
+                <p>您可以透過以下方式開立賬戶：</p>
+                <ul>
+                  <li>網上申請 - 填寫線上表格，上載所需文件</li>
+                  <li>親臨分行 - 攜帶身份證明文件及住址證明</li>
+                  <li>手機銀行 - 下載應用程式後線上開戶</li>
+                </ul>
+                <p>一般需時 1-3 個工作天完成審批。</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span class="accordion-title">申請貸款需要什麼文件？</span>
+              <svg class="accordion-icon" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10 4V16M4 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <div class="accordion-content" hidden>
+              <div class="accordion-body">
+                <p>申請貸款通常需要以下文件：</p>
+                <ul>
+                  <li>香港身份證副本</li>
+                  <li>最近 3 個月的糧單或銀行月結單</li>
+                  <li>住址證明（如最近 3 個月的水電費單）</li>
+                  <li>其他收入證明（如適用）</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span class="accordion-title">信用卡年費是多少？</span>
+              <svg class="accordion-icon" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10 4V16M4 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <div class="accordion-content" hidden>
+              <div class="accordion-body">
+                <p>富邦信用卡首年年費全免。其後每年簽賬滿 12 次可豁免翌年年費。主卡年費為 HK$1,000，附屬卡年費為 HK$500。</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span class="accordion-title">如何聯絡我們？</span>
+              <svg class="accordion-icon" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10 4V16M4 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <div class="accordion-content" hidden>
+              <div class="accordion-body">
+                <p>您可以透過以下方式聯絡我們：</p>
+                <ul>
+                  <li>電話熱線：2806 5062（星期一至五：9:00 - 17:00）</li>
+                  <li>電子郵件：info@fubonbank.com.hk</li>
+                  <li>親臨任何一間分行</li>
+                  <li>網上即時聊天服務</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>需要協助？</h2>
+        <p>我們的客戶服務團隊隨時為您提供協助</p>
+        <div class="cta-buttons">
+          <a href="/about/contact/" class="btn btn-primary btn-large">
+            聯絡我們
+          </a>
+          <a href="/about/network/branches/" class="btn btn-secondary btn-large">
+            尋找分行
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer (same as index.html) -->
+  <footer class="global-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>個人銀行</h4>
+          <ul>
+            <li><a href="/personal/accounts/">賬戶服務</a></li>
+            <li><a href="/personal/loans/">貸款服務</a></li>
+            <li><a href="/personal/cards/">信用卡</a></li>
+            <li><a href="/personal/investment/">投資服務</a></li>
+            <li><a href="/personal/insurance/">保險服務</a></li>
+            <li><a href="/personal/e-banking/">電子銀行</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>企業銀行</h4>
+          <ul>
+            <li><a href="/corporate/accounts/">商業賬戶</a></li>
+            <li><a href="/corporate/loans/">企業貸款</a></li>
+            <li><a href="/corporate/sme/">SME 服務</a></li>
+            <li><a href="/corporate/trade-finance/">貿易融資</a></li>
+            <li><a href="/corporate/business-online/">企業網上銀行</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>財富管理</h4>
+          <ul>
+            <li><a href="/wealth/investment/">投資產品</a></li>
+            <li><a href="/wealth/funds/">基金</a></li>
+            <li><a href="/wealth/stocks/">股票</a></li>
+            <li><a href="/wealth/private-banking/">私人銀行</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>關於我們</h4>
+          <ul>
+            <li><a href="/about/contact/">聯絡我們</a></li>
+            <li><a href="/about/network/">分行網絡</a></li>
+            <li><a href="/about/careers/">職業機會</a></li>
+            <li><a href="/about/news/">新聞中心</a></li>
+            <li><a href="/about/compliance/">合規與披露</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="footer-legal">
+          <a href="/terms/">使用條款</a>
+          <a href="/privacy/">隱私權政策</a>
+          <a href="/disclaimer/">免責聲明</a>
+          <a href="/sitemap/">網站地圖</a>
+        </div>
+        
+        <div class="footer-regulatory">
+          <p>© 2026 富邦銀行（香港）有限公司 版權所有</p>
+          <p>富邦銀行（香港）有限公司受香港金融管理局監管</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="/js/main.js" defer></script>
+</body>
+</html>
