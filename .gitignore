@@ -22,3 +22,9 @@ node_modules/
 # 構建輸出
 dist/
 build/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
