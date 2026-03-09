@@ -23,6 +23,45 @@
   
   <style>
     /* 首頁特定樣式 */
+    .hero-image-section {
+      position: relative;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .hero-background {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+    
+    .hero-bg-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%);
+    }
+    
+    .hero-overlay-dark {
+      background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%);
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: var(--spacing-15);
+      text-align: center;
+    }
+    
     .hero-product {
       background: var(--black);
       color: var(--white);
@@ -30,6 +69,13 @@
     
     .hero-product .hero-subtitle {
       color: var(--gray-secondary);
+    }
+    
+    .promo-icon {
+      width: 48px;
+      height: 48px;
+      color: var(--fubon-orange);
+      margin-bottom: var(--spacing-4);
     }
     
     .promo-grid {
@@ -275,6 +321,10 @@
 
   <!-- 主打產品 -->
   <section class="hero hero-product">
+    <div class="hero-background">
+      <img src="images/hero/hero-happy-family.jpg" alt="幸福家庭" class="hero-bg-image">
+      <div class="hero-overlay hero-overlay-dark"></div>
+    </div>
     <div class="hero-content">
       <p class="hero-eyebrow">限時優惠</p>
       <h2 class="hero-title">富邦稅務貸款</h2>
@@ -290,32 +340,35 @@
   <section class="section">
     <div class="container">
       <div class="promo-grid">
-        <div class="promo-card" style="background-image: linear-gradient(135deg, #F47920 0%, #FF6B35 100%);">
+        <div class="promo-card" style="background-image: linear-gradient(135deg, rgba(244,121,32,0.1) 0%, rgba(244,121,32,0.05) 100%), url('images/products/product-credit-card.jpg');">
           <div class="promo-card-content">
             <h3 class="promo-card-title">信用卡迎新優惠</h3>
             <p class="promo-card-text">簽賬滿 HK$10,000 即享 HK$1,200 現金回贈</p>
-            <a href="pages/personal/cards/" class="btn-link">立即申请 ›</a>
+            <a href="pages/personal/cards/" class="btn-link">立即申請 ›</a>
           </div>
         </div>
         
-        <div class="promo-card" style="background-image: linear-gradient(135deg, #007AFF 0%, #5AC8FA 100%);">
+        <div class="promo-card" style="background-image: linear-gradient(135deg, rgba(0,122,255,0.1) 0%, rgba(90,200,250,0.05) 100%), url('images/products/product-investment.jpg');">
           <div class="promo-card-content">
+            <svg class="promo-icon"><use href="images/icons/service-icons.svg#investment"/></svg>
             <h3 class="promo-card-title">投資服務</h3>
             <p class="promo-card-text">港股交易佣金低至 0.08%，免費即時報價</p>
             <a href="pages/personal/investments/" class="btn-link">開始投資 ›</a>
           </div>
         </div>
         
-        <div class="promo-card" style="background-image: linear-gradient(135deg, #34C759 0%, #30D158 100%);">
+        <div class="promo-card" style="background-image: linear-gradient(135deg, rgba(52,199,89,0.1) 0%, rgba(48,209,88,0.05) 100%), url('images/products/product-insurance.jpg');">
           <div class="promo-card-content">
+            <svg class="promo-icon"><use href="images/icons/service-icons.svg#insurance"/></svg>
             <h3 class="promo-card-title">人壽保險計劃</h3>
             <p class="promo-card-text">財富傳承 whole life plan，保障家人未來</p>
             <a href="pages/personal/insurance/" class="btn-link">了解計劃 ›</a>
           </div>
         </div>
         
-        <div class="promo-card" style="background-image: linear-gradient(135deg, #5856D6 0%, #AF52DE 100%);">
+        <div class="promo-card" style="background-image: linear-gradient(135deg, rgba(88,86,214,0.1) 0%, rgba(175,82,222,0.05) 100%), url('images/banners/banner-mobile-app.jpg');">
           <div class="promo-card-content">
+            <svg class="promo-icon"><use href="images/icons/service-icons.svg#mobile-banking"/></svg>
             <h3 class="promo-card-title">手機銀行</h3>
             <p class="promo-card-text">隨時隨地管理財務，下載即享 HK$100 現金券</p>
             <a href="pages/ebanking/mobile/" class="btn-link">立即下載 ›</a>

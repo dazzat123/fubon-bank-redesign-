@@ -7,14 +7,49 @@
   <link rel="stylesheet" href="../../css/main.css">
   <style>
     .page-header {
+      position: relative;
       padding: var(--spacing-15) 0 var(--spacing-10);
       background: linear-gradient(135deg, #8E8E93 0%, #636366 100%);
       color: var(--white);
       text-align: center;
+      overflow: hidden;
+    }
+    
+    .page-header-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0.15;
+    }
+    
+    .page-header-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     
     .page-header .page-subtitle {
       color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .service-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, #8E8E93 0%, #636366 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      margin-bottom: var(--spacing-6);
+    }
+    
+    .service-icon svg {
+      width: 40px;
+      height: 40px;
+      color: white;
     }
     
     .service-grid {
@@ -192,6 +227,9 @@
 
   <!-- 頁面標題 -->
   <header class="page-header">
+    <div class="page-header-bg">
+      <img src="../../images/hero/hero-financial-advisor.jpg" alt="理財顧問">
+    </div>
     <div class="container">
       <h1 class="page-title">財富管理</h1>
       <p class="page-subtitle">專業理財顧問，為您量身打造財富增值方案</p>

@@ -7,14 +7,42 @@
   <link rel="stylesheet" href="../../../css/main.css">
   <style>
     .page-header {
+      position: relative;
       padding: var(--spacing-15) 0 var(--spacing-10);
       background: linear-gradient(135deg, #FF3B30 0%, #FF6B35 100%);
       color: var(--white);
       text-align: center;
+      overflow: hidden;
+    }
+    
+    .page-header-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0.15;
+    }
+    
+    .page-header-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     
     .page-header .page-subtitle {
       color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .card-image {
+      height: 200px;
+      background: linear-gradient(135deg, #1D1D1F 0%, #4A4A4C 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+      background-size: cover;
+      background-position: center;
     }
     
     .card-grid {
@@ -133,6 +161,9 @@
 
   <!-- 頁面標題 -->
   <header class="page-header">
+    <div class="page-header-bg">
+      <img src="../../../images/products/product-credit-card.jpg" alt="信用卡">
+    </div>
     <div class="container">
       <h1 class="page-title">信用卡</h1>
       <p class="page-subtitle">多款信用卡選擇，豐富簽賬獎賞及獨家優惠</p>

@@ -1,195 +1,104 @@
 #!/bin/bash
 
-# ============================================
-# 富邦銀行 Apple 風格重新設計 - 部署腳本
-# Fubon Bank Redesign - Deployment Script
-# ============================================
+# Fubon Bank Redesign - 部署腳本
+# 使用說明：./deploy.sh
 
 set -e
 
-# 顏色定義
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-BLUE='\033[0;34m'
-NC='\033[0m' # No Color
-
-# 專案目錄
-PROJECT_DIR="/root/.openclaw/workspace/fubon-bank-redesign"
 PROJECT_NAME="fubon-bank-redesign"
+BUILD_DIR="."
 
-echo -e "${BLUE}╔════════════════════════════════════════════════════════╗${NC}"
-echo -e "${BLUE}║   富邦銀行 Apple 風格重新設計 - 部署工具              ║${NC}"
-echo -e "${BLUE}╚════════════════════════════════════════════════════════╝${NC}"
+echo "🚀 Fubon Bank Redesign - 部署腳本"
+echo "=================================="
 echo ""
 
-# 檢查 Wrangler 是否安裝
-check_wrangler() {
-  if ! command -v wrangler &> /dev/null; then
-    echo -e "${YELLOW}⚠️  Wrangler 未安裝，正在安裝...${NC}"
-    npm install -g wrangler
-  else
-    echo -e "${GREEN}✓ Wrangler 已安裝${NC}"
-  fi
-}
-
-# 檢查 Cloudflare 登入
-check_login() {
-  echo -e "${YELLOW}📝 檢查 Cloudflare 登入狀態...${NC}"
-  if ! wrangler whoami &> /dev/null; then
-    echo -e "${YELLOW}⚠️  未登入 Cloudflare，正在啟動登入流程...${NC}"
-    wrangler login
-  else
-    echo -e "${GREEN}✓ 已登入 Cloudflare${NC}"
-  fi
-}
-
-# 驗證專案結構
-validate_project() {
-  echo -e "${YELLOW}📋 驗證專案結構...${NC}"
-  
-  required_files=(
-    "index.html"
-    "css/main.css"
-    "js/main.js"
-    "wrangler.toml"
-  )
-  
-  for file in "${required_files[@]}"; do
-    if [ -f "${PROJECT_DIR}/${file}" ]; then
-      echo -e "${GREEN}  ✓ ${file}${NC}"
-    else
-      echo -e "${RED}  ✗ ${file} (遺失)${NC}"
-      exit 1
-    fi
-  done
-}
-
-# 部署到 Cloudflare Pages
-deploy_pages() {
-  local env=${1:-production}
-  
-  echo ""
-  echo -e "${BLUE}╔════════════════════════════════════════════════════════╗${NC}"
-  echo -e "${BLUE}║   部署到 Cloudflare Pages                              ║${NC}"
-  echo -e "${BLUE}╚════════════════════════════════════════════════════════╝${NC}"
-  echo ""
-  
-  cd "${PROJECT_DIR}"
-  
-  if [ "$env" == "dev" ]; then
-    echo -e "${YELLOW}🚀 部署到開發環境...${NC}"
-    wrangler pages deploy . --project-name=${PROJECT_NAME}-dev
-  else
-    echo -e "${YELLOW}🚀 部署到生產環境...${NC}"
-    wrangler pages deploy . --project-name=${PROJECT_NAME}
-  fi
-  
-  echo ""
-  echo -e "${GREEN}✓ 部署完成！${NC}"
-  echo ""
-}
-
-# 本機預覽
-preview_local() {
-  echo ""
-  echo -e "${BLUE}╔════════════════════════════════════════════════════════╗${NC}"
-  echo -e "${BLUE}║   本機預覽                                             ║${NC}"
-  echo -e "${BLUE}╚════════════════════════════════════════════════════════╝${NC}"
-  echo ""
-  
-  cd "${PROJECT_DIR}"
-  
-  if command -v python3 &> /dev/null; then
-    echo -e "${YELLOW}🌐 啟動 Python 伺服器...${NC}"
-    echo -e "${GREEN}訪問：http://localhost:8000${NC}"
-    echo -e "${YELLOW}按 Ctrl+C 停止伺服器${NC}"
-    echo ""
-    python3 -m http.server 8000
-  elif command -v npx &> /dev/null; then
-    echo -e "${YELLOW}🌐 啟動 npx serve...${NC}"
-    echo -e "${GREEN}訪問：http://localhost:3000${NC}"
-    echo -e "${YELLOW}按 Ctrl+C 停止伺服器${NC}"
-    echo ""
-    npx serve .
-  else
-    echo -e "${RED}✗ 未找到 Python 或 npx，請安裝其中一個${NC}"
+# 檢查 Wrangler 是否已安裝
+if ! command -v wrangler &> /dev/null; then
+    echo "❌ Wrangler 未安裝"
+    echo "請執行：npm install -g wrangler"
     exit 1
-  fi
-}
-
-# 顯示選單
-show_menu() {
-  echo -e "${BLUE}請選擇操作：${NC}"
-  echo ""
-  echo "  1) 部署到生產環境 (Production)"
-  echo "  2) 部署到開發環境 (Development)"
-  echo "  3) 本機預覽 (Local Preview)"
-  echo "  4) 退出"
-  echo ""
-  read -p "輸入選項 [1-4]: " choice
-  
-  case $choice in
-    1)
-      check_wrangler
-      check_login
-      validate_project
-      deploy_pages production
-      ;;
-    2)
-      check_wrangler
-      check_login
-      validate_project
-      deploy_pages dev
-      ;;
-    3)
-      preview_local
-      ;;
-    4)
-      echo -e "${GREEN}再見！${NC}"
-      exit 0
-      ;;
-    *)
-      echo -e "${RED}無效選項${NC}"
-      exit 1
-      ;;
-  esac
-}
-
-# 檢查參數
-if [ "$#" -gt 0 ]; then
-  case $1 in
-    --deploy|-d)
-      check_wrangler
-      check_login
-      validate_project
-      deploy_pages production
-      ;;
-    --dev)
-      check_wrangler
-      check_login
-      validate_project
-      deploy_pages dev
-      ;;
-    --preview|-p)
-      preview_local
-      ;;
-    --help|-h)
-      echo "用法：$0 [選項]"
-      echo ""
-      echo "選項:"
-      echo "  --deploy, -d    部署到生產環境"
-      echo "  --dev           部署到開發環境"
-      echo "  --preview, -p   本機預覽"
-      echo "  --help, -h      顯示此說明"
-      echo "  (無參數)        顯示互動選單"
-      ;;
-    *)
-      echo -e "${RED}未知選項：$1${NC}"
-      echo "使用 --help 查看說明"
-      exit 1
-      ;;
-  esac
-else
-  show_menu
 fi
+
+echo "✅ Wrangler 已安裝：$(wrangler --version)"
+echo ""
+
+# 檢查 API Token
+if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+    echo "⚠️  未檢測到 CLOUDFLARE_API_TOKEN 環境變數"
+    echo ""
+    echo "請選擇部署方式："
+    echo "1. 設置 API Token 並部署 (推薦)"
+    echo "2. 使用 Cloudflare Dashboard 部署"
+    echo "3. 使用 GitHub + Cloudflare Pages 部署"
+    echo ""
+    read -p "請選擇 (1-3): " choice
+    
+    case $choice in
+        1)
+            read -p "請輸入 CLOUDFLARE_API_TOKEN: " -s token
+            export CLOUDFLARE_API_TOKEN=$token
+            echo ""
+            echo "✅ API Token 已設置"
+            ;;
+        2)
+            echo ""
+            echo "📋 Dashboard 部署步驟："
+            echo "1. 訪問：https://dash.cloudflare.com/"
+            echo "2. Workers & Pages > Create application"
+            echo "3. 選擇 Pages > Direct Upload"
+            echo "4. 上傳整個資料夾"
+            echo "5. 點擊 Deploy"
+            echo ""
+            exit 0
+            ;;
+        3)
+            echo ""
+            echo "📋 GitHub 部署步驟："
+            echo "1. git init && git add . && git commit -m 'Initial commit'"
+            echo "2. git remote add origin https://github.com/username/repo.git"
+            echo "3. git push -u origin main"
+            echo "4. Cloudflare Dashboard > Connect to Git"
+            echo ""
+            exit 0
+            ;;
+        *)
+            echo "❌ 無效選擇"
+            exit 1
+            ;;
+    esac
+fi
+
+# 部署選項
+echo ""
+echo "請選擇部署環境："
+echo "1. 生產環境 (Production)"
+echo "2. 開發環境 (Development)"
+echo ""
+read -p "請選擇 (1-2): " env_choice
+
+case $env_choice in
+    1)
+        echo ""
+        echo "🚀 部署到生產環境..."
+        wrangler pages deploy $BUILD_DIR --project-name=$PROJECT_NAME
+        ;;
+    2)
+        echo ""
+        echo "🧪 部署到開發環境..."
+        wrangler pages deploy $BUILD_DIR --project-name=$PROJECT_NAME-dev
+        ;;
+    *)
+        echo "❌ 無效選擇"
+        exit 1
+        ;;
+esac
+
+echo ""
+echo "✅ 部署完成！"
+echo ""
+echo "🌐 網站網址："
+echo "   https://$PROJECT_NAME.pages.dev"
+echo ""
+echo "📊 查看部署狀態："
+echo "   https://dash.cloudflare.com/?to=/:account/workers-and-pages/view/$PROJECT_NAME/overview"
+echo ""

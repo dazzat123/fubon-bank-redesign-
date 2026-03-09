@@ -7,14 +7,49 @@
   <link rel="stylesheet" href="../../../css/main.css">
   <style>
     .page-header {
+      position: relative;
       padding: var(--spacing-15) 0 var(--spacing-10);
       background: linear-gradient(135deg, #007AFF 0%, #5AC8FA 100%);
       color: var(--white);
       text-align: center;
+      overflow: hidden;
+    }
+    
+    .page-header-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0.15;
+    }
+    
+    .page-header-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     
     .page-header .page-subtitle {
       color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .service-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, #007AFF 0%, #5AC8FA 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      margin-bottom: var(--spacing-6);
+    }
+    
+    .service-icon svg {
+      width: 36px;
+      height: 36px;
+      color: white;
     }
     
     .service-grid {
@@ -112,6 +147,9 @@
 
   <!-- 頁面標題 -->
   <header class="page-header">
+    <div class="page-header-bg">
+      <img src="../../../images/products/product-investment.jpg" alt="投資服務">
+    </div>
     <div class="container">
       <h1 class="page-title">投資服務</h1>
       <p class="page-subtitle">多元化投資產品，專業顧問服務</p>

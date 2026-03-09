@@ -7,13 +7,48 @@
   <link rel="stylesheet" href="../../css/main.css">
   <style>
     .hero-ebanking {
+      position: relative;
       background: linear-gradient(135deg, #007AFF 0%, #5AC8FA 100%);
       color: var(--white);
       padding: var(--spacing-15) 0;
+      overflow: hidden;
+    }
+    
+    .hero-ebanking-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0.2;
+    }
+    
+    .hero-ebanking-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     
     .hero-ebanking .hero-subtitle {
       color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .service-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto var(--spacing-6);
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, #007AFF 0%, #5AC8FA 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+    }
+    
+    .service-icon svg {
+      width: 48px;
+      height: 48px;
+      color: white;
     }
     
     .services-grid {
@@ -173,6 +208,9 @@
 
   <!-- 英雄區塊 -->
   <section class="hero-ebanking">
+    <div class="hero-ebanking-bg">
+      <img src="../../images/banners/banner-mobile-app.jpg" alt="手機銀行">
+    </div>
     <div class="container" style="text-align: center;">
       <p class="hero-eyebrow" style="color: rgba(255, 255, 255, 0.8);">數位銀行體驗</p>
       <h1 class="hero-title" style="color: var(--white);">銀行服務，<br>觸手可及。</h1>
@@ -194,42 +232,73 @@
       
       <div class="services-grid">
         <div class="service-card">
-          <div class="service-icon">💻</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
           <h3 class="service-title">網上銀行</h3>
           <p class="service-desc">透過電腦隨時隨地管理您的戶口、轉賬、繳費及投資。</p>
           <a href="internet/" class="btn-link">了解更多 ›</a>
         </div>
         
         <div class="service-card">
-          <div class="service-icon">📱</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="5" y="2" width="14" height="20" rx="2"/>
+              <line x1="12" y1="18" x2="12.01" y2="18"/>
+            </svg>
+          </div>
           <h3 class="service-title">手機銀行</h3>
           <p class="service-desc">下載手機應用程式，享受便捷的行動銀行服務。</p>
           <a href="mobile/" class="btn-link">下載應用程式 ›</a>
         </div>
         
         <div class="service-card">
-          <div class="service-icon">📧</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="M6 8h.01M10 8h8"/>
+            </svg>
+          </div>
           <h3 class="service-title">電子支票</h3>
           <p class="service-desc">簽發及存入電子支票，簡單、安全、環保。</p>
           <a href="echeque/" class="btn-link">了解更多 ›</a>
         </div>
         
         <div class="service-card">
-          <div class="service-icon">💳</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="5" width="20" height="14" rx="2"/>
+              <line x1="2" y1="10" x2="22" y2="10"/>
+            </svg>
+          </div>
           <h3 class="service-title">繳費服務</h3>
           <p class="service-desc">網上繳付賬單、稅款及各種費用，方便快捷。</p>
           <a href="billpayment/" class="btn-link">立即繳費 ›</a>
         </div>
         
         <div class="service-card">
-          <div class="service-icon">🔔</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+            </svg>
+          </div>
           <h3 class="service-title">通知服務</h3>
           <p class="service-desc">即時接收戶口變動通知，掌握最新狀況。</p>
           <a href="notifications/" class="btn-link">設定通知 ›</a>
         </div>
         
         <div class="service-card">
-          <div class="service-icon">🔒</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </div>
           <h3 class="service-title">保安服務</h3>
           <p class="service-desc">多重保安認證，保障您的資金和資料安全。</p>
           <a href="security/" class="btn-link">了解保安措施 ›</a>

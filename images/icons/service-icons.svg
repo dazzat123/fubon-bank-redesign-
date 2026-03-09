@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+  <!-- 儲蓄帳戶 Savings -->
+  <symbol id="savings" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="28" stroke="#F47920" fill="none"/>
+    <path d="M32 18v14l10 4" stroke="#F47920"/>
+    <circle cx="32" cy="32" r="2" fill="#F47920"/>
+  </symbol>
+  
+  <!-- 定期存款 Time Deposit -->
+  <symbol id="time-deposit" viewBox="0 0 64 64">
+    <rect x="14" y="20" width="36" height="24" rx="4" stroke="#F47920" fill="none"/>
+    <path d="M20 28h24M20 36h16" stroke="#F47920"/>
+    <circle cx="46" cy="40" r="3" fill="#F47920"/>
+  </symbol>
+  
+  <!-- 稅務貸款 Tax Loan -->
+  <symbol id="tax-loan" viewBox="0 0 64 64">
+    <path d="M32 8L12 18v28l20 10 20-10V18L32 8z" stroke="#F47920" fill="none"/>
+    <path d="M24 32l6 6 10-10" stroke="#F47920"/>
+  </symbol>
+  
+  <!-- 房屋貸款 Mortgage -->
+  <symbol id="mortgage" viewBox="0 0 64 64">
+    <path d="M32 12L12 26v26h40V26L32 12z" stroke="#F47920" fill="none"/>
+    <rect x="28" y="36" width="8" height="16" fill="#F47920"/>
+    <circle cx="32" cy="24" r="3" fill="#F47920"/>
+  </symbol>
+  
+  <!-- 信用卡 Credit Card -->
+  <symbol id="credit-card" viewBox="0 0 64 64">
+    <rect x="10" y="20" width="44" height="28" rx="4" stroke="#F47920" fill="none"/>
+    <path d="M10 28h44" stroke="#F47920"/>
+    <rect x="38" y="38" width="10" height="6" fill="#F47920"/>
+  </symbol>
+  
+  <!-- 投資 Investment -->
+  <symbol id="investment" viewBox="0 0 64 64">
+    <path d="M12 52L24 40l10 10 16-20" stroke="#F47920" fill="none"/>
+    <circle cx="24" cy="40" r="3" fill="#F47920"/>
+    <circle cx="34" cy="50" r="3" fill="#F47920"/>
+    <circle cx="50" cy="30" r="3" fill="#F47920"/>
+  </symbol>
+  
+  <!-- 基金 Fund -->
+  <symbol id="fund" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="20" stroke="#F47920" fill="none"/>
+    <path d="M32 22v10l6 3" stroke="#F47920"/>
+    <path d="M22 32h20" stroke="#F47920"/>
+  </symbol>
+  
+  <!-- 保險 Insurance -->
+  <symbol id="insurance" viewBox="0 0 64 64">
+    <path d="M32 8L14 18v18c0 12 18 20 18 20s18-8 18-20V18L32 8z" stroke="#F47920" fill="none"/>
+    <path d="M26 34l5 5 9-9" stroke="#F47920"/>
+  </symbol>
+  
+  <!-- 退休規劃 Retirement -->
+  <symbol id="retirement" viewBox="0 0 64 64">
+    <circle cx="32" cy="28" r="10" stroke="#F47920" fill="none"/>
+    <path d="M18 56v-4a14 14 0 0 1 28 0v4" stroke="#F47920" fill="none"/>
+    <circle cx="44" cy="22" r="4" fill="#F47920"/>
+  </symbol>
+  
+  <!-- 教育儲蓄 Education -->
+  <symbol id="education" viewBox="0 0 64 64">
+    <path d="M32 16L14 26v8l18 10 18-10v-8L32 16z" stroke="#F47920" fill="none"/>
+    <path d="M24 36v10c0 4 8 6 8 6s8-2 8-6V36" stroke="#F47920" fill="none"/>
+  </symbol>
+  
+  <!-- 手機銀行 Mobile -->
+  <symbol id="mobile-banking" viewBox="0 0 64 64">
+    <rect x="22" y="8" width="20" height="48" rx="4" stroke="#F47920" fill="none"/>
+    <circle cx="32" cy="48" r="2" fill="#F47920"/>
+    <path d="M28 20h8M28 28h8M28 36h4" stroke="#F47920"/>
+  </symbol>
+  
+  <!-- 網上銀行 Internet -->
+  <symbol id="internet-banking" viewBox="0 0 64 64">
+    <rect x="10" y="16" width="44" height="32" rx="2" stroke="#F47920" fill="none"/>
+    <path d="M18 48h28" stroke="#F47920"/>
+    <circle cx="32" cy="32" r="6" stroke="#F47920" fill="none"/>
+  </symbol>
+  
+  <!-- 轉賬 Transfer -->
+  <symbol id="transfer" viewBox="0 0 64 64">
+    <path d="M18 32h28M38 24l8 8-8 8" stroke="#F47920" fill="none"/>
+    <circle cx="22" cy="32" r="6" stroke="#F47920" fill="none"/>
+  </symbol>
+  
+  <!-- 繳費 Bill Payment -->
+  <symbol id="bill-payment" viewBox="0 0 64 64">
+    <rect x="16" y="18" width="32" height="28" rx="2" stroke="#F47920" fill="none"/>
+    <path d="M22 26h20M22 34h16M22 42h12" stroke="#F47920"/>
+  </symbol>
+  
+  <!-- 外幣兌換 FX -->
+  <symbol id="fx" viewBox="0 0 64 64">
+    <circle cx="26" cy="32" r="10" stroke="#F47920" fill="none"/>
+    <path d="M26 26l4 6-4 6" stroke="#F47920"/>
+    <circle cx="38" cy="32" r="10" stroke="#F47920" fill="none"/>
+    <path d="M38 26l-4 6 4 6" stroke="#F47920"/>
+  </symbol>
+  
+  <!-- 客戶服務 Support -->
+  <symbol id="support" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="24" stroke="#F47920" fill="none"/>
+    <path d="M24 28c0-4 4-6 8-6s8 2 8 6-4 6-8 6v4" stroke="#F47920"/>
+    <circle cx="32" cy="46" r="2" fill="#F47920"/>
+  </symbol>
+</svg>

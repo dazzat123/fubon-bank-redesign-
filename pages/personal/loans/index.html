@@ -7,10 +7,27 @@
   <link rel="stylesheet" href="../../../css/main.css">
   <style>
     .page-header {
+      position: relative;
       padding: var(--spacing-15) 0 var(--spacing-10);
       background: linear-gradient(135deg, #F47920 0%, #FF6B35 100%);
       color: var(--white);
       text-align: center;
+      overflow: hidden;
+    }
+    
+    .page-header-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0.15;
+    }
+    
+    .page-header-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     
     .page-header .page-subtitle {
@@ -161,6 +178,9 @@
 
   <!-- 頁面標題 -->
   <header class="page-header">
+    <div class="page-header-bg">
+      <img src="../../../images/products/product-mortgage.jpg" alt="房屋貸款">
+    </div>
     <div class="container">
       <h1 class="page-title">貸款服務</h1>
       <p class="page-subtitle">靈活貸款方案，配合您的財務需要</p>

@@ -7,9 +7,26 @@
   <link rel="stylesheet" href="../../css/main.css">
   <style>
     .page-header {
-      padding: var(--spacing-15) 0 var(--spacing-10);
+      position: relative;
+      padding: var(--spacing-20) 0 var(--spacing-10);
       background: var(--gray-light);
       text-align: center;
+      overflow: hidden;
+    }
+    
+    .page-header-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    
+    .page-header-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.1;
     }
     
     .page-title {

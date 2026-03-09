@@ -7,14 +7,49 @@
   <link rel="stylesheet" href="../../css/main.css">
   <style>
     .page-header {
+      position: relative;
       padding: var(--spacing-15) 0 var(--spacing-10);
       background: linear-gradient(135deg, #1D1D1F 0%, #4A4A4C 100%);
       color: var(--white);
       text-align: center;
+      overflow: hidden;
+    }
+    
+    .page-header-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0.2;
+    }
+    
+    .page-header-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     
     .page-header .page-subtitle {
       color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .nav-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto var(--spacing-6);
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, #1D1D1F 0%, #4A4A4C 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+    }
+    
+    .nav-icon svg {
+      width: 44px;
+      height: 44px;
+      color: white;
     }
     
     .nav-grid {
@@ -208,6 +243,9 @@
 
   <!-- 頁面標題 -->
   <header class="page-header">
+    <div class="page-header-bg">
+      <img src="../../images/hero/hero-bank-building.jpg" alt="富邦銀行大樓">
+    </div>
     <div class="container">
       <h1 class="page-title">關於我們</h1>
       <p class="page-subtitle">認識富邦銀行，了解我們的使命、願景及核心價值</p>
