@@ -1,9 +1,0 @@
-# Cloudflare Pages 配置
-# Fubon Bank Redesign
-
-name = "fubon-bank-redesign"
-compatibility_date = "2024-01-01"
-
-[build]
-build_command = ""
-build_output_dir = "."
